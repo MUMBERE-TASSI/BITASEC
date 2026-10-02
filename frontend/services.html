@@ -11,37 +11,78 @@
 </head>
 <body>
 <header class="site-header">
-<div class="container nav">
-<a class="brand" href="index.html">
-<span class="brand-mark">B</span>
-<span>BITASEC</span>
-</a>
-<nav>
-<a data-i18n="nav_home" href="index.html">Home</a>
-<a data-i18n="nav_about" href="about.html">About</a>
-<a href="team.html" data-i18n="nav_team">Meet the Team</a>
-<a data-i18n="nav_services" href="services.html">Services</a>
-<a data-i18n="nav_projects" href="projects.html">Projects</a>
-<a data-i18n="nav_training" href="training.html">Training</a>
-<a data-i18n="nav_faq" href="faq.html">FAQ</a>
-<a class="nav-cta" href="contact.html">Contact</a>
-<div class="language-switcher">
-<span>🌐</span>
-<select aria-label="Select language" id="languageSelector">
-<option value="en">🇬🇧 English</option>
-<option value="fr">🇫🇷 Français</option>
-<option value="es">🇪🇸 Español</option>
-<option value="pt">🇵🇹 Português</option>
-<option value="sw">🇰🇪 Kiswahili</option>
-<option value="de">🇩🇪 Deutsch</option>
-<option value="ar">🇸🇦 العربية</option>
-<option value="zh">🇨🇳 中文</option>
-<option value="hi">🇮🇳 हिन्दी</option>
-<option value="ja">🇯🇵 日本語</option>
-</select>
-</div>
-</nav>
-</div>
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            BITASEC
+        </a>
+
+        <button
+            class="mobile-menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <div class="nav-links">
+
+            <a href="index.html" data-i18n="nav_home">
+                Home
+            </a>
+
+            <a href="about.html" class="" data-i18n="nav_about">
+                About
+            </a>
+
+            <a href="team.html" data-i18n="nav_team">
+                Meet the Team
+            </a>
+
+            <a href="services.html" class="active" data-i18n="nav_services">
+                Services
+            </a>
+
+            <a href="projects.html" class="" data-i18n="nav_projects">
+                Projects
+            </a>
+
+            <a href="training.html" class="" data-i18n="nav_training">
+                Training
+            </a>
+
+            <a href="faq.html" class="" data-i18n="nav_faq">
+                FAQ
+            </a>
+
+            <a
+                href="contact.html"
+                class="nav-cta"
+                data-i18n="nav_contact"
+            >
+                Request a Service
+            </a>
+
+        </div>
+
+        <select
+            id="languageSelector"
+            aria-label="Language"
+        >
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="sw">Kiswahili</option>
+            <option value="de">Deutsch</option>
+            <option value="ar">العربية</option>
+            <option value="zh">中文</option>
+            <option value="hi">हिन्दी</option>
+            <option value="ja">日本語</option>
+        </select>
+
+    </nav>
 </header>
 <main>
 <section class="hero">
