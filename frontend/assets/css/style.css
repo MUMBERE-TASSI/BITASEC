@@ -60,3 +60,119 @@ html[dir="rtl"] .language-switcher {
         font-size: 0.78rem;
     }
 }
+
+/* ============================================================
+   RESPONSIVE NAVIGATION
+   ============================================================ */
+
+.navbar {
+    width: min(1200px, 94%);
+    min-height: 72px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar .logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: .08em;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: .92rem;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #38bdf8;
+}
+
+.nav-links .nav-cta {
+    padding: 9px 14px;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    color: #fff;
+}
+
+#languageSelector {
+    width: auto;
+    min-width: 105px;
+    padding: 8px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    margin-left: auto;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* Mobile navigation */
+@media (max-width: 850px) {
+
+    .navbar {
+        min-height: 64px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 10px 0 5px;
+        order: 4;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .nav-links .nav-cta {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    #languageSelector {
+        margin-left: 0;
+        min-width: 95px;
+    }
+
+}
