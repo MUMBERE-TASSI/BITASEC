@@ -1,0 +1,59 @@
+# ============================================================
+# BITASEC - Git Ignore
+# ============================================================
+
+# Environment variables / secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+.venv*/
+.i18n-venv/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# Backups
+*.backup
+*.backup-*
+*.bak
+*.old
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Build/cache
+dist/
+build/
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Project backup directories
+backup_*/
