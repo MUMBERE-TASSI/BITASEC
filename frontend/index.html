@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -7,80 +6,161 @@
 <meta content="BITASEC - Cybersecurity, Networking, Artificial Intelligence, IoT, Electrical Engineering and Technology Training." name="description"/>
 <title>BITASEC | Technology. Security. Intelligence. Innovation.</title>
 <link href="assets/css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<style>
+    /* Professional Hero Grid Layout */
+    .hero {
+        padding: 40px 0 60px 0;
+        overflow: hidden;
+    }
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        gap: 30px;
+        align-items: center;
+    }
+    @media (max-width: 968px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .hero-panel {
+        background: rgba(15, 23, 42, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 20px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    }
+    .services-showcase-heading {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    
+    /* Scrollable Container to Free Up Space */
+    .tech-scroll-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 360px;
+        overflow-y: auto;
+        padding-right: 4px;
+    }
+    .tech-scroll-container::-webkit-scrollbar {
+        width: 5px;
+    }
+    .tech-scroll-container::-webkit-scrollbar-thumb {
+        background: rgba(56, 189, 248, 0.4);
+        border-radius: 4px;
+    }
+    .tech-scroll-container::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.5);
+    }
+
+    /* Clean Horizontal Service Row Card */
+    .tech-item-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(30, 41, 59, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 12px 16px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+    .tech-item-row:hover {
+        transform: translateX(4px);
+        border-color: rgba(56, 189, 248, 0.5);
+        background: rgba(30, 41, 59, 0.9);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .tech-item-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+        min-width: 0;
+    }
+    .tech-item-icon {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: 10px;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+    .tech-item-content {
+        min-width: 0;
+    }
+    .tech-item-content h4 {
+        color: #ffffff;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 0 0 2px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .tech-item-content p {
+        color: #94a3b8;
+        font-size: 0.75rem;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .tech-item-action {
+        color: #38bdf8;
+        font-size: 0.8rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-shrink: 0;
+        margin-left: 12px;
+    }
+    .tech-orbit {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .tech-orbit-badge {
+        display: inline-block;
+        padding: 3px 12px;
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: 20px;
+        color: #38bdf8;
+        font-weight: 600;
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+</style>
 </head>
 <body>
 <header class="site-header">
     <nav class="navbar">
-
-        <a href="index.html" class="logo">
-            BITASEC
-        </a>
-
-        <button
-            class="mobile-menu-toggle"
-            type="button"
-            aria-label="Open menu"
-        >
-            ☰
-        </button>
-
+        <a href="index.html" class="logo">BITASEC</a>
+        <button class="mobile-menu-toggle" type="button" aria-label="Open menu">☰</button>
         <div class="nav-links">
-
-            <a href="index.html" class="active" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" data-i18n="nav_projects">
-                Projects
-            </a>
-
-            <a href="training.html" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a
-                href="contact.html"
-                class="nav-cta"
-                data-i18n="nav_contact"
-            >
-                Request a Service
-            </a>
-
+            <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Request a Service</a>
         </div>
-
-        <select
-            id="languageSelector"
-            aria-label="Language"
-        >
+        <select id="languageSelector" aria-label="Language">
             <option value="en">English</option>
             <option value="fr">Français</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
             <option value="sw">Kiswahili</option>
-            <option value="de">Deutsch</option>
-            <option value="ar">العربية</option>
-            <option value="zh">中文</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ja">日本語</option>
         </select>
-
     </nav>
 </header>
 <main>
@@ -88,464 +168,537 @@
 <section class="hero">
 <div class="container hero-grid">
 <div>
-<p class="eyebrow" data-i18n="index_text_122">
-                BEST INFORMATION TECHNOLOGY ADVANCED SECURITY
-            </p>
-<h1 data-i18n="index_text_123">
-                Secure.
-                Connect.
-                <span>Innovate.</span>
+<p class="eyebrow" data-i18n="index_text_122">BEST INFORMATION TECHNOLOGY ADVANCED SECURITY</p>
+<h1 data-i18n="index_text_123" style="font-size: clamp(2.4rem, 4vw, 3.8rem); line-height: 1.1; margin-bottom: 15px;">
+    Secure. Connect. <span>Innovate.</span>
 </h1>
-<p class="hero-text" data-i18n="index_text_124">
-
-                Advanced technology solutions across cybersecurity,
-                networking, artificial intelligence, IoT, electrical
-                engineering and professional training.
-
-            </p>
+<p class="hero-text" data-i18n="index_text_124" style="margin-bottom: 25px; font-size: 0.95rem; line-height: 1.5;">
+    Advanced technology solutions across cybersecurity, networking, artificial intelligence, IoT, electrical engineering and professional training.
+</p>
 <div class="actions">
-<a class="btn primary" href="services.html">
-                    Explore Services
-                </a>
-<a class="btn secondary" href="contact.html">
-                    Talk to BITASEC
-                </a>
+<a class="btn primary" href="services.html" data-i18n="explore_services_btn">Explore Services</a>
+<a class="btn secondary" href="contact.html" data-i18n="talk_bitasec_btn">Talk to BITASEC</a>
 </div>
 </div>
+
+<!-- Right Panel with Scrollable Service Rows -->
 <div class="hero-panel">
+<div class="services-showcase-heading">
+    <span class="services-showcase-label" data-i18n="services_showcase_label" style="font-size: 0.65rem; letter-spacing: 1px;">BITASEC TECHNOLOGY SERVICES</span>
+    <h2 data-i18n="services_showcase_title" style="font-size: 1.05rem; margin-top: 2px;">Technology Solutions Built for Tomorrow</h2>
+</div>
+
 <div class="tech-orbit">
-                BITASEC
+    <span class="tech-orbit-badge">BITASEC</span>
+</div>
+
+<div class="tech-scroll-container">
+    <!-- Cybersecurity -->
+    <a class="tech-item-row" href="service-detail.html?service=cybersecurity">
+        <div class="tech-item-left">
+            <div class="tech-item-icon">🛡</div>
+            <div class="tech-item-content">
+                <h4 data-i18n="service_cybersecurity_title">Cybersecurity</h4>
+                <p data-i18n="service_cybersecurity_short">Protect your digital environment.</p>
             </div>
-<div class="tech-card">
-                Cybersecurity
+        </div>
+        <div class="tech-item-action">
+            <span data-i18n="service_explore">Explore</span> →
+        </div>
+    </a>
+
+    <!-- Artificial Intelligence -->
+    <a class="tech-item-row" href="service-detail.html?service=ai">
+        <div class="tech-item-left">
+            <div class="tech-item-icon">✦</div>
+            <div class="tech-item-content">
+                <h4 data-i18n="service_ai_title">Artificial Intelligence</h4>
+                <p data-i18n="service_ai_short">Turn data into intelligent solutions.</p>
             </div>
-<div class="tech-card">
-                Artificial Intelligence
+        </div>
+        <div class="tech-item-action">
+            <span data-i18n="service_explore">Explore</span> →
+        </div>
+    </a>
+
+    <!-- Networking -->
+    <a class="tech-item-row" href="service-detail.html?service=networking">
+        <div class="tech-item-left">
+            <div class="tech-item-icon">◈</div>
+            <div class="tech-item-content">
+                <h4 data-i18n="service_networking_title">Networking</h4>
+                <p data-i18n="service_networking_short">Build reliable infrastructure.</p>
             </div>
-<div class="tech-card">
-                IoT &amp; Smart Homes
+        </div>
+        <div class="tech-item-action">
+            <span data-i18n="service_explore">Explore</span> →
+        </div>
+    </a>
+
+    <!-- IoT & Smart Homes -->
+    <a class="tech-item-row" href="service-detail.html?service=iot">
+        <div class="tech-item-left">
+            <div class="tech-item-icon">⌁</div>
+            <div class="tech-item-content">
+                <h4 data-i18n="service_iot_title">IoT &amp; Smart Homes</h4>
+                <p data-i18n="service_iot_short">Connect devices and homes.</p>
             </div>
-<div class="tech-card">
-                Networking
+        </div>
+        <div class="tech-item-action">
+            <span data-i18n="service_explore">Explore</span> →
+        </div>
+    </a>
+
+    <!-- Electrical Engineering -->
+    <a class="tech-item-row" href="service-detail.html?service=electrical">
+        <div class="tech-item-left">
+            <div class="tech-item-icon">⚡</div>
+            <div class="tech-item-content">
+                <h4 data-i18n="service_electrical_title">Electrical Engineering</h4>
+                <p data-i18n="service_electrical_short">Intelligent electrical solutions.</p>
             </div>
-<div class="tech-card">
-                Electrical Engineering
-            </div>
+        </div>
+        <div class="tech-item-action">
+            <span data-i18n="service_explore">Explore</span> →
+        </div>
+    </a>
+</div>
+
 </div>
 </div>
 </section>
+
 <!-- ABOUT -->
 <section class="section">
 <div class="container two-col">
 <div>
-<p class="eyebrow" data-i18n="index_text_125">
-                WHO WE ARE
-            </p>
-<h2 data-i18n="index_text_126">
-                Technology built around real-world needs.
-            </h2>
-<a class="btn secondary" href="about.html">
-                Learn More About Us
-            </a>
+<p class="eyebrow" data-i18n="index_text_125">WHO WE ARE</p>
+<h2 data-i18n="index_text_126">Technology built around real-world needs.</h2>
+<a class="btn secondary" href="about.html" data-i18n="learn_more_about_btn">Learn More About Us</a>
 </div>
 <div>
 <p data-i18n="index_text_127">
-
-                BITASEC is a technology solutions enterprise focused
-                on helping individuals, businesses and institutions
-                become more secure, connected, intelligent and
-                efficient through modern technology.
-
-            </p>
+    BITASEC is a technology solutions enterprise focused on helping individuals, businesses and institutions become more secure, connected, intelligent and efficient through modern technology.
+</p>
 </div>
 </div>
 </section>
+
 <!-- SERVICES -->
 <section class="section alt">
 <div class="container">
-<p class="eyebrow" data-i18n="index_text_128">
-            OUR SERVICES
-        </p>
-<h2 data-i18n="index_text_129">
-            Technology solutions
-        </h2>
+<p class="eyebrow" data-i18n="index_text_128">OUR SERVICES</p>
+<h2 data-i18n="index_text_129">Technology solutions</h2>
 <div class="cards">
 <article class="card">
-<h3 data-i18n="index_text_130">
-                    Cybersecurity
-                </h3>
-<p data-i18n="index_text_131">
-                    Security assessment, monitoring, awareness,
-                    infrastructure protection and security consulting.
-                </p>
+<h3 data-i18n="index_text_130">Cybersecurity</h3>
+<p data-i18n="index_text_131">Security assessment, monitoring, awareness, infrastructure protection and security consulting.</p>
 </article>
 <article class="card">
-<h3 data-i18n="index_text_132">
-                    Networking
-                </h3>
-<p data-i18n="index_text_133">
-                    LAN/WAN, Wi-Fi, routing, switching,
-                    structured cabling, servers and network
-                    infrastructure.
-                </p>
+<h3 data-i18n="index_text_132">Networking</h3>
+<p data-i18n="index_text_133">LAN/WAN, Wi-Fi, routing, switching, structured cabling, servers and network infrastructure.</p>
 </article>
 <article class="card">
-<h3 data-i18n="index_text_134">
-                    Artificial Intelligence
-                </h3>
-<p data-i18n="index_text_135">
-                    AI integration, automation, intelligent
-                    applications, analytics and computer vision.
-                </p>
+<h3 data-i18n="index_text_134">Artificial Intelligence</h3>
+<p data-i18n="index_text_135">AI integration, automation, intelligent applications, analytics and computer vision.</p>
 </article>
 <article class="card">
-<h3 data-i18n="index_text_136">
-                    IoT &amp; Smart Homes
-                </h3>
-<p data-i18n="index_text_137">
-                    Intelligent lighting, sensors, automation,
-                    monitoring and connected home solutions.
-                </p>
+<h3 data-i18n="index_text_136">IoT &amp; Smart Homes</h3>
+<p data-i18n="index_text_137">Intelligent lighting, sensors, automation, monitoring and connected home solutions.</p>
 </article>
 <article class="card">
-<h3 data-i18n="index_text_138">
-                    Electrical Engineering
-                </h3>
-<p data-i18n="index_text_139">
-                    Electrical systems, maintenance, automation,
-                    smart electrical solutions and energy monitoring.
-                </p>
+<h3 data-i18n="index_text_138">Electrical Engineering</h3>
+<p data-i18n="index_text_139">Electrical systems, maintenance, automation, smart electrical solutions and energy monitoring.</p>
 </article>
 <article class="card">
-<h3 data-i18n="index_text_140">
-                    Training &amp; Conferences
-                </h3>
-<p data-i18n="index_text_141">
-                    Professional training, workshops, conferences
-                    and cybersecurity awareness programs.
-                </p>
+<h3 data-i18n="index_text_140">Training &amp; Conferences</h3>
+<p data-i18n="index_text_141">Professional training, workshops, conferences and cybersecurity awareness programs.</p>
 </article>
 </div>
 <div class="actions">
-<a class="btn primary" href="services.html">
-                View All Services
-            </a>
+<a class="btn primary" href="services.html" data-i18n="view_all_services_btn">View All Services</a>
 </div>
 </div>
 </section>
+
 <!-- SOLUTIONS -->
 <section class="section">
 <div class="container">
-<p class="eyebrow" data-i18n="index_text_142">
-            SOLUTIONS
-        </p>
-<h2 data-i18n="index_text_143">
-            Technology for every environment
-        </h2>
+<p class="eyebrow" data-i18n="index_text_142">SOLUTIONS</p>
+<h2 data-i18n="index_text_143">Technology for every environment</h2>
 <div class="solution-grid">
 <div>
-<h3 data-i18n="index_text_144">
-                    For Businesses
-                </h3>
-<p data-i18n="index_text_145">
-                    Secure infrastructure, connected teams
-                    and technology automation.
-                </p>
+<h3 data-i18n="index_text_144">For Businesses</h3>
+<p data-i18n="index_text_145">Secure infrastructure, connected teams and technology automation.</p>
 </div>
 <div>
-<h3 data-i18n="index_text_146">
-                    For Homes
-                </h3>
-<p data-i18n="index_text_147">
-                    Intelligent, connected and secure
-                    smart-home environments.
-                </p>
+<h3 data-i18n="index_text_146">For Homes</h3>
+<p data-i18n="index_text_147">Intelligent, connected and secure smart-home environments.</p>
 </div>
 <div>
-<h3 data-i18n="index_text_148">
-                    For Institutions
-                </h3>
-<p data-i18n="index_text_149">
-                    Reliable networks, digital infrastructure
-                    and technology training.
-                </p>
+<h3 data-i18n="index_text_148">For Institutions</h3>
+<p data-i18n="index_text_149">Reliable networks, digital infrastructure and technology training.</p>
 </div>
 <div>
-<h3 data-i18n="index_text_150">
-                    For Organizations
-                </h3>
-<p data-i18n="index_text_151">
-                    Integrated security, AI, IoT and
-                    engineering solutions.
-                </p>
+<h3 data-i18n="index_text_150">For Organizations</h3>
+<p data-i18n="index_text_151">Integrated security, AI, IoT and engineering solutions.</p>
 </div>
 </div>
 </div>
 </section>
+
 <!-- PROJECTS -->
 <section class="section alt">
 <div class="container">
-<p class="eyebrow" data-i18n="index_text_152">
-            PROJECTS
-        </p>
-<h2 data-i18n="index_text_153">
-            Selected technology projects
-        </h2>
+<p class="eyebrow" data-i18n="index_text_152">PROJECTS</p>
+<h2 data-i18n="index_text_153">Selected technology projects</h2>
 <div class="cards">
 <article class="card">
-<h3 data-i18n="index_text_154">
-                    Cybersecurity Operations
-                </h3>
-<p data-i18n="index_text_155">
-                    Security monitoring and threat-detection
-                    concepts for modern environments.
-                </p>
+<h3 data-i18n="index_text_154">Cybersecurity Operations</h3>
+<p data-i18n="index_text_155">Security monitoring and threat-detection concepts for modern environments.</p>
 </article>
 <article class="card">
-<h3 data-i18n="index_text_156">
-                    Smart Home
-                </h3>
-<p data-i18n="index_text_157">
-                    IoT-based automation and intelligent
-                    environmental monitoring.
-                </p>
+<h3 data-i18n="index_text_156">Smart Home</h3>
+<p data-i18n="index_text_157">IoT-based automation and intelligent environmental monitoring.</p>
 </article>
 <article class="card">
-<h3 data-i18n="index_text_158">
-                    AI Solutions
-                </h3>
-<p data-i18n="index_text_159">
-                    Practical AI systems designed around
-                    organizational needs.
-                </p>
+<h3 data-i18n="index_text_158">AI Solutions</h3>
+<p data-i18n="index_text_159">Practical AI systems designed around organizational needs.</p>
 </article>
 </div>
 <div class="actions">
-<a class="btn primary" href="projects.html">
-                View Projects
-            </a>
+<a class="btn primary" href="projects.html" data-i18n="view_projects_btn">View Projects</a>
 </div>
 </div>
 </section>
+
 <!-- TRAINING -->
 <section class="section">
 <div class="container two-col">
 <div>
-<p class="eyebrow" data-i18n="index_text_160">
-                TRAINING
-            </p>
-<h2 data-i18n="index_text_161">
-                Build the skills of tomorrow.
-            </h2>
-<a class="btn primary" href="training.html">
-                Explore Training
-            </a>
+<p class="eyebrow" data-i18n="index_text_160">TRAINING</p>
+<h2 data-i18n="index_text_161">Build the skills of tomorrow.</h2>
+<a class="btn primary" href="training.html" data-i18n="explore_training_btn">Explore Training</a>
 </div>
 <div>
 <p data-i18n="index_text_162">
-
-                Cybersecurity, networking, programming,
-                artificial intelligence, IoT, Linux,
-                IT fundamentals, corporate workshops
-                and technology conferences.
-
-            </p>
+    Cybersecurity, networking, programming, artificial intelligence, IoT, Linux, IT fundamentals, corporate workshops and technology conferences.
+</p>
 </div>
 </div>
 </section>
+
 <!-- CALL TO ACTION -->
 <section class="section contact">
 <div class="container">
-<p class="eyebrow" data-i18n="index_text_163">
-            START WITH BITASEC
-        </p>
-<h2 data-i18n="index_text_164">
-            Have a technology challenge?
-        </h2>
-<p data-i18n="index_text_165">
-
-            Tell us what you need and let's explore
-            the right technology solution.
-
-        </p>
+<p class="eyebrow" data-i18n="index_text_163">START WITH BITASEC</p>
+<h2 data-i18n="index_text_164">Have a technology challenge?</h2>
+<p data-i18n="index_text_165">Tell us what you need and let's explore the right technology solution.</p>
 <div class="actions">
-<a class="btn primary" data-i18n="nav_contact" href="contact.html">
-                Request a Service
-            </a>
-<a class="btn secondary" href="about.html">
-                Learn More
-            </a>
+<a class="btn primary" data-i18n="nav_contact" href="contact.html">Request a Service</a>
+<a class="btn secondary" href="about.html" data-i18n="learn_more_btn">Learn More</a>
 </div>
 </div>
 </section>
 </main>
 
-<script src="assets/js/translations.js"></script>
-<script src="assets/js/page_translations.js"></script>
+<!-- Translation Script -->
+<script>
+    const translations = {
+        en: {
+            nav_home: "Home",
+            nav_about: "About",
+            nav_team: "Meet the Team",
+            nav_services: "Services",
+            nav_projects: "Projects",
+            nav_training: "Training",
+            nav_faq: "FAQ",
+            nav_contact: "Request a Service",
+            index_text_122: "BEST INFORMATION TECHNOLOGY ADVANCED SECURITY",
+            index_text_123: "Secure. Connect. Innovate.",
+            index_text_124: "Advanced technology solutions across cybersecurity, networking, artificial intelligence, IoT, electrical engineering and professional training.",
+            explore_services_btn: "Explore Services",
+            talk_bitasec_btn: "Talk to BITASEC",
+            services_showcase_label: "BITASEC TECHNOLOGY SERVICES",
+            services_showcase_title: "Technology Solutions Built for Tomorrow",
+            service_cybersecurity_title: "Cybersecurity",
+            service_cybersecurity_short: "Protect your digital environment.",
+            service_ai_title: "Artificial Intelligence",
+            service_ai_short: "Turn data into intelligent solutions.",
+            service_iot_title: "IoT & Smart Homes",
+            service_iot_short: "Connect devices and homes.",
+            service_networking_title: "Networking",
+            service_networking_short: "Build reliable infrastructure.",
+            service_electrical_title: "Electrical Engineering",
+            service_electrical_short: "Intelligent electrical solutions.",
+            service_explore: "Explore",
+            index_text_125: "WHO WE ARE",
+            index_text_126: "Technology built around real-world needs.",
+            learn_more_about_btn: "Learn More About Us",
+            index_text_127: "BITASEC is a technology solutions enterprise focused on helping individuals, businesses and institutions become more secure, connected, intelligent and efficient through modern technology.",
+            index_text_128: "OUR SERVICES",
+            index_text_129: "Technology solutions",
+            index_text_130: "Cybersecurity",
+            index_text_131: "Security assessment, monitoring, awareness, infrastructure protection and security consulting.",
+            index_text_132: "Networking",
+            index_text_133: "LAN/WAN, Wi-Fi, routing, switching, structured cabling, servers and network infrastructure.",
+            index_text_134: "Artificial Intelligence",
+            index_text_135: "AI integration, automation, intelligent applications, analytics and computer vision.",
+            index_text_136: "IoT & Smart Homes",
+            index_text_137: "Intelligent lighting, sensors, automation, monitoring and connected home solutions.",
+            index_text_138: "Electrical Engineering",
+            index_text_139: "Electrical systems, maintenance, automation, smart electrical solutions and energy monitoring.",
+            index_text_140: "Training & Conferences",
+            index_text_141: "Professional training, workshops, conferences and cybersecurity awareness programs.",
+            view_all_services_btn: "View All Services",
+            index_text_142: "SOLUTIONS",
+            index_text_143: "Technology for every environment",
+            index_text_144: "For Businesses",
+            index_text_145: "Secure infrastructure, connected teams and technology automation.",
+            index_text_146: "For Homes",
+            index_text_147: "Intelligent, connected and secure smart-home environments.",
+            index_text_148: "For Institutions",
+            index_text_149: "Reliable networks, digital infrastructure and technology training.",
+            index_text_150: "For Organizations",
+            index_text_151: "Integrated security, AI, IoT and engineering solutions.",
+            index_text_152: "PROJECTS",
+            index_text_153: "Selected technology projects",
+            index_text_154: "Cybersecurity Operations",
+            index_text_155: "Security monitoring and threat-detection concepts for modern environments.",
+            index_text_156: "Smart Home",
+            index_text_157: "IoT-based automation and intelligent environmental monitoring.",
+            index_text_158: "AI Solutions",
+            index_text_159: "Practical AI systems designed around organizational needs.",
+            view_projects_btn: "View Projects",
+            index_text_160: "TRAINING",
+            index_text_161: "Build the skills of tomorrow.",
+            explore_training_btn: "Explore Training",
+            index_text_162: "Cybersecurity, networking, programming, artificial intelligence, IoT, Linux, IT fundamentals, corporate workshops and technology conferences.",
+            index_text_163: "START WITH BITASEC",
+            index_text_164: "Have a technology challenge?",
+            index_text_165: "Tell us what you need and let's explore the right technology solution.",
+            learn_more_btn: "Learn More"
+        },
+        fr: {
+            nav_home: "Accueil",
+            nav_about: "À propos",
+            nav_team: "Notre Équipe",
+            nav_services: "Services",
+            nav_projects: "Projets",
+            nav_training: "Formation",
+            nav_faq: "FAQ",
+            nav_contact: "Demander un Service",
+            index_text_122: "MEILLEURE SÉCURITÉ INFORMATIQUE AVANCÉE",
+            index_text_123: "Sécuriser. Connecter. Innover.",
+            index_text_124: "Solutions technologiques avancées en cybersécurité, réseaux, intelligence artificielle, IoT, génie électrique et formation professionnelle.",
+            explore_services_btn: "Explorer les Services",
+            talk_bitasec_btn: "Parler à BITASEC",
+            services_showcase_label: "SERVICES TECHNOLOGIQUES BITASEC",
+            services_showcase_title: "Solutions Technologiques pour Demain",
+            service_cybersecurity_title: "Cybersécurité",
+            service_cybersecurity_short: "Protégez votre environnement numérique.",
+            service_ai_title: "Intelligence Artificielle",
+            service_ai_short: "Transformez vos données en solutions.",
+            service_iot_title: "IoT & Domotique",
+            service_iot_short: "Connectez appareils et maisons.",
+            service_networking_title: "Réseaux",
+            service_networking_short: "Construisez une infrastructure fiable.",
+            service_electrical_title: "Génie Électrique",
+            service_electrical_short: "Solutions électriques intelligentes.",
+            service_explore: "Explorer",
+            index_text_125: "QUI NOUS SOMMES",
+            index_text_126: "Une technologie conçue pour les besoins réels.",
+            learn_more_about_btn: "En Savoir Plus",
+            index_text_127: "BITASEC est une entreprise de solutions technologiques dédiée à aider les individus, entreprises et institutions à devenir plus sécurisés, connectés et efficaces.",
+            index_text_128: "NOS SERVICES",
+            index_text_129: "Solutions technologiques",
+            index_text_130: "Cybersécurité",
+            index_text_131: "Évaluation de la sécurité, surveillance, sensibilisation et conseil en sécurité.",
+            index_text_132: "Réseaux",
+            index_text_133: "LAN/WAN, Wi-Fi, routage, commutation, câblage structuré et serveurs.",
+            index_text_134: "Intelligence Artificielle",
+            index_text_135: "Intégration d'IA, automatisation, applications intelligentes et vision par ordinateur.",
+            index_text_136: "IoT & Domotique",
+            index_text_137: "Éclairage intelligent, capteurs, automatisation et solutions connectées.",
+            index_text_138: "Génie Électrique",
+            index_text_139: "Systèmes électriques, maintenance, automatisation et suivi énergétique.",
+            index_text_140: "Formation & Conférences",
+            index_text_141: "Formations professionnelles, ateliers, conférences et programmes de sensibilisation.",
+            view_all_services_btn: "Voir Tous les Services",
+            index_text_142: "SOLUTIONS",
+            index_text_143: "La technologie pour chaque environnement",
+            index_text_144: "Pour les Entreprises",
+            index_text_145: "Infrastructure sécurisée, équipes connectées et automatisation.",
+            index_text_146: "Pour les Foyers",
+            index_text_147: "Environnements de maison intelligente sécurisés et connectés.",
+            index_text_148: "Pour les Institutions",
+            index_text_149: "Réseaux fiables, infrastructure numérique et formation technique.",
+            index_text_150: "Pour les Organisations",
+            index_text_151: "Sécurité intégrée, IA, IoT et solutions d'ingénierie.",
+            index_text_152: "PROJETS",
+            index_text_153: "Projets technologiques sélectionnés",
+            index_text_154: "Opérations de Cybersécurité",
+            index_text_155: "Surveillance de sécurité et détection des menaces pour environnements modernes.",
+            index_text_156: "Maison Intelligente",
+            index_text_157: "Automatisation basée sur l'IoT et surveillance environnementale.",
+            index_text_158: "Solutions IA",
+            index_text_159: "Systèmes d'IA pratiques adaptés aux besoins organisationnels.",
+            view_projects_btn: "Voir les Projets",
+            index_text_160: "FORMATION",
+            index_text_161: "Développez les compétences de demain.",
+            explore_training_btn: "Explorer les Formations",
+            index_text_162: "Cybersécurité, réseaux, programmation, intelligence artificielle, IoT, Linux et ateliers d'entreprise.",
+            index_text_163: "COMMENCER AVEC BITASEC",
+            index_text_164: "Un défi technologique ?",
+            index_text_165: "Dites-nous ce dont vous avez besoin et découvrons la solution adaptée.",
+            learn_more_btn: "En Savoir Plus"
+        },
+        sw: {
+            nav_home: "Nyumbani",
+            nav_about: "Kuhusu Sisi",
+            nav_team: "Timu Yetu",
+            nav_services: "Huduma",
+            nav_projects: "Miradi",
+            nav_training: "Mafunzo",
+            nav_faq: "Maswali",
+            nav_contact: "Omba Huduma",
+            index_text_122: "USALAMA BORA WA TEKNOLOJIA YA HABARI",
+            index_text_123: "Salama. Unganisha. Buni.",
+            index_text_124: "Suluhisho za teknolojia ya juu katika usalama wa mtandao, mawasiliano, akili bandia, IoT, uhandisi wa umeme na mafunzo ya kitaalamu.",
+            explore_services_btn: "Chunguza Huduma",
+            talk_bitasec_btn: "Wasiliana na BITASEC",
+            services_showcase_label: "HUDUMA ZA TEKNOLOJIA ZA BITASEC",
+            services_showcase_title: "Suluhisho za Kiteknolojia za Kesho",
+            service_cybersecurity_title: "Usalama wa Mtandao",
+            service_cybersecurity_short: "Linda mazingira yako ya kidijitali.",
+            service_ai_title: "Akili Bandia",
+            service_ai_short: "Geuza data kuwa suluhisho.",
+            service_iot_title: "IoT & Nyumba Mahiri",
+            service_iot_short: "Unganisha vifaa na nyumba.",
+            service_networking_title: "Mitandao",
+            service_networking_short: "Jenga miundombinu thabiti.",
+            service_electrical_title: "Uhandisi wa Umeme",
+            service_electrical_short: "Suluhisho mahiri za umeme.",
+            service_explore: "Chunguza",
+            index_text_125: "SISI NI NANI",
+            index_text_126: "Teknolojia iliyoundwa kulingana na mahitaji halisi.",
+            learn_more_about_btn: "Jifunze Zaidi Kuhusu Sisi",
+            index_text_127: "BITASEC ni biashara ya suluhisho za kiufundi inayolenga kusaidia watu binafsi, biashara na taasisi kuwa salama zaidi, zilizounganishwa, na zenye ufanisi kupitia teknolojia.",
+            index_text_128: "HUDUMA ZETU",
+            index_text_129: "Suluhisho za kiteknolojia",
+            index_text_130: "Usalama wa Mtandao",
+            index_text_131: "Tathmini ya usalama, ufuatiliaji, ulinzi wa miundombinu na ushauri.",
+            index_text_132: "Mitandao",
+            index_text_133: "LAN/WAN, Wi-Fi, uelekezaji, kubadilisha njia, na miundombinu ya mitandao.",
+            index_text_134: "Akili Bandia",
+            index_text_135: "Ujumuishaji wa AI, otomatiki, programu zenye akili na uchanganuzi.",
+            index_text_136: "IoT & Nyumba Mahiri",
+            index_text_137: "Taa mahiri, vitambuzi, otomatiki, ufuatiliaji na suluhisho za nyumba.",
+            index_text_138: "Uhandisi wa Umeme",
+            index_text_139: "Mifumo ya umeme, matengenezo, otomatiki na ufuatiliaji wa nishati.",
+            index_text_140: "Mafunzo na Mikutano",
+            index_text_141: "Mafunzo ya kitaalamu, warsha, mikutano na programu za uhamasishaji.",
+            view_all_services_btn: "Tazama Huduma Zote",
+            index_text_142: "SULUHISHO",
+            index_text_143: "Teknolojia kwa kila mazingira",
+            index_text_144: "Kwa Biashara",
+            index_text_145: "Miundombinu salama, timu zilizounganishwa na otomatiki.",
+            index_text_146: "Kwa Nyumba",
+            index_text_147: "Mazingira ya nyumba mahiri yaliyounganishwa na salama.",
+            index_text_148: "Kwa Taasisi",
+            index_text_149: "Mitandao ya kuaminika, miundombinu ya kidijitali na mafunzo.",
+            index_text_150: "Kwa Mashirika",
+            index_text_151: "Usalama uliounganishwa, AI, IoT na suluhisho za uhandisi.",
+            index_text_152: "MIRADI",
+            index_text_153: "Miradi iliyochaguliwa ya kiteknolojia",
+            index_text_154: "Shughuli za Usalama wa Mtandao",
+            index_text_155: "Ufuatiliaji wa usalama na ugunduzi wa vitisho kwa mazingira.",
+            index_text_156: "Nyumba Mahiri",
+            index_text_157: "Otomatiki inayotegemea IoT na ufuatiliaji wa mazingira.",
+            index_text_158: "Suluhisho za AI",
+            index_text_159: "Mifumo ya vitendo ya AI iliyoundwa kuzunguka mahitaji.",
+            view_projects_btn: "Tazama Miradi",
+            index_text_160: "MAFUNZO",
+            index_text_161: "Jenga ujuzi wa kesho.",
+            explore_training_btn: "Chunguza Mafunzo",
+            index_text_162: "Usalama wa mtandao, mitandao, programu, akili bandia, IoT, Linux na warsha za kampuni.",
+            index_text_163: "ANZA NA BITASEC",
+            index_text_164: "Una changamoto ya kiteknolojia?",
+            index_text_165: "Tuambie unachohitaji na tuchunguze suluhisho sahihi.",
+            learn_more_btn: "Jifunze Zaidi"
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const selector = document.getElementById("languageSelector");
+        if (!selector) return;
+
+        const applyTranslations = (lang) => {
+            const dictionary = translations[lang] || translations['en'];
+            document.querySelectorAll("[data-i18n]").forEach(element => {
+                const translationKey = element.getAttribute("data-i18n");
+                if (dictionary[translationKey]) {
+                    element.textContent = dictionary[translationKey];
+                }
+            });
+            localStorage.setItem("bitasec_current_lang", lang);
+        };
+
+        const initialLang = localStorage.getItem("bitasec_current_lang") || "en";
+        selector.value = initialLang;
+        applyTranslations(initialLang);
+
+        selector.addEventListener("change", (event) => {
+            applyTranslations(event.target.value);
+        });
+    });
+</script>
 <script src="assets/js/main.js"></script>
 
 <footer class="bitasec-footer">
-
     <div class="footer-glow"></div>
-
     <div class="footer-container">
-
-        <!-- Brand -->
         <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-                BITASEC
-            </a>
-
-            <p>
-                Best Information Technology Advanced Security
-            </p>
-
-            <p class="footer-tagline">
-                Technology. Security. Intelligence. Innovation.
-            </p>
-
+            <a href="index.html" class="footer-logo">BITASEC</a>
+            <p>Best Information Technology Advanced Security</p>
+            <p class="footer-tagline">Technology. Security. Intelligence. Innovation.</p>
         </div>
-
-
-        <!-- Company -->
         <div class="footer-column">
-
             <h3>Company</h3>
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" data-i18n="nav_projects">
-                Projects
-            </a>
-
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
         </div>
-
-
-        <!-- Resources -->
         <div class="footer-column">
-
             <h3>Resources</h3>
-
-            <a href="training.html" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a href="contact.html" data-i18n="nav_contact">
-                Request a Service
-            </a>
-
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" data-i18n="nav_contact">Request a Service</a>
         </div>
-
-
-        <!-- Contact -->
         <div class="footer-column footer-contact">
-
             <h3>Contact</h3>
-
-            <a href="mailto:mumberedieumerci@gmail.com">
-                ✉ mumberedieumerci@gmail.com
-            </a>
-
-            <a
-                href="https://wa.me/254742432583"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ☎ +254 742 432 583
-            </a>
-
+            <a href="mailto:mumberedieumerci@gmail.com">✉ mumberedieumerci@gmail.com</a>
+            <a href="https://wa.me/254742432583" target="_blank" rel="noopener noreferrer">☎ +254 742 432 583</a>
         </div>
-
-
-        <!-- Social Media -->
         <div class="footer-column footer-social">
-
             <h3>Connect With Us</h3>
-
-            <p>
-                Follow BITASEC and stay connected with our
-                technology, cybersecurity and innovation work.
-            </p>
-
+            <p>Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.</p>
             <div class="social-links">
-
-                <a
-                    href="#"
-                    aria-label="Facebook"
-                    title="Facebook"
-                >
-                    f
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                    title="Instagram"
-                >
-                    ◎
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                >
-                    in
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="YouTube"
-                    title="YouTube"
-                >
-                    ▶
-                </a>
-
+                <a href="#" aria-label="Facebook" title="Facebook">f</a>
+                <a href="#" aria-label="Instagram" title="Instagram">◎</a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+                <a href="#" aria-label="YouTube" title="YouTube">▶</a>
             </div>
-
         </div>
-
     </div>
-
-
-    <!-- Bottom -->
     <div class="footer-bottom">
-
         <div class="footer-container footer-bottom-inner">
-
-            <p>
-                © 2026 BITASEC. All rights reserved.
-            </p>
-
-            <p>
-                Technology • Security • Intelligence • Innovation
-            </p>
-
+            <p>© 2026 BITASEC. All rights reserved.</p>
+            <p>Technology • Security • Intelligence • Innovation</p>
         </div>
-
     </div>
-
 </footer>
-
-
 </body>
 </html>

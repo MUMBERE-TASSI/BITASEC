@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="BITASEC technology training, workshops and professional programs." name="description"/>
-<title>Training | BITASEC</title>
-<link href="assets/css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="BITASEC technology training, workshops and professional programs." name="description"/>
+    <title>Training | BITASEC</title>
+    
+    <!-- External CSS Stylesheets -->
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/footer.css" rel="stylesheet"/>
+
+    <!-- Embedded CSS Enhancements & Effects -->
+    <style>
+        /* Navbar Language Selector Styling */
+        .navbar select#languageSelector {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .navbar select#languageSelector option {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .navbar select#languageSelector:hover,
+        .navbar select#languageSelector:focus {
+            border-color: #00d2ff;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Smooth Transition Effects for Cards & Elements */
+        .btn, .card, .solution-grid > div, .nav-links a {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover, .solution-grid > div:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 210, 255, 0.15);
+        }
+    </style>
 </head>
 <body>
+
 <header class="site-header">
     <nav class="navbar">
 
@@ -27,431 +66,612 @@
         </button>
 
         <div class="nav-links">
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" class="" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" class="" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" class="" data-i18n="nav_projects">
-                Projects
-            </a>
-
-            <a href="training.html" class="active" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" class="" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a
-                href="contact.html"
-                class="nav-cta"
-                data-i18n="nav_contact"
-            >
-                Request a Service
-            </a>
-
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
+            <a href="training.html" class="active" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Request a Service</a>
         </div>
 
-        <select
-            id="languageSelector"
-            aria-label="Language"
-        >
+        <select id="languageSelector" aria-label="Language">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="es">Español</option>
             <option value="pt">Português</option>
             <option value="sw">Kiswahili</option>
-            <option value="de">Deutsch</option>
-            <option value="ar">العربية</option>
-            <option value="zh">中文</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ja">日本語</option>
         </select>
 
     </nav>
 </header>
+
 <main>
-<section class="hero">
-<div class="container">
-<p class="eyebrow" data-i18n="training_text_238">BITASEC TRAINING</p>
-<h1 data-i18n="training_text_239">
-            Learn. Practice.
-            <span>Innovate.</span>
-</h1>
-<p class="hero-text" data-i18n="training_text_240">
-            Practical technology training designed to help students,
-            professionals, organizations and technology enthusiasts
-            build relevant digital skills.
-        </p>
-<div class="actions">
-<a class="btn primary" href="contact.html">
-                Request Training
-            </a>
-<a class="btn secondary" href="contact.html">
-                Contact BITASEC
-            </a>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container">
-<p class="eyebrow" data-i18n="training_text_241">TRAINING PROGRAMS</p>
-<h2 data-i18n="training_text_242">Build skills for the digital future</h2>
-<div class="cards">
-<article class="card">
-<h3 data-i18n="training_text_243">Cybersecurity</h3>
-<p data-i18n="training_text_244">
-                    Learn cybersecurity fundamentals, network security,
-                    security monitoring, threat detection, Linux security
-                    and security awareness.
-                </p>
-<p data-i18n="training_text_245">
-<strong>Suitable for:</strong>
-                    Students, IT professionals and organizations.
-                </p>
-<a class="btn secondary" href="contact.html">
-                    Enquire
-                </a>
-</article>
-<article class="card">
-<h3 data-i18n="training_text_246">Networking</h3>
-<p data-i18n="training_text_247">
-                    Practical training in networking fundamentals,
-                    IP addressing, routing, switching, VLANs,
-                    wireless networking and network security.
-                </p>
-<p data-i18n="training_text_248">
-<strong>Suitable for:</strong>
-                    Students, technicians and IT professionals.
-                </p>
-<a class="btn secondary" href="contact.html">
-                    Enquire
-                </a>
-</article>
-<article class="card">
-<h3 data-i18n="training_text_249">Programming &amp; Software</h3>
-<p data-i18n="training_text_250">
-                    Learn programming concepts, software development,
-                    web technologies, databases and practical
-                    application development.
-                </p>
-<p data-i18n="training_text_251">
-<strong>Suitable for:</strong>
-                    Beginners, students and developers.
-                </p>
-<a class="btn secondary" href="contact.html">
-                    Enquire
-                </a>
-</article>
-<article class="card">
-<h3 data-i18n="training_text_252">Artificial Intelligence</h3>
-<p data-i18n="training_text_253">
-                    Introduction to artificial intelligence,
-                    machine learning concepts, AI applications,
-                    automation and responsible AI use.
-                </p>
-<p data-i18n="training_text_254">
-<strong>Suitable for:</strong>
-                    Students, professionals and organizations.
-                </p>
-<a class="btn secondary" href="contact.html">
-                    Enquire
-                </a>
-</article>
-<article class="card">
-<h3 data-i18n="training_text_255">IoT &amp; Embedded Systems</h3>
-<p data-i18n="training_text_256">
-                    Practical introduction to sensors, microcontrollers,
-                    connected devices, automation and IoT applications.
-                </p>
-<p data-i18n="training_text_257">
-<strong>Suitable for:</strong>
-                    Students, innovators and technology enthusiasts.
-                </p>
-<a class="btn secondary" href="contact.html">
-                    Enquire
-                </a>
-</article>
-<article class="card">
-<h3 data-i18n="training_text_258">Linux &amp; IT Fundamentals</h3>
-<p data-i18n="training_text_259">
-                    Learn Linux administration, command-line operations,
-                    system fundamentals, troubleshooting and essential
-                    IT skills.
-                </p>
-<p data-i18n="training_text_260">
-<strong>Suitable for:</strong>
-                    Beginners, students and IT support professionals.
-                </p>
-<a class="btn secondary" href="contact.html">
-                    Enquire
-                </a>
-</article>
-</div>
-</div>
-</section>
-<section class="section alt">
-<div class="container">
-<p class="eyebrow" data-i18n="training_text_261">TRAINING FORMAT</p>
-<h2 data-i18n="training_text_262">Flexible learning options</h2>
-<div class="solution-grid">
-<div>
-<h3 data-i18n="training_text_263">Individual Training</h3>
-<p data-i18n="training_text_264">
-                    Personalized training based on your current
-                    knowledge and learning objectives.
-                </p>
-</div>
-<div>
-<h3 data-i18n="training_text_265">Group Training</h3>
-<p data-i18n="training_text_266">
-                    Practical technology sessions for student groups,
-                    teams and professional communities.
-                </p>
-</div>
-<div>
-<h3 data-i18n="training_text_267">Corporate Workshops</h3>
-<p data-i18n="training_text_268">
-                    Customized technology and cybersecurity workshops
-                    for organizations and institutions.
-                </p>
-</div>
-<div>
-<h3 data-i18n="training_text_269">Technology Conferences</h3>
-<p data-i18n="training_text_270">
-                    Technology talks, seminars and awareness sessions
-                    covering emerging technologies and digital security.
-                </p>
-</div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container">
-<p class="eyebrow" data-i18n="training_text_271">PRACTICAL LEARNING</p>
-<h2 data-i18n="training_text_272">Learn by doing</h2>
-<div class="two-col">
-<div>
-<p data-i18n="training_text_273">
-                    BITASEC training can include practical laboratories,
-                    demonstrations, simulations and real-world projects.
-                </p>
-<p data-i18n="training_text_274">
-                    Participants can apply what they learn using
-                    appropriate tools, technologies and development
-                    environments.
-                </p>
-</div>
-<div>
-<p data-i18n="training_text_275">
-                    Training content can be adapted according to
-                    the learner's level, objectives and available
-                    technology environment.
-                </p>
-</div>
-</div>
-</div>
-</section>
-<section class="section contact">
-<div class="container">
-<p class="eyebrow" data-i18n="training_text_276">START LEARNING</p>
-<h2 data-i18n="training_text_277">Ready to develop your technology skills?</h2>
-<p data-i18n="training_text_278">
-            Contact BITASEC and tell us the area you would like
-            to learn or the training your organization requires.
-        </p>
-<div class="actions">
-<a class="btn primary" href="contact.html">
-                Request Training
-            </a>
-<a class="btn secondary" href="services.html">
-                View Services
-            </a>
-</div>
-</div>
-</section>
+    <section class="hero">
+        <div class="container">
+            <p class="eyebrow" data-i18n="training_text_238">BITASEC TRAINING</p>
+            <h1 data-i18n="training_text_239">
+                Learn. Practice. <span>Innovate.</span>
+            </h1>
+            <p class="hero-text" data-i18n="training_text_240">
+                Practical technology training designed to help students,
+                professionals, organizations and technology enthusiasts
+                build relevant digital skills.
+            </p>
+            <div class="actions">
+                <a class="btn primary" href="contact.html" data-i18n="btn_req_training">Request Training</a>
+                <a class="btn secondary" href="contact.html" data-i18n="btn_contact_bitasec">Contact BITASEC</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <p class="eyebrow" data-i18n="training_text_241">TRAINING PROGRAMS</p>
+            <h2 data-i18n="training_text_242">Build skills for the digital future</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3 data-i18n="training_text_243">Cybersecurity</h3>
+                    <p data-i18n="training_text_244">
+                        Learn cybersecurity fundamentals, network security,
+                        security monitoring, threat detection, Linux security
+                        and security awareness.
+                    </p>
+                    <p><strong data-i18n="label_suitable">Suitable for:</strong> <span data-i18n="training_text_245">Students, IT professionals and organizations.</span></p>
+                    <a class="btn secondary" href="contact.html" data-i18n="btn_enquire">Enquire</a>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="training_text_246">Networking</h3>
+                    <p data-i18n="training_text_247">
+                        Practical training in networking fundamentals,
+                        IP addressing, routing, switching, VLANs,
+                        wireless networking and network security.
+                    </p>
+                    <p><strong data-i18n="label_suitable">Suitable for:</strong> <span data-i18n="training_text_248">Students, technicians and IT professionals.</span></p>
+                    <a class="btn secondary" href="contact.html" data-i18n="btn_enquire">Enquire</a>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="training_text_249">Programming & Software</h3>
+                    <p data-i18n="training_text_250">
+                        Learn programming concepts, software development,
+                        web technologies, databases and practical
+                        application development.
+                    </p>
+                    <p><strong data-i18n="label_suitable">Suitable for:</strong> <span data-i18n="training_text_251">Beginners, students and developers.</span></p>
+                    <a class="btn secondary" href="contact.html" data-i18n="btn_enquire">Enquire</a>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="training_text_252">Artificial Intelligence</h3>
+                    <p data-i18n="training_text_253">
+                        Introduction to artificial intelligence,
+                        machine learning concepts, AI applications,
+                        automation and responsible AI use.
+                    </p>
+                    <p><strong data-i18n="label_suitable">Suitable for:</strong> <span data-i18n="training_text_254">Students, professionals and organizations.</span></p>
+                    <a class="btn secondary" href="contact.html" data-i18n="btn_enquire">Enquire</a>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="training_text_255">IoT & Embedded Systems</h3>
+                    <p data-i18n="training_text_256">
+                        Practical introduction to sensors, microcontrollers,
+                        connected devices, automation and IoT applications.
+                    </p>
+                    <p><strong data-i18n="label_suitable">Suitable for:</strong> <span data-i18n="training_text_257">Students, innovators and technology enthusiasts.</span></p>
+                    <a class="btn secondary" href="contact.html" data-i18n="btn_enquire">Enquire</a>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="training_text_258">Linux & IT Fundamentals</h3>
+                    <p data-i18n="training_text_259">
+                        Learn Linux administration, command-line operations,
+                        system fundamentals, troubleshooting and essential
+                        IT skills.
+                    </p>
+                    <p><strong data-i18n="label_suitable">Suitable for:</strong> <span data-i18n="training_text_260">Beginners, students and IT support professionals.</span></p>
+                    <a class="btn secondary" href="contact.html" data-i18n="btn_enquire">Enquire</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt">
+        <div class="container">
+            <p class="eyebrow" data-i18n="training_text_261">TRAINING FORMAT</p>
+            <h2 data-i18n="training_text_262">Flexible learning options</h2>
+            <div class="solution-grid">
+                <div>
+                    <h3 data-i18n="training_text_263">Individual Training</h3>
+                    <p data-i18n="training_text_264">
+                        Personalized training based on your current
+                        knowledge and learning objectives.
+                    </p>
+                </div>
+                <div>
+                    <h3 data-i18n="training_text_265">Group Training</h3>
+                    <p data-i18n="training_text_266">
+                        Practical technology sessions for student groups,
+                        teams and professional communities.
+                    </p>
+                </div>
+                <div>
+                    <h3 data-i18n="training_text_267">Corporate Workshops</h3>
+                    <p data-i18n="training_text_268">
+                        Customized technology and cybersecurity workshops
+                        for organizations and institutions.
+                    </p>
+                </div>
+                <div>
+                    <h3 data-i18n="training_text_269">Technology Conferences</h3>
+                    <p data-i18n="training_text_270">
+                        Technology talks, seminars and awareness sessions
+                        covering emerging technologies and digital security.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <p class="eyebrow" data-i18n="training_text_271">PRACTICAL LEARNING</p>
+            <h2 data-i18n="training_text_272">Learn by doing</h2>
+            <div class="two-col">
+                <div>
+                    <p data-i18n="training_text_273">
+                        BITASEC training can include practical laboratories,
+                        demonstrations, simulations and real-world projects.
+                    </p>
+                    <p data-i18n="training_text_274">
+                        Participants can apply what they learn using
+                        appropriate tools, technologies and development
+                        environments.
+                    </p>
+                </div>
+                <div>
+                    <p data-i18n="training_text_275">
+                        Training content can be adapted according to
+                        the learner's level, objectives and available
+                        technology environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <div class="container">
+            <p class="eyebrow" data-i18n="training_text_276">START LEARNING</p>
+            <h2 data-i18n="training_text_277">Ready to develop your technology skills?</h2>
+            <p data-i18n="training_text_278">
+                Contact BITASEC and tell us the area you would like
+                to learn or the training your organization requires.
+            </p>
+            <div class="actions">
+                <a class="btn primary" href="contact.html" data-i18n="btn_req_training">Request Training</a>
+                <a class="btn secondary" href="services.html" data-i18n="btn_view_services">View Services</a>
+            </div>
+        </div>
+    </section>
 </main>
 
-<script src="assets/js/translations.js"></script>
-<script src="assets/js/page_translations.js"></script>
-<script src="assets/js/main.js"></script>
-
 <footer class="bitasec-footer">
-
     <div class="footer-glow"></div>
 
     <div class="footer-container">
-
         <!-- Brand -->
         <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-                BITASEC
-            </a>
-
-            <p>
-                Best Information Technology Advanced Security
-            </p>
-
-            <p class="footer-tagline">
-                Technology. Security. Intelligence. Innovation.
-            </p>
-
+            <a href="index.html" class="footer-logo">BITASEC</a>
+            <p>Best Information Technology Advanced Security</p>
+            <p class="footer-tagline">Technology. Security. Intelligence. Innovation.</p>
         </div>
-
 
         <!-- Company -->
         <div class="footer-column">
-
-            <h3>Company</h3>
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" data-i18n="nav_projects">
-                Projects
-            </a>
-
+            <h3 data-i18n="footer_company">Company</h3>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
         </div>
-
 
         <!-- Resources -->
         <div class="footer-column">
-
-            <h3>Resources</h3>
-
-            <a href="training.html" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a href="contact.html" data-i18n="nav_contact">
-                Request a Service
-            </a>
-
+            <h3 data-i18n="footer_resources">Resources</h3>
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" data-i18n="nav_contact">Request a Service</a>
         </div>
-
 
         <!-- Contact -->
         <div class="footer-column footer-contact">
-
-            <h3>Contact</h3>
-
-            <a href="mailto:mumberedieumerci@gmail.com">
-                ✉ mumberedieumerci@gmail.com
-            </a>
-
-            <a
-                href="https://wa.me/254742432583"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ☎ +254 742 432 583
-            </a>
-
+            <h3 data-i18n="footer_contact">Contact</h3>
+            <a href="mailto:mumberedieumerci@gmail.com">✉ mumberedieumerci@gmail.com</a>
+            <a href="https://wa.me/254742432583" target="_blank" rel="noopener noreferrer">☎ +254 742 432 583</a>
         </div>
-
 
         <!-- Social Media -->
         <div class="footer-column footer-social">
-
-            <h3>Connect With Us</h3>
-
-            <p>
-                Follow BITASEC and stay connected with our
-                technology, cybersecurity and innovation work.
-            </p>
-
+            <h3 data-i18n="footer_connect">Connect With Us</h3>
+            <p data-i18n="footer_connect_desc">Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.</p>
             <div class="social-links">
-
-                <a
-                    href="#"
-                    aria-label="Facebook"
-                    title="Facebook"
-                >
-                    f
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                    title="Instagram"
-                >
-                    ◎
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                >
-                    in
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="YouTube"
-                    title="YouTube"
-                >
-                    ▶
-                </a>
-
+                <a href="#" aria-label="Facebook" title="Facebook">f</a>
+                <a href="#" aria-label="Instagram" title="Instagram">◎</a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+                <a href="#" aria-label="YouTube" title="YouTube">▶</a>
             </div>
-
         </div>
-
     </div>
-
 
     <!-- Bottom -->
     <div class="footer-bottom">
-
         <div class="footer-container footer-bottom-inner">
-
-            <p>
-                © 2026 BITASEC. All rights reserved.
-            </p>
-
-            <p>
-                Technology • Security • Intelligence • Innovation
-            </p>
-
+            <p data-i18n="footer_rights">© 2026 BITASEC. All rights reserved.</p>
+            <p data-i18n="footer_motto">Technology • Security • Intelligence • Innovation</p>
         </div>
-
     </div>
-
 </footer>
 
+<!-- Embedded Translation Engine & UI Logic -->
+<script>
+    const siteTranslations = {
+        en: {
+            nav_home: "Home",
+            nav_about: "About",
+            nav_team: "Meet the Team",
+            nav_services: "Services",
+            nav_projects: "Projects",
+            nav_training: "Training",
+            nav_faq: "FAQ",
+            nav_contact: "Request a Service",
+            btn_req_training: "Request Training",
+            btn_contact_bitasec: "Contact BITASEC",
+            btn_enquire: "Enquire",
+            btn_view_services: "View Services",
+            label_suitable: "Suitable for:",
+            footer_company: "Company",
+            footer_resources: "Resources",
+            footer_contact: "Contact",
+            footer_connect: "Connect With Us",
+            footer_connect_desc: "Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.",
+            footer_rights: "© 2026 BITASEC. All rights reserved.",
+            footer_motto: "Technology • Security • Intelligence • Innovation",
+            training_text_238: "BITASEC TRAINING",
+            training_text_239: "Learn. Practice. Innovate.",
+            training_text_240: "Practical technology training designed to help students, professionals, organizations and technology enthusiasts build relevant digital skills.",
+            training_text_241: "TRAINING PROGRAMS",
+            training_text_242: "Build skills for the digital future",
+            training_text_243: "Cybersecurity",
+            training_text_244: "Learn cybersecurity fundamentals, network security, security monitoring, threat detection, Linux security and security awareness.",
+            training_text_245: "Students, IT professionals and organizations.",
+            training_text_246: "Networking",
+            training_text_247: "Practical training in networking fundamentals, IP addressing, routing, switching, VLANs, wireless networking and network security.",
+            training_text_248: "Students, technicians and IT professionals.",
+            training_text_249: "Programming & Software",
+            training_text_250: "Learn programming concepts, software development, web technologies, databases and practical application development.",
+            training_text_251: "Beginners, students and developers.",
+            training_text_252: "Artificial Intelligence",
+            training_text_253: "Introduction to artificial intelligence, machine learning concepts, AI applications, automation and responsible AI use.",
+            training_text_254: "Students, professionals and organizations.",
+            training_text_255: "IoT & Embedded Systems",
+            training_text_256: "Practical introduction to sensors, microcontrollers, connected devices, automation and IoT applications.",
+            training_text_257: "Students, innovators and technology enthusiasts.",
+            training_text_258: "Linux & IT Fundamentals",
+            training_text_259: "Learn Linux administration, command-line operations, system fundamentals, troubleshooting and essential IT skills.",
+            training_text_260: "Beginners, students and IT support professionals.",
+            training_text_261: "TRAINING FORMAT",
+            training_text_262: "Flexible learning options",
+            training_text_263: "Individual Training",
+            training_text_264: "Personalized training based on your current knowledge and learning objectives.",
+            training_text_265: "Group Training",
+            training_text_266: "Practical technology sessions for student groups, teams and professional communities.",
+            training_text_267: "Corporate Workshops",
+            training_text_268: "Customized technology and cybersecurity workshops for organizations and institutions.",
+            training_text_269: "Technology Conferences",
+            training_text_270: "Technology talks, seminars and awareness sessions covering emerging technologies and digital security.",
+            training_text_271: "PRACTICAL LEARNING",
+            training_text_272: "Learn by doing",
+            training_text_273: "BITASEC training can include practical laboratories, demonstrations, simulations and real-world projects.",
+            training_text_274: "Participants can apply what they learn using appropriate tools, technologies and development environments.",
+            training_text_275: "Training content can be adapted according to the learner's level, objectives and available technology environment.",
+            training_text_276: "START LEARNING",
+            training_text_277: "Ready to develop your technology skills?",
+            training_text_278: "Contact BITASEC and tell us the area you would like to learn or the training your organization requires."
+        },
+        fr: {
+            nav_home: "Accueil",
+            nav_about: "À propos",
+            nav_team: "Rencontrez l'équipe",
+            nav_services: "Services",
+            nav_projects: "Projets",
+            nav_training: "Formation",
+            nav_faq: "FAQ",
+            nav_contact: "Demander un service",
+            btn_req_training: "Demander une formation",
+            btn_contact_bitasec: "Contacter BITASEC",
+            btn_enquire: "Se renseigner",
+            btn_view_services: "Voir les services",
+            label_suitable: "Convient à :",
+            footer_company: "Entreprise",
+            footer_resources: "Ressources",
+            footer_contact: "Contact",
+            footer_connect: "Connectez-vous avec nous",
+            footer_connect_desc: "Suivez BITASEC et restez connecté à notre travail en matière de technologie, de cybersécurité et d'innovation.",
+            footer_rights: "© 2026 BITASEC. Tous droits réservés.",
+            footer_motto: "Technologie • Sécurité • Intelligence • Innovation",
+            training_text_238: "FORMATION BITASEC",
+            training_text_239: "Apprendre. Pratiquer. Innover.",
+            training_text_240: "Une formation technologique pratique conçue pour aider les étudiants, les professionnels, les organisations et les passionnés de technologie à acquérir des compétences numériques pertinentes.",
+            training_text_241: "PROGRAMMES DE FORMATION",
+            training_text_242: "Développer des compétences pour l'avenir numérique",
+            training_text_243: "Cybersécurité",
+            training_text_244: "Apprenez les fondamentaux de la cybersécurité, la sécurité des réseaux, la surveillance de la sécurité, la détection des menaces, la sécurité Linux et la sensibilisation à la sécurité.",
+            training_text_245: "Étudiants, professionnels de l'informatique et organisations.",
+            training_text_246: "Réseaux",
+            training_text_247: "Formation pratique aux fondamentaux des réseaux, adressage IP, routage, commoutation, VLAN, réseaux sans fil et sécurité réseau.",
+            training_text_248: "Étudiants, techniciens et professionnels de l'informatique.",
+            training_text_249: "Programmation et Logiciels",
+            training_text_250: "Apprenez les concepts de programmation, le développement de logiciels, les technologies Web, les bases de données et le développement d'applications pratiques.",
+            training_text_251: "Débutants, étudiants et développeurs.",
+            training_text_252: "Intelligence Artificielle",
+            training_text_253: "Introduction à l'intelligence artificielle, concepts d'apprentissage automatique, applications de l'IA, automatisation et utilisation responsable de l'IA.",
+            training_text_254: "Étudiants, professionnels et organisations.",
+            training_text_255: "IoT et Systèmes Embarqués",
+            training_text_256: "Introduction pratique aux capteurs, microcontrôleurs, appareils connectés, automatisation et applications IoT.",
+            training_text_257: "Étudiants, innovateurs et passionnés de technologie.",
+            training_text_258: "Linux et Fondamentaux IT",
+            training_text_259: "Apprenez l'administration Linux, les opérations en ligne de commande, les fondamentaux du système, le dépannage et les compétences informatiques essentielles.",
+            training_text_260: "Débutants, étudiants et professionnels du support informatique.",
+            training_text_261: "FORMAT DE FORMATION",
+            training_text_262: "Options d'apprentissage flexibles",
+            training_text_263: "Formation Individuelle",
+            training_text_264: "Formation personnalisée basée sur vos connaissances actuelles et vos objectifs d'apprentissage.",
+            training_text_265: "Formation en Groupe",
+            training_text_266: "Sessions technologiques pratiques pour des groupes d'étudiants, des équipes et des communautés professionnelles.",
+            training_text_267: "Ateliers d'Entreprise",
+            training_text_268: "Ateliers personnalisés de technologie et de cybersécurité pour les organisations et les institutions.",
+            training_text_269: "Conférences Technologiques",
+            training_text_270: "Conférences technologiques, séminaires et sessions de sensibilisation couvrant les technologies émergentes et la sécurité numérique.",
+            training_text_271: "APPRENTISSAGE PRATIQUE",
+            training_text_272: "Apprendre en faisant",
+            training_text_273: "La formation BITASEC peut inclure des laboratoires pratiques, des démonstrations, des simulations et des projets du monde réel.",
+            training_text_274: "Les participants peuvent appliquer ce qu'ils apprennent en utilisant des outils, des technologies et des environnements de développement appropriés.",
+            training_text_275: "Le contenu de la formation peut être adapté en fonction du niveau de l'apprenant, de ses objectifs et de son environnement technologique disponible.",
+            training_text_276: "COMMENCER À APPRENDRE",
+            training_text_277: "Prêt à développer vos compétences technologiques ?",
+            training_text_278: "Contactez BITASEC et dites-nous le domaine que vous souhaitez apprendre ou la formation requise par votre organisation."
+        },
+        es: {
+            nav_home: "Inicio",
+            nav_about: "Acerca de",
+            nav_team: "Conoce al Equipo",
+            nav_services: "Servicios",
+            nav_projects: "Proyectos",
+            nav_training: "Formación",
+            nav_faq: "Preguntas Frecuentes",
+            nav_contact: "Solicitar Servicio",
+            btn_req_training: "Solicitar Formación",
+            btn_contact_bitasec: "Contactar a BITASEC",
+            btn_enquire: "Consultar",
+            btn_view_services: "Ver Servicios",
+            label_suitable: "Adecuado para:",
+            footer_company: "Empresa",
+            footer_resources: "Recursos",
+            footer_contact: "Contacto",
+            footer_connect: "Conéctate con nosotros",
+            footer_connect_desc: "Sigue a BITASEC y mantente conectado con nuestro trabajo en tecnología, ciberseguridad e innovación.",
+            footer_rights: "© 2026 BITASEC. Todos los derechos reservados.",
+            footer_motto: "Tecnología • Seguridad • Inteligencia • Innovación",
+            training_text_238: "FORMACIÓN BITASEC",
+            training_text_239: "Aprende. Practica. Innova.",
+            training_text_240: "Formación tecnológica práctica diseñada para ayudar a estudiantes, profesionales, organizaciones y entusiastas de la tecnología a desarrollar habilidades digitales relevantes.",
+            training_text_241: "PROGRAMAS DE FORMACIÓN",
+            training_text_242: "Desarrolla habilidades para el futuro digital",
+            training_text_243: "Ciberseguridad",
+            training_text_244: "Aprende fundamentos de ciberseguridad, seguridad de redes, monitoreo de seguridad, detección de amenazas, seguridad en Linux y conciencia de seguridad.",
+            training_text_245: "Estudiantes, profesionales de TI y organizaciones.",
+            training_text_246: "Redes",
+            training_text_247: "Formación práctica en fundamentos de redes, direccionamiento IP, enrutamiento, conmutación, VLAN, redes inalámbricas y seguridad de redes.",
+            training_text_248: "Estudiantes, técnicos y profesionales de TI.",
+            training_text_249: "Programación y Software",
+            training_text_250: "Aprende conceptos de programación, desarrollo de software, tecnologías web, bases de datos y desarrollo de aplicaciones prácticas.",
+            training_text_251: "Principiantes, estudiantes y desarrolladores.",
+            training_text_252: "Inteligencia Artificial",
+            training_text_253: "Introducción a la inteligencia artificial, conceptos de aprendizaje automático, aplicaciones de IA, automatización y uso responsable de la IA.",
+            training_text_254: "Estudiantes, profesionales y organizaciones.",
+            training_text_255: "IoT y Sistemas Embebidos",
+            training_text_256: "Introducción práctica a sensores, microcontroladores, dispositivos conectados, automatización y aplicaciones de IoT.",
+            training_text_257: "Estudiantes, innovadores y entusiastas de la tecnología.",
+            training_text_258: "Linux y Fundamentos de TI",
+            training_text_259: "Aprende administración de Linux, operaciones de línea de comandos, fundamentos del sistema, resolución de problemas y habilidades esenciales de TI.",
+            training_text_260: "Principiantes, estudiantes y profesionales de soporte de TI.",
+            training_text_261: "FORMATO DE FORMACIÓN",
+            training_text_262: "Opciones de aprendizaje flexibles",
+            training_text_263: "Formación Individual",
+            training_text_264: "Formación personalizada basada en tus conocimientos actuales y objetivos de aprendizaje.",
+            training_text_265: "Formación en Grupo",
+            training_text_266: "Sesiones tecnológicas prácticas para grupos de estudiantes, equipos y comunidades profesionales.",
+            training_text_267: "Talleres Corporativos",
+            training_text_268: "Talleres personalizados de tecnología y ciberseguridad para organizaciones e instituciones.",
+            training_text_269: "Conferencias Tecnológicas",
+            training_text_270: "Charlas tecnológicas, seminarios y sesiones de concienciación sobre tecnologías emergentes y seguridad digital.",
+            training_text_271: "APRENDIZAJE PRÁCTICO",
+            training_text_272: "Aprender haciendo",
+            training_text_273: "La formación de BITASEC puede incluir laboratorios prácticos, demostraciones, simulaciones y proyectos del mundo real.",
+            training_text_274: "Los participantes pueden aplicar lo aprendido utilizando herramientas, tecnologías y entornos de desarrollo adecuados.",
+            training_text_275: "El contenido de la formación se puede adaptar según el nivel del alumno, sus objetivos y el entorno tecnológico disponible.",
+            training_text_276: "EMPIEZA A APRENDER",
+            training_text_277: "¿Listo para desarrollar tus habilidades tecnológicas?",
+            training_text_278: "Contacta a BITASEC y dinos el área que te gustaría aprender o la formación que requiere tu organización."
+        },
+        pt: {
+            nav_home: "Início",
+            nav_about: "Sobre",
+            nav_team: "Equipa",
+            nav_services: "Serviços",
+            nav_projects: "Projetos",
+            nav_training: "Formação",
+            nav_faq: "FAQ",
+            nav_contact: "Pedir Serviço",
+            btn_req_training: "Solicitar Formação",
+            btn_contact_bitasec: "Contactar BITASEC",
+            btn_enquire: "Consultar",
+            btn_view_services: "Ver Serviços",
+            label_suitable: "Adequado para:",
+            footer_company: "Empresa",
+            footer_resources: "Recursos",
+            footer_contact: "Contacto",
+            footer_connect: "Conecte-se Connosco",
+            footer_connect_desc: "Siga a BITASEC e mantenha-se ligado ao nosso trabalho em tecnologia, cibersegurança e inovação.",
+            footer_rights: "© 2026 BITASEC. Todos os direitos reservados.",
+            footer_motto: "Tecnologia • Segurança • Inteligência • Inovação",
+            training_text_238: "FORMAÇÃO BITASEC",
+            training_text_239: "Aprender. Praticar. Inovar.",
+            training_text_240: "Formação tecnológica prática concebida para ajudar estudantes, profissionais, organizações e entusiastas da tecnologia a desenvolver competências digitais relevantes.",
+            training_text_241: "PROGRAMAS DE FORMAÇÃO",
+            training_text_242: "Desenvolva competências para o futuro digital",
+            training_text_243: "Cibersegurança",
+            training_text_244: "Aprenda fundamentos de cibersegurança, segurança de redes, monitorização de segurança, deteção de ameaças, segurança Linux e consciencialização de segurança.",
+            training_text_245: "Estudantes, profissionais de TI e organizações.",
+            training_text_246: "Redes",
+            training_text_247: "Formação prática em fundamentos de redes, endereçamento IP, encaminhamento, comutação, VLANs, redes sem fios e segurança de redes.",
+            training_text_248: "Estudantes, técnicos e profissionais de TI.",
+            training_text_249: "Programação e Software",
+            training_text_250: "Aprenda conceitos de programação, desenvolvimento de software, tecnologias web, bases de dados e desenvolvimento prático de aplicações.",
+            training_text_251: "Iniciantes, estudantes e programadores.",
+            training_text_252: "Inteligência Artificial",
+            training_text_253: "Introdução à inteligência artificial, conceitos de aprendizagem automática, aplicações de IA, automação e uso responsável da IA.",
+            training_text_254: "Estudantes, profissionais e organizações.",
+            training_text_255: "IoT e Sistemas Embutidos",
+            training_text_256: "Introdução prática a sensores, microcontroladores, dispositivos conectados, automação e aplicações IoT.",
+            training_text_257: "Estudantes, inovadores e entusiastas da tecnologia.",
+            training_text_258: "Linux e Fundamentos de TI",
+            training_text_259: "Aprenda administração Linux, operações de linha de comandos, fundamentos de sistemas, resolução de problemas e competências essenciais de TI.",
+            training_text_260: "Iniciantes, estudantes e profissionais de suporte de TI.",
+            training_text_261: "FORMATO DE FORMAÇÃO",
+            training_text_262: "Opções de aprendizagem flexíveis",
+            training_text_263: "Formação Individual",
+            training_text_264: "Formação personalizada com base nos seus conhecimentos atuais e objetivos de aprendizagem.",
+            training_text_265: "Formação em Grupo",
+            training_text_266: "Sessões tecnológicas práticas para grupos de estudantes, equipas e comunidades profissionais.",
+            training_text_267: "Workshops Empresariais",
+            training_text_268: "Workshops personalizados de tecnologia e cibersegurança para organizações e instituições.",
+            training_text_269: "Conferências Tecnológicas",
+            training_text_270: "Palestras tecnológicas, seminários e sessões de consciencialização sobre tecnologias emergentes e segurança digital.",
+            training_text_271: "APRENDIZAGEM PRÁTICA",
+            training_text_272: "Aprender fazendo",
+            training_text_273: "A formação BITASEC pode incluir laboratórios práticos, demonstrações, simulações e projetos do mundo real.",
+            training_text_274: "Os participantes podem aplicar o que aprendem utilizando ferramentas, tecnologias e ambientes de desenvolvimento adequados.",
+            training_text_275: "O conteúdo da formação pode ser adaptado de acordo com o nível do formando, objetivos e ambiente tecnológico disponível.",
+            training_text_276: "COMEÇAR A APRENDER",
+            training_text_277: "Pronto para desenvolver as suas competências tecnológicas?",
+            training_text_278: "Contacte a BITASEC e indique-nos a área que gostaria de aprender ou a formação que a sua organização necessita."
+        },
+        sw: {
+            nav_home: "Nyumbani",
+            nav_about: "Kuhusu Sisi",
+            nav_team: "Kutana na Timu",
+            nav_services: "Huduma",
+            nav_projects: "Miradi",
+            nav_training: "Mafunzo",
+            nav_faq: "Maswali Yanayoulizwa",
+            nav_contact: "Omba Huduma",
+            btn_req_training: "Omba Mafunzo",
+            btn_contact_bitasec: "Wasiliana na BITASEC",
+            btn_enquire: "Uliza",
+            btn_view_services: "Tazama Huduma",
+            label_suitable: "Inafaa kwa:",
+            footer_company: "Kampuni",
+            footer_resources: "Rasilimali",
+            footer_contact: "Mawasiliano",
+            footer_connect: "Ungana Nasi",
+            footer_connect_desc: "Fuata BITASEC na uendelee kuunganishwa na kazi yetu ya teknolojia, usalama wa mtandao na uvumbuzi.",
+            footer_rights: "© 2026 BITASEC. Haki zote zimehifadhiwa.",
+            footer_motto: "Teknolojia • Usalama • Ujasusi • Uvumbuzi",
+            training_text_238: "MAFUNZO YA BITASEC",
+            training_text_239: "Jifunze. Fanya Mazoezi. Buni.",
+            training_text_240: "Mafunzo ya vitendo ya teknolojia yaliyoundwa kusaidia wanafunzi, wataalamu, mashirika na wapenzi wa teknolojia kujenga ujuzi unaofaa wa kidijitali.",
+            training_text_241: "PROGRAMU ZA MAFUNZO",
+            training_text_242: "Jenga ujuzi kwa ajili ya siku za usoni za kidijitali",
+            training_text_243: "Usalama wa Mtandao",
+            training_text_244: "Jifunze misingi ya usalama wa mtandao, usalama wa mawasiliano, ufuatiliaji wa usalama, ugunduzi wa vitisho, usalama wa Linux na uelewa wa usalama.",
+            training_text_245: "Wanafunzi, wataalamu wa IT na mashirika.",
+            training_text_246: "Mitandao",
+            training_text_247: "Mafunzo ya vitendo ya misingi ya mitandao, anwani za IP, uelekezaji, kubadilisha, VLANs, mitandao ya wireless na usalama wa mitandao.",
+            training_text_248: "Wanafunzi, mafundi na wataalamu wa IT.",
+            training_text_249: "Programu na Programu za Kompyuta",
+            training_text_250: "Jifunze dhana za programu, ukuzaji wa programu, teknolojia za wavuti, hifadhidata na ukuzaji wa programu za vitendo.",
+            training_text_251: "Wanaoanza, wanafunzi na watengenezaji programu.",
+            training_text_252: "Akili Bandia",
+            training_text_253: "Utangulizi wa akili bandia, dhana za kujifunza kwa mashine, matumizi ya AI, otomatiki na matumizi ya uwajibikaji ya AI.",
+            training_text_254: "Wanafunzi, wataalamu na mashirika.",
+            training_text_255: "IoT na Mifumo Iliyopachikwa",
+            training_text_256: "Utangulizi wa vitendo wa vitambuzi, vidhibiti vidogo, vifaa vilivyounganishwa, otomatiki na matumizi ya IoT.",
+            training_text_257: "Wanafunzi, wabunifu na wapenzi wa teknolojia.",
+            training_text_258: "Linux na Misingi ya IT",
+            training_text_259: "Jifunze usimamizi wa Linux, shughuli za mstari wa amri, misingi ya mfumo, utatuzi wa shida na ujuzi muhimu wa IT.",
+            training_text_260: "Wanaoanza, wanafunzi na wataalamu wa usaidizi wa IT.",
+            training_text_261: "MUUNDO WA MAFUNZO",
+            training_text_262: "Chaguo rahisi za kujifunza",
+            training_text_263: "Mafunzo ya Kibinafsi",
+            training_text_264: "Mafunzo yaliyobinafsishwa kulingana na ujuzi wako wa sasa na malengo ya kujifunza.",
+            training_text_265: "Mafunzo ya Kikundi",
+            training_text_266: "Vipindi vya vitendo vya teknolojia kwa vikundi vya wanafunzi, timu na jamii za kitaalamu.",
+            training_text_267: "Semina za Kampuni",
+            training_text_268: "Semina maalum za teknolojia na usalama wa mtandao kwa mashirika na taasisi.",
+            training_text_269: "Mikutano ya Teknolojia",
+            training_text_270: "Mazungumzo ya teknolojia, semina na vikao vya uhamasishaji vinavyohusu teknolojia zinazochipuka na usalama wa kidijitali.",
+            training_text_271: "KUJIFUNZA KWA VITENDO",
+            training_text_272: "Jifunze kwa kufanya",
+            training_text_273: "Mafunzo ya BITASEC yanaweza kujumuisha maabara za vitendo, maonyesho, uigaji na miradi ya ulimwengu halisi.",
+            training_text_274: "Washiriki wanaweza kutumia kile wanachojifunza kwa kutumia zana, teknolojia na mazingira sahihi ya ukuzaji.",
+            training_text_275: "Yaliyomo kwenye mafunzo yanaweza kubadilishwa kulingana na kiwango cha mwanafunzi, malengo na mazingira yanayopatikana ya teknolojia.",
+            training_text_276: "ANZA KUJIFUNZA",
+            training_text_277: "Uko tayari kuendeleza ujuzi wako wa teknolojia?",
+            training_text_278: "Wasiliana na BITASEC utuambie eneo ambalo ungependa kujifunza au mafunzo ambayo shirika lako linahitaji."
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Mobile Menu Toggle Logic
+        const menuToggle = document.querySelector(".mobile-menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+                menuToggle.setAttribute("aria-expanded", !expanded);
+            });
+        }
+
+        // Language Translation Handler
+        const languageSelector = document.getElementById("languageSelector");
+        
+        function applyTranslations(lang) {
+            const langData = siteTranslations[lang] || siteTranslations["en"];
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (langData[key]) {
+                    el.textContent = langData[key];
+                }
+            });
+        }
+
+        if (languageSelector) {
+            const savedLang = localStorage.getItem("bitasec_lang") || "en";
+            languageSelector.value = savedLang;
+            applyTranslations(savedLang);
+
+            languageSelector.addEventListener("change", (event) => {
+                const selectedLang = event.target.value;
+                localStorage.setItem("bitasec_lang", selectedLang);
+                applyTranslations(selectedLang);
+            });
+        }
+    });
+</script>
 
 </body>
 </html>

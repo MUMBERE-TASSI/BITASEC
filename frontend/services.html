@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -7,7 +6,23 @@
 <meta content="BITASEC technology and cybersecurity services." name="description"/>
 <title>Services | BITASEC</title>
 <link href="assets/css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<style>
+    /* Direct Language Switcher Styling & Fallback safety */
+    #languageSelector {
+        padding: 6px 12px;
+        border-radius: 4px;
+        background-color: var(--bg-card, #111827);
+        color: var(--text-color, #ffffff);
+        border: 1px solid var(--border-color, #374151);
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+    #languageSelector option {
+        background-color: #111827;
+        color: #ffffff;
+    }
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -28,62 +43,27 @@
 
         <div class="nav-links">
 
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" class="" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" class="active" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" class="" data-i18n="nav_projects">
-                Projects
-            </a>
-
-            <a href="training.html" class="" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" class="" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a
-                href="contact.html"
-                class="nav-cta"
-                data-i18n="nav_contact"
-            >
-                Request a Service
-            </a>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" class="" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" class="active" data-i18n="nav_services">Services</a>
+            <a href="projects.html" class="" data-i18n="nav_projects">Projects</a>
+            <a href="training.html" class="" data-i18n="nav_training">Training</a>
+            <a href="faq.html" class="" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Request a Service</a>
 
         </div>
 
-        <select
-            id="languageSelector"
-            aria-label="Language"
-        >
+        <select id="languageSelector" aria-label="Language">
             <option value="en">English</option>
             <option value="fr">Français</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
             <option value="sw">Kiswahili</option>
-            <option value="de">Deutsch</option>
-            <option value="ar">العربية</option>
-            <option value="zh">中文</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ja">日本語</option>
+            <option value="es">Español</option>
         </select>
 
     </nav>
 </header>
+
 <main>
 <section class="hero">
 <div class="container">
@@ -98,15 +78,12 @@
             BITASEC provides practical technology solutions.
         </p>
 <div class="actions">
-<a class="btn primary" data-i18n="nav_contact" href="contact.html">
-                Request a Service
-            </a>
-<a class="btn secondary" href="projects.html">
-                View Projects
-            </a>
+<a class="btn primary" data-i18n="nav_contact" href="contact.html">Request a Service</a>
+<a class="btn secondary" data-i18n="services_view_projects_btn" href="projects.html">View Projects</a>
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="container">
 <p class="eyebrow" data-i18n="services_text_209">OUR EXPERTISE</p>
@@ -119,9 +96,7 @@
                     security assessment, monitoring, threat detection,
                     security awareness and infrastructure protection.
                 </p>
-<a class="btn secondary" href="contact.html">
-                    Request Service
-                </a>
+<a class="btn secondary" data-i18n="services_request_service_btn" href="contact.html">Request Service</a>
 </article>
 <article class="card">
 <h3 data-i18n="services_text_213">Networking</h3>
@@ -130,9 +105,7 @@
                     networks including routing, switching, Wi-Fi,
                     servers and structured cabling.
                 </p>
-<a class="btn secondary" href="contact.html">
-                    Request Service
-                </a>
+<a class="btn secondary" data-i18n="services_request_service_btn" href="contact.html">Request Service</a>
 </article>
 <article class="card">
 <h3 data-i18n="services_text_215">Artificial Intelligence</h3>
@@ -141,9 +114,7 @@
                     automation, analytics, computer vision and
                     AI-powered business solutions.
                 </p>
-<a class="btn secondary" href="contact.html">
-                    Request Service
-                </a>
+<a class="btn secondary" data-i18n="services_request_service_btn" href="contact.html">Request Service</a>
 </article>
 <article class="card">
 <h3 data-i18n="services_text_217">IoT &amp; Smart Homes</h3>
@@ -152,9 +123,7 @@
                     smart devices, automation, monitoring systems
                     and intelligent home technologies.
                 </p>
-<a class="btn secondary" href="contact.html">
-                    Request Service
-                </a>
+<a class="btn secondary" data-i18n="services_request_service_btn" href="contact.html">Request Service</a>
 </article>
 <article class="card">
 <h3 data-i18n="services_text_219">Electrical Engineering</h3>
@@ -163,9 +132,7 @@
                     energy monitoring and intelligent electrical
                     technology solutions.
                 </p>
-<a class="btn secondary" href="contact.html">
-                    Request Service
-                </a>
+<a class="btn secondary" data-i18n="services_request_service_btn" href="contact.html">Request Service</a>
 </article>
 <article class="card">
 <h3 data-i18n="services_text_221">Training &amp; Conferences</h3>
@@ -174,49 +141,41 @@
                     and technology awareness programs in cybersecurity,
                     networking, programming, AI and IoT.
                 </p>
-<a class="btn secondary" href="contact.html">
-                    Request Training
-                </a>
+<a class="btn secondary" data-i18n="services_request_training_btn" href="contact.html">Request Training</a>
 </article>
 </div>
 </div>
 </section>
+
 <section class="section alt">
 <div class="container">
 <p class="eyebrow" data-i18n="services_text_223">HOW WE WORK</p>
 <h2 data-i18n="services_text_224">From challenge to solution</h2>
 <div class="solution-grid">
 <div>
-<h3 data-i18n="services_text_225">01. Understand</h3>
-<p data-i18n="services_text_226">
-                    We first understand your organization,
-                    technology environment and specific needs.
-                </p>
+<span data-i18n="services_step_1_num">1.</span> 
+<h3 data-i18n="services_text_225">Understand</h3>
+<p data-i18n="services_text_226">We first understand your organization, technology environment and specific needs.</p>
 </div>
 <div>
-<h3 data-i18n="services_text_227">02. Analyze</h3>
-<p data-i18n="services_text_228">
-                    We analyze the technical requirements,
-                    risks, resources and possible solutions.
-                </p>
+<span data-i18n="services_step_2_num">02.</span> 
+<h3 data-i18n="services_text_227">Analyze</h3>
+<p data-i18n="services_text_228">We analyze the technical requirements, risks, resources and possible solutions.</p>
 </div>
 <div>
-<h3 data-i18n="services_text_229">03. Design</h3>
-<p data-i18n="services_text_230">
-                    We develop a practical technology solution
-                    based on your requirements.
-                </p>
+<span data-i18n="services_step_3_num">03.</span> 
+<h3 data-i18n="services_text_229">Design</h3>
+<p data-i18n="services_text_230">We develop a practical technology solution based on your requirements.</p>
 </div>
 <div>
-<h3 data-i18n="services_text_231">04. Implement</h3>
-<p data-i18n="services_text_232">
-                    We implement, test and configure the solution
-                    for reliable operation.
-                </p>
+<span data-i18n="services_step_4_num">04.</span> 
+<h3 data-i18n="services_text_231">Implement</h3>
+<p data-i18n="services_text_232">We implement, test and configure the solution for reliable operation.</p>
 </div>
 </div>
 </div>
 </section>
+
 <section class="section contact">
 <div class="container">
 <p class="eyebrow" data-i18n="services_text_233">NEED A SOLUTION?</p>
@@ -226,183 +185,368 @@
             identify the appropriate technology solution.
         </p>
 <div class="actions">
-<a class="btn primary" data-i18n="nav_contact" href="contact.html">
-                Request a Service
-            </a>
-<a class="btn secondary" href="about.html">
-                Learn About BITASEC
-            </a>
+<a class="btn primary" data-i18n="nav_contact" href="contact.html">Request a Service</a>
+<a class="btn secondary" data-i18n="services_about_btn" href="about.html">Learn About BITASEC</a>
 </div>
 </div>
 </section>
 </main>
 
-<script src="assets/js/translations.js"></script>
-<script src="assets/js/page_translations.js"></script>
-<script src="assets/js/main.js"></script>
-
 <footer class="bitasec-footer">
-
     <div class="footer-glow"></div>
-
     <div class="footer-container">
-
-        <!-- Brand -->
         <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-                BITASEC
-            </a>
-
-            <p>
-                Best Information Technology Advanced Security
-            </p>
-
-            <p class="footer-tagline">
-                Technology. Security. Intelligence. Innovation.
-            </p>
-
+            <a href="index.html" class="footer-logo">BITASEC</a>
+            <p data-i18n="footer_brand_desc">Best Information Technology Advanced Security</p>
+            <p class="footer-tagline" data-i18n="footer_tagline">Technology. Security. Intelligence. Innovation.</p>
         </div>
-
-
-        <!-- Company -->
         <div class="footer-column">
-
-            <h3>Company</h3>
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" data-i18n="nav_projects">
-                Projects
-            </a>
-
+            <h3 data-i18n="footer_company_title">Company</h3>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
         </div>
-
-
-        <!-- Resources -->
         <div class="footer-column">
-
-            <h3>Resources</h3>
-
-            <a href="training.html" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a href="contact.html" data-i18n="nav_contact">
-                Request a Service
-            </a>
-
+            <h3 data-i18n="footer_resources_title">Resources</h3>
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" data-i18n="nav_contact">Request a Service</a>
         </div>
-
-
-        <!-- Contact -->
         <div class="footer-column footer-contact">
-
-            <h3>Contact</h3>
-
-            <a href="mailto:mumberedieumerci@gmail.com">
-                ✉ mumberedieumerci@gmail.com
-            </a>
-
-            <a
-                href="https://wa.me/254742432583"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ☎ +254 742 432 583
-            </a>
-
+            <h3 data-i18n="footer_contact_title">Contact</h3>
+            <a href="mailto:mumberedieumerci@gmail.com">✉ mumberedieumerci@gmail.com</a>
+            <a href="https://wa.me/254742432583" target="_blank" rel="noopener noreferrer">☎ +254 742 432 583</a>
         </div>
-
-
-        <!-- Social Media -->
         <div class="footer-column footer-social">
-
-            <h3>Connect With Us</h3>
-
-            <p>
-                Follow BITASEC and stay connected with our
-                technology, cybersecurity and innovation work.
-            </p>
-
+            <h3 data-i18n="footer_social_title">Connect With Us</h3>
+            <p data-i18n="footer_social_desc">Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.</p>
             <div class="social-links">
-
-                <a
-                    href="#"
-                    aria-label="Facebook"
-                    title="Facebook"
-                >
-                    f
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                    title="Instagram"
-                >
-                    ◎
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                >
-                    in
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="YouTube"
-                    title="YouTube"
-                >
-                    ▶
-                </a>
-
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">◎</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="YouTube">▶</a>
             </div>
-
         </div>
-
     </div>
-
-
-    <!-- Bottom -->
     <div class="footer-bottom">
-
         <div class="footer-container footer-bottom-inner">
-
-            <p>
-                © 2026 BITASEC. All rights reserved.
-            </p>
-
-            <p>
-                Technology • Security • Intelligence • Innovation
-            </p>
-
+            <p data-i18n="footer_copyright">© 2026 BITASEC. All rights reserved.</p>
+            <p data-i18n="footer_bottom_tagline">Technology • Security • Intelligence • Innovation</p>
         </div>
-
     </div>
-
 </footer>
 
+<!-- Embedded Translation Engine Script supporting exactly en, fr, sw, es -->
+<script>
+const siteTranslations = {
+    en: {
+        nav_home: "Home",
+        nav_about: "About",
+        nav_team: "Meet the Team",
+        nav_services: "Services",
+        nav_projects: "Projects",
+        nav_training: "Training",
+        nav_faq: "FAQ",
+        nav_contact: "Request a Service",
+        
+        services_text_206: "BITASEC SERVICES",
+        services_text_207: 'Technology solutions for <span>real-world needs.</span>',
+        services_text_208: "From cybersecurity and networking to artificial intelligence, IoT, electrical engineering and professional training, BITASEC provides practical technology solutions.",
+        services_view_projects_btn: "View Projects",
+        
+        services_text_209: "OUR EXPERTISE",
+        services_text_210: "What we offer",
+        
+        services_text_211: "Cybersecurity",
+        services_text_212: "Protect systems, networks and data through security assessment, monitoring, threat detection, security awareness and infrastructure protection.",
+        services_request_service_btn: "Request Service",
+        
+        services_text_213: "Networking",
+        services_text_214: "Design and deployment of LAN, WAN and wireless networks including routing, switching, Wi-Fi, servers and structured cabling.",
+        
+        services_text_215: "Artificial Intelligence",
+        services_text_216: "Develop and integrate intelligent applications, automation, analytics, computer vision and AI-powered business solutions.",
+        
+        services_text_217: "IoT & Smart Homes",
+        services_text_218: "Build connected environments using sensors, smart devices, automation, monitoring systems and intelligent home technologies.",
+        
+        services_text_219: "Electrical Engineering",
+        services_text_220: "Electrical systems, maintenance, automation, energy monitoring and intelligent electrical technology solutions.",
+        
+        services_text_221: "Training & Conferences",
+        services_text_222: "Professional training, workshops, conferences and technology awareness programs in cybersecurity, networking, programming, AI and IoT.",
+        services_request_training_btn: "Request Training",
+        
+        services_text_223: "HOW WE WORK",
+        services_text_224: "From challenge to solution",
+        services_step_1_num: "1.",
+        services_text_225: "Understand",
+        services_text_226: "We first understand your organization, technology environment and specific needs.",
+        services_step_2_num: "02.",
+        services_text_227: "Analyze",
+        services_text_228: "We analyze the technical requirements, risks, resources and possible solutions.",
+        services_step_3_num: "03.",
+        services_text_229: "Design",
+        services_text_230: "We develop a practical technology solution based on your requirements.",
+        services_step_4_num: "04.",
+        services_text_231: "Implement",
+        services_text_232: "We implement, test and configure the solution for reliable operation.",
+        
+        services_text_233: "NEED A SOLUTION?",
+        services_text_234: "Let's solve your technology challenge.",
+        services_text_235: "Tell us what you need and our team can help you identify the appropriate technology solution.",
+        services_about_btn: "Learn About BITASEC",
+        
+        footer_brand_desc: "Best Information Technology Advanced Security",
+        footer_tagline: "Technology. Security. Intelligence. Innovation.",
+        footer_company_title: "Company",
+        footer_resources_title: "Resources",
+        footer_contact_title: "Contact",
+        footer_social_title: "Connect With Us",
+        footer_social_desc: "Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.",
+        footer_copyright: "© 2026 BITASEC. All rights reserved.",
+        footer_bottom_tagline: "Technology • Security • Intelligence • Innovation"
+    },
+    fr: {
+        nav_home: "Accueil",
+        nav_about: "À propos",
+        nav_team: "Notre Équipe",
+        nav_services: "Services",
+        nav_projects: "Projets",
+        nav_training: "Formation",
+        nav_faq: "FAQ",
+        nav_contact: "Demander un Service",
+        
+        services_text_206: "SERVICES BITASEC",
+        services_text_207: 'Solutions technologiques pour <span>besoins réels.</span>',
+        services_text_208: "De la cybersécurité et des réseaux à l'intelligence artificielle, l'IoT, l'ingénierie électrique et la formation professionnelle, BITASEC propose des solutions technologiques pratiques.",
+        services_view_projects_btn: "Voir les Projets",
+        
+        services_text_209: "NOTRE EXPERTISE",
+        services_text_210: "Ce que nous offrons",
+        
+        services_text_211: "Cybersécurité",
+        services_text_212: "Protéger les systèmes, réseaux et données grâce à l'évaluation de la sécurité, la surveillance, la détection des menaces et la protection des infrastructures.",
+        services_request_service_btn: "Demander le Service",
+        
+        services_text_213: "Réseaux",
+        services_text_214: "Conception et déploiement de réseaux LAN, WAN et sans fil, incluant routage, commutation, Wi-Fi, serveurs et câblage structuré.",
+        
+        services_text_215: "Intelligence Artificielle",
+        services_text_216: "Développer et intégrer des applications intelligentes, l'automatisation, l'analytique, la vision par ordinateur et des solutions d'affaires propulsées par l'IA.",
+        
+        services_text_217: "IoT & Maison Intelligente",
+        services_text_218: "Construire des environnements connectés utilisant des capteurs, des appareils intelligents, l'automatisation et des technologies de maison intelligente.",
+        
+        services_text_219: "Génie Électrique",
+        services_text_220: "Systèmes électriques, maintenance, automatisation, surveillance énergétique et solutions technologiques électriques intelligentes.",
+        
+        services_text_221: "Formation & Conférences",
+        services_text_222: "Formations professionnelles, ateliers, conférences et programmes de sensibilisation technologique en cybersécurité, réseaux, programmation, IA et IoT.",
+        services_request_training_btn: "Demander une Formation",
+        
+        services_text_223: "COMMENT NOUS TRAVAILLONS",
+        services_text_224: "Du défi à la solution",
+        services_step_1_num: "1.",
+        services_text_225: "Comprendre",
+        services_text_226: "Nous comprenons d'abord votre organisation, votre environnement technologique et vos besoins spécifiques.",
+        services_step_2_num: "02.",
+        services_text_227: "Analyser",
+        services_text_228: "Nous analysons les exigences techniques, les risques, les ressources et les solutions possibles.",
+        services_step_3_num: "03.",
+        services_text_229: "Concevoir",
+        services_text_230: "Nous développons une solution technologique pratique basée sur vos exigences.",
+        services_step_4_num: "04.",
+        services_text_231: "Mettre en œuvre",
+        services_text_232: "Nous implémentons, testons et configurons la solution pour un fonctionnement fiable.",
+        
+        services_text_233: "BESOIN D'UNE SOLUTION ?",
+        services_text_234: "Résolvons votre défi technologique.",
+        services_text_235: "Dites-nous ce dont vous avez besoin et notre équipe vous aidera à identifier la solution technologique appropriée.",
+        services_about_btn: "En savoir plus sur BITASEC",
+        
+        footer_brand_desc: "Best Information Technology Advanced Security",
+        footer_tagline: "Technologie. Sécurité. Intelligence. Innovation.",
+        footer_company_title: "Entreprise",
+        footer_resources_title: "Ressources",
+        footer_contact_title: "Contact",
+        footer_social_title: "Restez Connectés",
+        footer_social_desc: "Suivez BITASEC et restez connecté à notre travail en technologie, cybersécurité et innovation.",
+        footer_copyright: "© 2026 BITASEC. Tous droits réservés.",
+        footer_bottom_tagline: "Technologie • Sécurité • Intelligence • Innovation"
+    },
+    sw: {
+        nav_home: "Nyumbani",
+        nav_about: "Kuhusu Sisi",
+        nav_team: "Kutana na Timu",
+        nav_services: "Huduma",
+        nav_projects: "Miradi",
+        nav_training: "Mafunzo",
+        nav_faq: "Maswali Yanayoulizwa Mara kwa Mara",
+        nav_contact: "Omba Huduma",
+        
+        services_text_206: "HUDUMA ZA BITASEC",
+        services_text_207: 'Suluhisho za kiteknolojia kwa ajili ya <span>mahitaji ya ulimwengu halisi.</span>',
+        services_text_208: "Kutoka kwa usalama wa mtandao na mawasiliano hadi akili bandia, IoT, uhandisi wa umeme na mafunzo ya kitaalamu, BITASEC inatoa suluhisho za vitendo za kiteknolojia.",
+        services_view_projects_btn: "Tazama Miradi",
+        
+        services_text_209: "UTAALAM WETU",
+        services_text_210: "Tunachotoa",
+        
+        services_text_211: "Usalama wa Mtandao (Cybersecurity)",
+        services_text_212: "Kulinda mifumo, mitandao na data kupitia tathmini ya usalama, ufuatiliaji, ugunduzi wa vitisho, uelewa wa usalama na ulinzi wa miundombinu.",
+        services_request_service_btn: "Omba Huduma",
+        
+        services_text_213: "Mitandao",
+        services_text_214: "Ubunifu na usambazaji wa mitandao ya LAN, WAN na isiyo na waya ikiwa ni pamoja na uelekezaji, kubadilisha, Wi-Fi, seva na nyaya zilizopangwa.",
+        
+        services_text_215: "Akili Bandia (AI)",
+        services_text_216: "Kuunda na kuunganisha programu tumizi zenye akili, otomatiki, uchanganuzi, maono ya kompyuta na suluhu za biashara zinazotumia AI.",
+        
+        services_text_217: "IoT & Nyumba Mahiri",
+        services_text_218: "Kujenga mazingira yaliyounganishwa kwa kutumia vitambuzi, vifaa mahiri, otomatiki, mifumo ya ufuatiliaji na teknolojia za nyumba mahiri.",
+        
+        services_text_219: "Uhandisi wa Umeme",
+        services_text_220: "Mifumo ya umeme, matengenezo, otomatiki, ufuatiliaji wa n الطاقة na suluhu za teknolojia ya umeme zenye akili.",
+        
+        services_text_221: "Mafunzo & Mikutano",
+        services_text_222: "Mafunzo ya kitaalamu, warsha, mikutano na programu za uhamasishaji wa kiteknolojia katika usalama wa mtandao, mitandao, programu, AI na IoT.",
+        services_request_training_btn: "Omba Mafunzo",
+        
+        services_text_223: "JINSI TUNAVYOFANYA KAZI",
+        services_text_224: "Kutoka kwa changamoto hadi suluhisho",
+        services_step_1_num: "1.",
+        services_text_225: "Kuelewa",
+        services_text_226: "Kwanza tunaelewa shirika lako, mazingira ya kiteknolojia na mahitaji yako maalum.",
+        services_step_2_num: "02.",
+        services_text_227: "Kuchambua",
+        services_text_228: "Tunachambua mahitaji ya kiufundi, hatari, rasilimali na suluhu zinazowezekana.",
+        services_step_3_num: "03.",
+        services_text_229: "Kusanifu",
+        services_text_230: "Tunatengeneza suluhisho la vitendo la kiteknolojia kulingana na mahitaji yako.",
+        services_step_4_num: "04.",
+        services_text_231: "Kutekeleza",
+        services_text_232: "Tunatekeleza, tunajaribu na tunasawazisha suluhisho kwa utendaji wa kuaminika.",
+        
+        services_text_233: "UNAHITAJI SULUHISHO?",
+        services_text_234: "Tutatue changamoto yako ya kiteknolojia.",
+        services_text_235: "Tuambie unachohitaji na timu yetu inaweza kukusaidia kutambua suluhisho sahihi la kiteknolojia.",
+        services_about_btn: "Jifunze Kuhusu BITASEC",
+        
+        footer_brand_desc: "Best Information Technology Advanced Security",
+        footer_tagline: "Teknolojia. Usalama. Akili. Ubunifu.",
+        footer_company_title: "Kampuni",
+        footer_resources_title: "Rasilimali",
+        footer_contact_title: "Wasiliana",
+        footer_social_title: "Ungana Nasi",
+        footer_social_desc: "Fuata BITASEC na ukae ukiwa umeunganishwa na kazi zetu za teknolojia, usalama wa mtandao na ubunifu.",
+        footer_copyright: "© 2026 BITASEC. Haki zote zimehifadhiwa.",
+        footer_bottom_tagline: "Teknolojia • Usalama • Akili • Ubunifu"
+    },
+    es: {
+        nav_home: "Inicio",
+        nav_about: "Acerca de",
+        nav_team: "Conoce al Equipo",
+        nav_services: "Servicios",
+        nav_projects: "Proyectos",
+        nav_training: "Capacitación",
+        nav_faq: "Preguntas Frecuentes",
+        nav_contact: "Solicitar un Servicio",
+        
+        services_text_206: "SERVICIOS BITASEC",
+        services_text_207: 'Soluciones tecnológicas para <span>necesidades del mundo real.</span>',
+        services_text_208: "Desde ciberseguridad y redes hasta inteligencia artificial, IoT, ingeniería eléctrica y capacitación profesional, BITASEC ofrece soluciones tecnológicas prácticas.",
+        services_view_projects_btn: "Ver Proyectos",
+        
+        services_text_209: "NUESTRA EXPERTIZ",
+        services_text_210: "Lo que ofrecemos",
+        
+        services_text_211: "Ciberseguridad",
+        services_text_212: "Proteja sistemas, redes y datos mediante evaluación de seguridad, monitoreo, detección de amenazas, concientización sobre seguridad y protección de infraestructura.",
+        services_request_service_btn: "Solicitar Servicio",
+        
+        services_text_213: "Redes",
+        services_text_214: "Diseño y despliegue de redes LAN, WAN e inalámbricas, incluyendo enrutamiento, conmutación, Wi-Fi, servidores y cableado estructurado.",
+        
+        services_text_215: "Inteligencia Artificial",
+        services_text_216: "Desarrolle e integre aplicaciones inteligentes, automatización, análisis, visión artificial y soluciones comerciales impulsadas por IA.",
+        
+        services_text_217: "IoT & Hogares Inteligentes",
+        services_text_218: "Construya entornos conectados utilizando sensores, dispositivos inteligentes, automatización, sistemas de monitoreo y tecnologías para hogares inteligentes.",
+        
+        services_text_219: "Ingeniería Eléctrica",
+        services_text_220: "Sistemas eléctricos, mantenimiento, automatización, monitoreo energético y soluciones tecnológicas eléctricas inteligentes.",
+        
+        services_text_221: "Capacitación y Conferencias",
+        services_text_222: "Capacitación profesional, talleres, conferencias y programas de concientización tecnológica en ciberseguridad, redes, programación, IA e IoT.",
+        services_request_training_btn: "Solicitar Capacitación",
+        
+        services_text_223: "CÓMO TRABAJAMOS",
+        services_text_224: "Del desafío a la solución",
+        services_step_1_num: "1.",
+        services_text_225: "Comprender",
+        services_text_226: "Primero entendemos su organización, su entorno tecnológico y sus necesidades específicas.",
+        services_step_2_num: "02.",
+        services_text_227: "Analizar",
+        services_text_228: "Analizamos los requisitos técnicos, riesgos, recursos y posibles soluciones.",
+        services_step_3_num: "03.",
+        services_text_229: "Diseñar",
+        services_text_230: "Desarrollamos una solución tecnológica práctica basada en sus requerimientos.",
+        services_step_4_num: "04.",
+        services_text_231: "Implementar",
+        services_text_232: "Implementamos, probamos y configuramos la solución para una operación confiable.",
+        
+        services_text_233: "¿NECESITA UNA SOLUCIÓN?",
+        services_text_234: "Resolvamos su desafío tecnológico.",
+        services_text_235: "Cuéntenos qué necesita y nuestro equipo le ayudará a identificar la solución tecnológica adecuada.",
+        services_about_btn: "Conozca sobre BITASEC",
+        
+        footer_brand_desc: "Best Information Technology Advanced Security",
+        footer_tagline: "Tecnología. Seguridad. Inteligencia. Innovación.",
+        footer_company_title: "Empresa",
+        footer_resources_title: "Recursos",
+        footer_contact_title: "Contacto",
+        footer_social_title: "Conéctate con Nosotros",
+        footer_social_desc: "Sigue a BITASEC y mantente conectado con nuestro trabajo en tecnología, ciberseguridad e innovación.",
+        footer_copyright: "© 2026 BITASEC. Todos los derechos reservados.",
+        footer_bottom_tagline: "Tecnología • Seguridad • Inteligencia • Innovación"
+    }
+};
 
+document.addEventListener("DOMContentLoaded", () => {
+    const selector = document.getElementById("languageSelector");
+    if (!selector) return;
+
+    // Check saved language or default to English
+    const savedLang = localStorage.getItem("bitasec_lang") || "en";
+    selector.value = savedLang;
+    switchLanguage(savedLang);
+
+    selector.addEventListener("change", (e) => {
+        const lang = e.target.value;
+        localStorage.setItem("bitasec_lang", lang);
+        switchLanguage(lang);
+    });
+});
+
+function switchLanguage(lang) {
+    const dict = siteTranslations[lang] || siteTranslations["en"];
+    const elements = document.querySelectorAll("[data-i18n]");
+
+    elements.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) {
+            // Use innerHTML to preserve spans or styling tags if present
+            el.innerHTML = dict[key];
+        }
+    });
+
+    document.documentElement.lang = lang;
+}
+</script>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

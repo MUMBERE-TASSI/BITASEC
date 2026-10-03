@@ -3,17 +3,410 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Contact BITASEC for cybersecurity, networking, AI, IoT, electrical engineering and technology training."
-    >
-
+    <meta name="description" content="Contact BITASEC for cybersecurity, networking, AI, IoT, electrical engineering and technology training.">
     <title>Contact | BITASEC</title>
-
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
+    <style>
+        /* Contact Page Professional Custom Enhancements */
+        .contact-hero {
+            position: relative;
+            padding: 60px 0 40px 0;
+            overflow: hidden;
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 50%);
+        }
+        .contact-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 14px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 20px;
+            color: #38bdf8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+        .contact-badge-dot {
+            width: 6px;
+            height: 6px;
+            background: #38bdf8;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #38bdf8;
+        }
+        .contact-hero-content h1 {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            line-height: 1.15;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .contact-hero-content h1 span {
+            color: #38bdf8;
+        }
+        .contact-hero-content p {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        /* Layout Grid */
+        .contact-section {
+            padding: 50px 0;
+        }
+        .contact-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-grid-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: start;
+        }
+        @media (max-width: 968px) {
+            .contact-grid-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Service Cards Grid */
+        .contact-service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .contact-service-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 18px;
+            transition: all 0.2s ease;
+        }
+        .contact-service-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-3px);
+            background: rgba(30, 41, 59, 0.8);
+        }
+        .service-icon {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .contact-service-card h3 {
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .contact-service-card p {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Form Wrapper */
+        .contact-form-wrapper {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+        }
+        .form-header {
+            margin-bottom: 25px;
+        }
+        .form-header span {
+            color: #38bdf8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+        .form-header h2 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 5px 0;
+        }
+        .form-header p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        /* Form Controls */
+        #contactForm label {
+            display: block;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            margin-top: 15px;
+        }
+        #contactForm input,
+        #contactForm select,
+        #contactForm textarea {
+            width: 100%;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        #contactForm input:focus,
+        #contactForm select:focus,
+        #contactForm textarea:focus {
+            border-color: #38bdf8;
+            background: rgba(30, 41, 59, 0.95);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        }
+        #contactForm select option {
+            background: #0f172a;
+            color: #ffffff;
+        }
+        .contact-submit {
+            display: block;
+            width: 100%;
+            margin-top: 25px;
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: #0f172a;
+            font-weight: 700;
+            padding: 13px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+        .contact-submit:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+        }
+        #formMessage {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        .form-success {
+            color: #38bdf8;
+        }
+
+        /* Direct Contact Section */
+        .direct-contact-section {
+            padding: 60px 0;
+            background: rgba(30, 41, 59, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .direct-contact-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .direct-contact-heading span {
+            color: #38bdf8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+        .direct-contact-heading h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin: 8px 0;
+        }
+        .direct-contact-heading p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        .direct-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .direct-contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .direct-contact-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 20px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .direct-contact-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-3px);
+            background: rgba(15, 23, 42, 1);
+        }
+        .direct-icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 10px;
+            color: #38bdf8;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .direct-contact-card span {
+            display: block;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .direct-contact-card strong {
+            display: block;
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin: 2px 0;
+        }
+        .direct-contact-card small {
+            color: #64748b;
+            font-size: 0.75rem;
+        }
+
+        /* Information Section */
+        .information-section {
+            padding: 70px 0;
+            text-align: center;
+        }
+        .information-section span {
+            color: #38bdf8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+        .information-section h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin: 8px 0 40px 0;
+        }
+        .information-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+        @media (max-width: 968px) {
+            .information-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .information-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 24px;
+            position: relative;
+        }
+        .information-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(56, 189, 248, 0.15);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        .information-card h3 {
+            color: #ffffff;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        .information-card p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Final CTA */
+        .contact-final-section {
+            position: relative;
+            padding: 70px 0;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+        }
+        .contact-final-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .contact-final-content span {
+            color: #38bdf8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+        }
+        .contact-final-content h2 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin: 10px 0 15px 0;
+        }
+        .contact-final-content p {
+            color: #94a3b8;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+        .final-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .final-button {
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .final-button.primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+        .final-button.primary:hover {
+            background: #0ea5e9;
+            transform: translateY(-2px);
+        }
+        .final-button.secondary {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+        .final-button.secondary:hover {
+            background: rgba(30, 41, 59, 1);
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 
 <body>
@@ -21,743 +414,450 @@
 <!-- =========================================================
      HEADER
      ========================================================= -->
-
 <header class="site-header">
-
     <nav class="navbar">
-
-        <a href="index.html" class="logo">
-            BITASEC
-        </a>
-
-        <button
-            class="mobile-menu-toggle"
-            type="button"
-            aria-label="Open menu"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
-
+        <a href="index.html" class="logo">BITASEC</a>
+        <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
         <div class="nav-links">
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" data-i18n="nav_projects">
-                Projects
-            </a>
-
-            <a href="training.html" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a
-                href="contact.html"
-                class="active"
-                data-i18n="nav_contact"
-            >
-                Request a Service
-            </a>
-
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" class="active" data-i18n="nav_contact">Request a Service</a>
         </div>
-
-        <select
-            id="languageSelector"
-            aria-label="Language"
-        >
+        <select id="languageSelector" aria-label="Language">
             <option value="en">English</option>
             <option value="fr">Français</option>
-            <option value="es">Español</option>
-            <option value="pt">Português</option>
             <option value="sw">Kiswahili</option>
-            <option value="de">Deutsch</option>
-            <option value="ar">العربية</option>
-            <option value="zh">中文</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ja">日本語</option>
         </select>
-
     </nav>
-
 </header>
-
 
 <!-- =========================================================
      HERO
      ========================================================= -->
-
 <section class="contact-hero">
-
-    <div class="contact-hero-grid"></div>
-
-    <div class="contact-hero-glow contact-glow-one"></div>
-    <div class="contact-hero-glow contact-glow-two"></div>
-
     <div class="contact-hero-content">
-
         <div class="contact-badge">
             <span class="contact-badge-dot"></span>
-
-            <span data-i18n="contact_text_035">
-                CONTACT BITASEC
-            </span>
+            <span data-i18n="contact_text_035">CONTACT BITASEC</span>
         </div>
-
         <h1 data-i18n="contact_text_036">
-            Let's build something
-            <span>secure.</span>
+            Let's build something <span>secure.</span>
         </h1>
-
         <p data-i18n="contact_text_037">
-            Tell us about your technology requirement,
-            project, training need or cybersecurity challenge.
+            Tell us about your technology requirement, project, training need or cybersecurity challenge.
         </p>
-
-        <div class="contact-hero-line"></div>
-
     </div>
-
 </section>
 
-
 <main>
-
 <!-- =========================================================
      CONTACT SECTION
      ========================================================= -->
-
 <section class="contact-section">
-
     <div class="contact-container">
-
-        <div class="contact-intro">
-
-            <span class="section-eyebrow" data-i18n="contact_text_038">
-                GET IN TOUCH
-            </span>
-
-            <h2 data-i18n="contact_text_039">
-                Tell us what you need.
-            </h2>
-
-            <p data-i18n="contact_text_040">
-                Complete the form and provide as much information
-                as possible about your requirement.
-            </p>
-
-
-            <div class="contact-service-grid">
-
-                <article class="contact-service-card">
-
-                    <div class="service-icon">
-                        🛡️
-                    </div>
-
-                    <h3 data-i18n="contact_text_041">
-                        Cybersecurity
-                    </h3>
-
-                    <p data-i18n="contact_text_042">
-                        Security assessment, monitoring,
-                        protection and consulting.
-                    </p>
-
-                </article>
-
-
-                <article class="contact-service-card">
-
-                    <div class="service-icon">
-                        🌐
-                    </div>
-
-                    <h3 data-i18n="contact_text_043">
-                        Networking
-                    </h3>
-
-                    <p data-i18n="contact_text_044">
-                        Network design, installation,
-                        configuration and support.
-                    </p>
-
-                </article>
-
-
-                <article class="contact-service-card">
-
-                    <div class="service-icon">
-                        🤖
-                    </div>
-
-                    <h3 data-i18n="contact_text_045">
-                        AI & IoT
-                    </h3>
-
-                    <p data-i18n="contact_text_046">
-                        Intelligent applications,
-                        automation and connected systems.
-                    </p>
-
-                </article>
-
-
-                <article class="contact-service-card">
-
-                    <div class="service-icon">
-                        🎓
-                    </div>
-
-                    <h3>
-                        Training
-                    </h3>
-
-                    <p data-i18n="contact_text_047">
-                        Professional technology training,
-                        workshops and conferences.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             FORM
-             ================================================= -->
-
-        <div class="contact-form-wrapper">
-
-            <div class="form-header">
-
-                <span>BITASEC</span>
-
-                <h2>
-                    Start a conversation
-                </h2>
-
-                <p>
-                    Tell us how we can help.
+        <div class="contact-grid-wrapper">
+            
+            <!-- Left Intro & Highlights -->
+            <div class="contact-intro">
+                <span class="section-eyebrow" data-i18n="contact_text_038" style="color: #38bdf8; font-size: 0.75rem; font-weight: 600; letter-spacing: 1.5px;">GET IN TOUCH</span>
+                <h2 data-i18n="contact_text_039" style="color: #ffffff; font-size: 1.8rem; margin: 8px 0 12px 0;">Tell us what you need.</h2>
+                <p data-i18n="contact_text_040" style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5;">
+                    Complete the form and provide as much information as possible about your requirement.
                 </p>
 
+                <div class="contact-service-grid">
+                    <article class="contact-service-card">
+                        <div class="service-icon">🛡️</div>
+                        <h3 data-i18n="contact_text_041">Cybersecurity</h3>
+                        <p data-i18n="contact_text_042">Security assessment, monitoring, protection and consulting.</p>
+                    </article>
+                    <article class="contact-service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3 data-i18n="contact_text_043">Networking</h3>
+                        <p data-i18n="contact_text_044">Network design, installation, configuration and support.</p>
+                    </article>
+                    <article class="contact-service-card">
+                        <div class="service-icon">🤖</div>
+                        <h3 data-i18n="contact_text_045">AI & IoT</h3>
+                        <p data-i18n="contact_text_046">Intelligent applications, automation and connected systems.</p>
+                    </article>
+                    <article class="contact-service-card">
+                        <div class="service-icon">🎓</div>
+                        <h3 data-i18n="contact_text_training_title">Training</h3>
+                        <p data-i18n="contact_text_047">Professional technology training, workshops and conferences.</p>
+                    </article>
+                </div>
             </div>
 
+            <!-- Right Form -->
+            <div class="contact-form-wrapper">
+                <div class="form-header">
+                    <span>BITASEC</span>
+                    <h2 data-i18n="contact_form_heading">Start a conversation</h2>
+                    <p data-i18n="contact_form_sub">Tell us how we can help.</p>
+                </div>
 
-            <form id="contactForm">
+                <form id="contactForm">
+                    <label for="name" data-i18n="contact_text_048">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter your full name" required>
 
-                <label
-                    for="name"
-                    data-i18n="contact_text_048"
-                >
-                    Full Name
-                </label>
+                    <label for="email" data-i18n="contact_text_049">Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" required>
 
-                <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Enter your full name"
-                    data-i18n-placeholder="placeholder_067"
-                    required
-                >
+                    <label for="company" data-i18n="contact_text_050">Company / Organization</label>
+                    <input id="company" name="company" type="text" placeholder="Company or organization">
 
+                    <label for="service" data-i18n="contact_text_051">Service Required</label>
+                    <select id="service" name="service" required>
+                        <option value="" data-i18n="contact_text_071">Select a service</option>
+                        <option value="Cybersecurity" data-i18n="contact_text_072">Cybersecurity</option>
+                        <option value="Networking" data-i18n="contact_text_073">Networking</option>
+                        <option value="IoT / Smart Home" data-i18n="contact_text_074">IoT / Smart Home</option>
+                        <option value="Artificial Intelligence" data-i18n="contact_text_075">Artificial Intelligence</option>
+                        <option value="Electrical Engineering" data-i18n="contact_text_076">Electrical Engineering</option>
+                        <option value="Training" data-i18n="contact_text_077">Training</option>
+                        <option value="Consulting" data-i18n="contact_text_078">Consulting</option>
+                        <option value="Other" data-i18n="contact_text_079">Other</option>
+                    </select>
 
-                <label
-                    for="email"
-                    data-i18n="contact_text_049"
-                >
-                    Email Address
-                </label>
+                    <label for="message" data-i18n="contact_text_052">Your Requirement</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe your requirement..." required></textarea>
 
-                <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    data-i18n-placeholder="placeholder_068"
-                    required
-                >
-
-
-                <label
-                    for="company"
-                    data-i18n="contact_text_050"
-                >
-                    Company / Organization
-                </label>
-
-                <input
-                    id="company"
-                    name="company"
-                    type="text"
-                    placeholder="Company or organization"
-                    data-i18n-placeholder="placeholder_069"
-                >
-
-
-                <label
-                    for="service"
-                    data-i18n="contact_text_051"
-                >
-                    Service Required
-                </label>
-
-                <select
-                    id="service"
-                    name="service"
-                    required
-                >
-
-                    <option
-                        value=""
-                        data-i18n="contact_text_071"
-                    >
-                        Select a service
-                    </option>
-
-                    <option
-                        value="Cybersecurity"
-                        data-i18n="contact_text_072"
-                    >
-                        Cybersecurity
-                    </option>
-
-                    <option
-                        value="Networking"
-                        data-i18n="contact_text_073"
-                    >
-                        Networking
-                    </option>
-
-                    <option
-                        value="IoT / Smart Home"
-                        data-i18n="contact_text_074"
-                    >
-                        IoT / Smart Home
-                    </option>
-
-                    <option
-                        value="Artificial Intelligence"
-                        data-i18n="contact_text_075"
-                    >
-                        Artificial Intelligence
-                    </option>
-
-                    <option
-                        value="Electrical Engineering"
-                        data-i18n="contact_text_076"
-                    >
-                        Electrical Engineering
-                    </option>
-
-                    <option
-                        value="Training"
-                        data-i18n="contact_text_077"
-                    >
-                        Training
-                    </option>
-
-                    <option
-                        value="Consulting"
-                        data-i18n="contact_text_078"
-                    >
-                        Consulting
-                    </option>
-
-                    <option
-                        value="Other"
-                        data-i18n="contact_text_079"
-                    >
-                        Other
-                    </option>
-
-                </select>
-
-
-                <label
-                    for="message"
-                    data-i18n="contact_text_052"
-                >
-                    Your Requirement
-                </label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="7"
-                    placeholder="Describe your requirement..."
-                    data-i18n-placeholder="placeholder_070"
-                    required
-                ></textarea>
-
-
-                <button
-                    type="submit"
-                    class="contact-submit"
-                    data-i18n="contact_text_053"
-                >
-                    Send Request
-                </button>
-
-                <div id="formMessage"></div>
-
-            </form>
+                    <button type="submit" class="contact-submit" data-i18n="contact_text_053">Send Request</button>
+                    <div id="formMessage"></div>
+                </form>
+            </div>
 
         </div>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      DIRECT CONTACT
      ========================================================= -->
-
 <section class="direct-contact-section">
-
     <div class="contact-container">
-
         <div class="direct-contact-heading">
-
-            <span class="section-eyebrow">
-                CONTACT DIRECTLY
-            </span>
-
-            <h2>
-                Prefer a direct conversation?
-            </h2>
-
-            <p>
-                You can contact BITASEC directly by email or WhatsApp.
-            </p>
-
+            <span data-i18n="direct_contact_eyebrow">CONTACT DIRECTLY</span>
+            <h2 data-i18n="direct_contact_title">Prefer a direct conversation?</h2>
+            <p data-i18n="direct_contact_desc">You can contact BITASEC directly by email or WhatsApp.</p>
         </div>
-
 
         <div class="direct-contact-grid">
-
-            <a
-                href="mailto:mumberedieumerci203@gmail.com"
-                class="direct-contact-card"
-            >
-
-                <div class="direct-icon">
-                    ✉
-                </div>
-
+            <a href="mailto:mumberedieumerci@gmail.com" class="direct-contact-card">
+                <div class="direct-icon">✉</div>
                 <div>
-                    <span>Email</span>
-
-                    <strong>
-                        mumberedieumerci203@gmail.com
-                    </strong>
-
-                    <small>
-                        Send us an email directly
-                    </small>
+                    <span data-i18n="email_label">Email</span>
+                    <strong>mumberedieumerci@gmail.com</strong>
+                    <small data-i18n="email_small">Send us an email directly</small>
                 </div>
-
             </a>
 
-
-            <a
-                href="https://wa.me/254742432583"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="direct-contact-card whatsapp-card"
-            >
-
-                <div class="direct-icon">
-                    ☎
-                </div>
-
+            <a href="https://wa.me/254742432583" target="_blank" rel="noopener noreferrer" class="direct-contact-card whatsapp-card">
+                <div class="direct-icon">☎</div>
                 <div>
-                    <span>WhatsApp</span>
-
-                    <strong>
-                        +254 742 432 583
-                    </strong>
-
-                    <small>
-                        Start a WhatsApp conversation
-                    </small>
+                    <span data-i18n="whatsapp_label">WhatsApp</span>
+                    <strong>+254 742 432 583</strong>
+                    <small data-i18n="whatsapp_small">Start a WhatsApp conversation</small>
                 </div>
-
             </a>
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      INFORMATION
      ========================================================= -->
-
 <section class="information-section">
-
     <div class="contact-container">
-
-        <span class="section-eyebrow">
-            BEFORE YOU SEND
-        </span>
-
-        <h2>
-            What information should you provide?
-        </h2>
-
+        <span data-i18n="before_send_eyebrow">BEFORE YOU SEND</span>
+        <h2 data-i18n="before_send_title">What information should you provide?</h2>
 
         <div class="information-grid">
-
             <article class="information-card">
-
-                <div class="information-number">
-                    01
-                </div>
-
-                <h3 data-i18n="contact_text_056">
-                    Your Goal
-                </h3>
-
-                <p data-i18n="contact_text_057">
-                    Explain what you want to achieve or the
-                    problem you want to solve.
-                </p>
-
+                <div class="information-number">01</div>
+                <h3 data-i18n="contact_text_056">Your Goal</h3>
+                <p data-i18n="contact_text_057">Explain what you want to achieve or the problem you want to solve.</p>
             </article>
 
-
             <article class="information-card">
-
-                <div class="information-number">
-                    02
-                </div>
-
-                <h3 data-i18n="contact_text_058">
-                    Your Environment
-                </h3>
-
-                <p data-i18n="contact_text_059">
-                    Mention relevant systems, devices, networks,
-                    software or infrastructure you already have.
-                </p>
-
+                <div class="information-number">02</div>
+                <h3 data-i18n="contact_text_058">Your Environment</h3>
+                <p data-i18n="contact_text_059">Mention relevant systems, devices, networks, software or infrastructure you already have.</p>
             </article>
 
-
             <article class="information-card">
-
-                <div class="information-number">
-                    03
-                </div>
-
-                <h3 data-i18n="contact_text_060">
-                    Your Requirements
-                </h3>
-
-                <p data-i18n="contact_text_061">
-                    Include important requirements, expected
-                    results and any technical constraints.
-                </p>
-
+                <div class="information-number">03</div>
+                <h3 data-i18n="contact_text_060">Your Requirements</h3>
+                <p data-i18n="contact_text_061">Include important requirements, expected results and any technical constraints.</p>
             </article>
-
         </div>
-
     </div>
-
 </section>
-
 
 <!-- =========================================================
      FINAL CTA
      ========================================================= -->
-
 <section class="contact-final-section">
-
-    <div class="contact-final-glow"></div>
-
     <div class="contact-final-content">
-
-        <span class="section-eyebrow">
-            BITASEC
-        </span>
-
-        <h2>
-            Technology. Security. Intelligence. Innovation.
-        </h2>
-
-        <p>
-            We help transform technology challenges into
-            practical solutions.
-        </p>
-
+        <span>BITASEC</span>
+        <h2>Technology. Security. Intelligence. Innovation.</h2>
+        <p data-i18n="final_cta_desc">We help transform technology challenges into practical solutions.</p>
         <div class="final-actions">
-
-            <a
-                href="mailto:mumberedieumerci203@gmail.com"
-                class="final-button primary"
-            >
-                Email BITASEC
-            </a>
-
-            <a
-                href="https://wa.me/254742432583"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="final-button secondary"
-            >
-                WhatsApp Us
-            </a>
-
+            <a href="mailto:mumberedieumerci@gmail.com" class="final-button primary" data-i18n="email_bitasec_btn">Email BITASEC</a>
+            <a href="https://wa.me/254742432583" target="_blank" rel="noopener noreferrer" class="final-button secondary" data-i18n="whatsapp_us_btn">WhatsApp Us</a>
         </div>
-
     </div>
-
 </section>
 
 </main>
 
-
 <!-- =========================================================
-     FOOTER
+     JAVASCRIPT & TRANSLATIONS
      ========================================================= -->
-
-
-
-
-<!-- =========================================================
-     JAVASCRIPT
-     ========================================================= -->
-
-<script src="assets/js/translations.js"></script>
-<script src="assets/js/page_translations.js"></script>
-<script src="assets/js/main.js"></script>
-
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+    const translations = {
+        en: {
+            nav_home: "Home",
+            nav_about: "About",
+            nav_team: "Meet the Team",
+            nav_services: "Services",
+            nav_projects: "Projects",
+            nav_training: "Training",
+            nav_faq: "FAQ",
+            nav_contact: "Request a Service",
+            contact_text_035: "CONTACT BITASEC",
+            contact_text_036: "Let's build something secure.",
+            contact_text_037: "Tell us about your technology requirement, project, training need or cybersecurity challenge.",
+            contact_text_038: "GET IN TOUCH",
+            contact_text_039: "Tell us what you need.",
+            contact_text_040: "Complete the form and provide as much information as possible about your requirement.",
+            contact_text_041: "Cybersecurity",
+            contact_text_042: "Security assessment, monitoring, protection and consulting.",
+            contact_text_043: "Networking",
+            contact_text_044: "Network design, installation, configuration and support.",
+            contact_text_045: "AI & IoT",
+            contact_text_046: "Intelligent applications, automation and connected systems.",
+            contact_text_training_title: "Training",
+            contact_text_047: "Professional technology training, workshops and conferences.",
+            contact_form_heading: "Start a conversation",
+            contact_form_sub: "Tell us how we can help.",
+            contact_text_048: "Full Name",
+            contact_text_049: "Email Address",
+            contact_text_050: "Company / Organization",
+            contact_text_051: "Service Required",
+            contact_text_052: "Your Requirement",
+            contact_text_053: "Send Request",
+            contact_text_071: "Select a service",
+            contact_text_072: "Cybersecurity",
+            contact_text_073: "Networking",
+            contact_text_074: "IoT / Smart Home",
+            contact_text_075: "Artificial Intelligence",
+            contact_text_076: "Electrical Engineering",
+            contact_text_077: "Training",
+            contact_text_078: "Consulting",
+            contact_text_079: "Other",
+            direct_contact_eyebrow: "CONTACT DIRECTLY",
+            direct_contact_title: "Prefer a direct conversation?",
+            direct_contact_desc: "You can contact BITASEC directly by email or WhatsApp.",
+            email_label: "Email",
+            email_small: "Send us an email directly",
+            whatsapp_label: "WhatsApp",
+            whatsapp_small: "Start a WhatsApp conversation",
+            before_send_eyebrow: "BEFORE YOU SEND",
+            before_send_title: "What information should you provide?",
+            contact_text_056: "Your Goal",
+            contact_text_057: "Explain what you want to achieve or the problem you want to solve.",
+            contact_text_058: "Your Environment",
+            contact_text_059: "Mention relevant systems, devices, networks, software or infrastructure you already have.",
+            contact_text_060: "Your Requirements",
+            contact_text_061: "Include important requirements, expected results and any technical constraints.",
+            final_cta_desc: "We help transform technology challenges into practical solutions.",
+            email_bitasec_btn: "Email BITASEC",
+            whatsapp_us_btn: "WhatsApp Us"
+        },
+        fr: {
+            nav_home: "Accueil",
+            nav_about: "À propos",
+            nav_team: "Notre Équipe",
+            nav_services: "Services",
+            nav_projects: "Projets",
+            nav_training: "Formation",
+            nav_faq: "FAQ",
+            nav_contact: "Demander un Service",
+            contact_text_035: "CONTACTEZ BITASEC",
+            contact_text_036: "Construisons quelque chose de sécurisé.",
+            contact_text_037: "Parlez-nous de vos besoins technologiques, projets, formations ou défis de cybersécurité.",
+            contact_text_038: "ENTRER EN CONTACT",
+            contact_text_039: "Dites-nous ce dont vous avez besoin.",
+            contact_text_040: "Remplissez le formulaire en fournissant autant de détails que possible sur vos exigences.",
+            contact_text_041: "Cybersécurité",
+            contact_text_042: "Évaluation de la sécurité, surveillance, protection et conseil.",
+            contact_text_043: "Réseaux",
+            contact_text_044: "Conception, installation, configuration et support réseau.",
+            contact_text_045: "IA & IoT",
+            contact_text_046: "Applications intelligentes, automatisation et systèmes connectés.",
+            contact_text_training_title: "Formation",
+            contact_text_047: "Formations technologiques professionnelles, ateliers et conférences.",
+            contact_form_heading: "Démarrer une conversation",
+            contact_form_sub: "Dites-nous comment nous pouvons vous aider.",
+            contact_text_048: "Nom Complet",
+            contact_text_049: "Adresse Email",
+            contact_text_050: "Entreprise / Organisation",
+            contact_text_051: "Service Demandé",
+            contact_text_052: "Votre Besoin",
+            contact_text_053: "Envoyer la Demande",
+            contact_text_071: "Sélectionnez un service",
+            contact_text_072: "Cybersécurité",
+            contact_text_073: "Réseaux",
+            contact_text_074: "IoT / Domotique",
+            contact_text_075: "Intelligence Artificielle",
+            contact_text_076: "Génie Électrique",
+            contact_text_077: "Formation",
+            contact_text_078: "Conseil",
+            contact_text_079: "Autre",
+            direct_contact_eyebrow: "CONTACT DIRECT",
+            direct_contact_title: "Vous préférez une conversation directe ?",
+            direct_contact_desc: "Vous pouvez contacter directement BITASEC par email ou WhatsApp.",
+            email_label: "Email",
+            email_small: "Envoyez-nous un email directement",
+            whatsapp_label: "WhatsApp",
+            whatsapp_small: "Démarrer une conversation WhatsApp",
+            before_send_eyebrow: "AVANT D'ENVOYER",
+            before_send_title: "Quelles informations devez-vous fournir ?",
+            contact_text_056: "Votre Objectif",
+            contact_text_057: "Expliquez ce que vous souhaitez accomplir ou le problème à résoudre.",
+            contact_text_058: "Votre Environnement",
+            contact_text_059: "Mentionnez les systèmes, appareils, réseaux ou logiciels pertinents.",
+            contact_text_060: "Vos Exigences",
+            contact_text_061: "Incluez les exigences importantes, les résultats attendus et les contraintes techniques.",
+            final_cta_desc: "Nous aidons à transformer les défis technologiques en solutions pratiques.",
+            email_bitasec_btn: "Envoyer un Email à BITASEC",
+            whatsapp_us_btn: "Écrivez-nous sur WhatsApp"
+        },
+        sw: {
+            nav_home: "Nyumbani",
+            nav_about: "Kuhusu Sisi",
+            nav_team: "Timu Yetu",
+            nav_services: "Huduma",
+            nav_projects: "Miradi",
+            nav_training: "Mafunzo",
+            nav_faq: "Maswali",
+            nav_contact: "Omba Huduma",
+            contact_text_035: "WASILIANA NA BITASEC",
+            contact_text_036: "Tujenge kitu kilicho salama.",
+            contact_text_037: "Tuambie kuhusu mahitaji yako ya kiteknolojia, mradi, mafunzo au changamoto ya usalama wa mtandao.",
+            contact_text_038: "WASILIANA NASI",
+            contact_text_039: "Tuambie unachohitaji.",
+            contact_text_040: "Jaza fomu na utoe maelezo ya kutosha iwezekanavyo kuhusu mahitaji yako.",
+            contact_text_041: "Usalama wa Mtandao",
+            contact_text_042: "Tathmini ya usalama, ufuatiliaji, ulinzi na ushauri.",
+            contact_text_043: "Mitandao",
+            contact_text_044: "Ubunifu wa mtandao, ufungaji, usanidi na usaidizi.",
+            contact_text_045: "AI na IoT",
+            contact_text_046: "Programu zenye akili, otomatiki na mifumo iliyounganishwa.",
+            contact_text_training_title: "Mafunzo",
+            contact_text_047: "Mafunzo ya kitaalamu ya kiteknolojia, warsha na mikutano.",
+            contact_form_heading: "Anzisha mazungumzo",
+            contact_form_sub: "Tuambie jinsi tunavyoweza kusaidia.",
+            contact_text_048: "Jina Kamili",
+            contact_text_049: "Barua Pepe",
+            contact_text_050: "Kampuni / Shirika",
+            contact_text_051: "Huduma Inayohitajika",
+            contact_text_052: "Hitaji Lako",
+            contact_text_053: "Tuma Ombi",
+            contact_text_071: "Chagua huduma",
+            contact_text_072: "Usalama wa Mtandao",
+            contact_text_073: "Mitandao",
+            contact_text_074: "IoT / Nyumba Mahiri",
+            contact_text_075: "Akili Bandia",
+            contact_text_076: "Uhandisi wa Umeme",
+            contact_text_077: "Mafunzo",
+            contact_text_078: "Ushauri",
+            contact_text_079: "Nyingine",
+            direct_contact_eyebrow: "WASILIANA MOJA KWA MOJA",
+            direct_contact_title: "Unapendelea mazungumzo ya moja kwa moja?",
+            direct_contact_desc: "Unaweza kuwasiliana na BITASEC moja kwa moja kupitia barua pepe au WhatsApp.",
+            email_label: "Barua Pepe",
+            email_small: "Tutumie barua pepe moja kwa moja",
+            whatsapp_label: "WhatsApp",
+            whatsapp_small: "Anzisha mazungumzo ya WhatsApp",
+            before_send_eyebrow: "KABLA HUJATUMA",
+            before_send_title: "Unapaswa kutoa taarifa gani?",
+            contact_text_056: "Lengo Lako",
+            contact_text_057: "Eleza unachotaka kufikia au tatizo unalotaka kutatua.",
+            contact_text_058: "Mazingira Yako",
+            contact_text_059: "Taja mifumo, vifaa, mitandao, programu au miundombinu uliyonayo.",
+            contact_text_060: "Mahitaji Yako",
+            contact_text_061: "Jumuisha mahitaji muhimu, matokeo yanayotarajiwa na vikwazo vyovyote vya kiufundi.",
+            final_cta_desc: "Tunasaidia kugeuza changamoto za kiteknolojia kuwa suluhisho za vitendo.",
+            email_bitasec_btn: "Tuma Barua Pepe BITASEC",
+            whatsapp_us_btn: "Wasiliana nasi WhatsApp"
+        }
+    };
 
-    /* Mobile menu */
+    document.addEventListener("DOMContentLoaded", function () {
+        /* Mobile menu toggle */
+        const menuButton = document.querySelector(".mobile-menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-    const menuButton =
-        document.querySelector(".mobile-menu-toggle");
-
-    const navLinks =
-        document.querySelector(".nav-links");
-
-    if (menuButton && navLinks) {
-
-        menuButton.addEventListener("click", function () {
-
-            const isOpen =
-                navLinks.classList.toggle("open");
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
-
-            menuButton.setAttribute(
-                "aria-label",
-                isOpen ? "Close menu" : "Open menu"
-            );
-
-            menuButton.textContent =
-                isOpen ? "✕" : "☰";
-
-        });
-
-
-        navLinks
-            .querySelectorAll("a")
-            .forEach(function (link) {
-
-                link.addEventListener("click", function () {
-
-                    navLinks.classList.remove("open");
-
-                    menuButton.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    menuButton.setAttribute(
-                        "aria-label",
-                        "Open menu"
-                    );
-
-                    menuButton.textContent = "☰";
-
-                });
-
+        if (menuButton && navLinks) {
+            menuButton.addEventListener("click", function () {
+                const isOpen = navLinks.classList.toggle("open");
+                menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                menuButton.textContent = isOpen ? "✕" : "☰";
             });
+            navLinks.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.textContent = "☰";
+                });
+            });
+        }
 
-    }
+        /* Language Switcher Logic */
+        const selector = document.getElementById("languageSelector");
+        const applyTranslations = (lang) => {
+            const dictionary = translations[lang] || translations['en'];
+            document.querySelectorAll("[data-i18n]").forEach(element => {
+                const key = element.getAttribute("data-i18n");
+                if (dictionary[key]) {
+                    element.textContent = dictionary[key];
+                }
+            });
+            localStorage.setItem("bitasec_current_lang", lang);
+        };
 
+        const initialLang = localStorage.getItem("bitasec_current_lang") || "en";
+        if (selector) {
+            selector.value = initialLang;
+            applyTranslations(initialLang);
+            selector.addEventListener("change", (e) => {
+                applyTranslations(e.target.value);
+            });
+        }
 
-    /* Direct email form */
+        /* Contact Form Submission Handler */
+        const form = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
 
-    const form =
-        document.getElementById("contactForm");
+        if (form) {
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const company = document.getElementById("company").value.trim();
+                const service = document.getElementById("service").value;
+                const message = document.getElementById("message").value.trim();
 
-    const formMessage =
-        document.getElementById("formMessage");
-
-    if (form) {
-
-        form.addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-            const name =
-                document.getElementById("name").value.trim();
-
-            const email =
-                document.getElementById("email").value.trim();
-
-            const company =
-                document.getElementById("company").value.trim();
-
-            const service =
-                document.getElementById("service").value;
-
-            const message =
-                document.getElementById("message").value.trim();
-
-
-            const subject =
-                encodeURIComponent(
-                    "BITASEC Service Request - " +
-                    service
-                );
-
-
-            const body =
-                encodeURIComponent(
+                const subject = encodeURIComponent("BITASEC Service Request - " + service);
+                const body = encodeURIComponent(
 `Hello BITASEC,
 
 I would like to request information about your services.
@@ -774,193 +874,66 @@ Thank you.
 ${name}`
                 );
 
+                if (formMessage) {
+                    formMessage.textContent = "Opening your email application...";
+                    formMessage.className = "form-success";
+                }
 
-            if (formMessage) {
-
-                formMessage.textContent =
-                    "Opening your email application...";
-
-                formMessage.className =
-                    "form-success";
-
-            }
-
-
-            window.location.href =
-                "mailto:mumberedieumerci203@gmail.com" +
-                "?subject=" + subject +
-                "&body=" + body;
-
-        });
-
-    }
-
-});
+                window.location.href = "mailto:mumberedieumerci@gmail.com?subject=" + subject + "&body=" + body;
+            });
+        }
+    });
 </script>
+<script src="assets/js/main.js"></script>
 
-
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 <footer class="bitasec-footer">
-
     <div class="footer-glow"></div>
-
     <div class="footer-container">
-
-        <!-- Brand -->
         <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-                BITASEC
-            </a>
-
-            <p>
-                Best Information Technology Advanced Security
-            </p>
-
-            <p class="footer-tagline">
-                Technology. Security. Intelligence. Innovation.
-            </p>
-
+            <a href="index.html" class="footer-logo">BITASEC</a>
+            <p>Best Information Technology Advanced Security</p>
+            <p class="footer-tagline">Technology. Security. Intelligence. Innovation.</p>
         </div>
-
-
-        <!-- Company -->
         <div class="footer-column">
-
             <h3>Company</h3>
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" data-i18n="nav_projects">
-                Projects
-            </a>
-
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
         </div>
-
-
-        <!-- Resources -->
         <div class="footer-column">
-
             <h3>Resources</h3>
-
-            <a href="training.html" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a href="contact.html" data-i18n="nav_contact">
-                Request a Service
-            </a>
-
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" data-i18n="nav_contact">Request a Service</a>
         </div>
-
-
-        <!-- Contact -->
         <div class="footer-column footer-contact">
-
             <h3>Contact</h3>
-
-            <a href="mailto:mumberedieumerci@gmail.com">
-                ✉ mumberedieumerci@gmail.com
-            </a>
-
-            <a
-                href="https://wa.me/254742432583"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ☎ +254 742 432 583
-            </a>
-
+            <a href="mailto:mumberedieumerci@gmail.com">✉ mumberedieumerci@gmail.com</a>
+            <a href="https://wa.me/254742432583" target="_blank" rel="noopener noreferrer">☎ +254 742 432 583</a>
         </div>
-
-
-        <!-- Social Media -->
         <div class="footer-column footer-social">
-
             <h3>Connect With Us</h3>
-
-            <p>
-                Follow BITASEC and stay connected with our
-                technology, cybersecurity and innovation work.
-            </p>
-
+            <p>Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.</p>
             <div class="social-links">
-
-                <a
-                    href="#"
-                    aria-label="Facebook"
-                    title="Facebook"
-                >
-                    f
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                    title="Instagram"
-                >
-                    ◎
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                >
-                    in
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="YouTube"
-                    title="YouTube"
-                >
-                    ▶
-                </a>
-
+                <a href="#" aria-label="Facebook" title="Facebook">f</a>
+                <a href="#" aria-label="Instagram" title="Instagram">◎</a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+                <a href="#" aria-label="YouTube" title="YouTube">▶</a>
             </div>
-
         </div>
-
     </div>
-
-
-    <!-- Bottom -->
     <div class="footer-bottom">
-
         <div class="footer-container footer-bottom-inner">
-
-            <p>
-                © 2026 BITASEC. All rights reserved.
-            </p>
-
-            <p>
-                Technology • Security • Intelligence • Innovation
-            </p>
-
+            <p>© 2026 BITASEC. All rights reserved.</p>
+            <p>Technology • Security • Intelligence • Innovation</p>
         </div>
-
     </div>
-
 </footer>
-
 
 </body>
 </html>

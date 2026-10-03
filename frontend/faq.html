@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -7,7 +6,44 @@
 <meta content="Frequently asked questions about BITASEC services, training and technology solutions." name="description"/>
 <title>FAQ | BITASEC</title>
 <link href="assets/css/style.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/footer.css">
+<link href="assets/css/footer.css" rel="stylesheet"/>
+
+<!-- Embedded CSS Enhancements & Effects -->
+<style>
+    /* Navbar Language Selector Styling */
+    .navbar select#languageSelector {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    .navbar select#languageSelector option {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .navbar select#languageSelector:hover,
+    .navbar select#languageSelector:focus {
+        border-color: #00d2ff;
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Smooth Transition Effects for Cards & Elements */
+    .btn, .card, .solution-grid > div, .nav-links a {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px -5px rgba(0, 210, 255, 0.15);
+    }
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -27,59 +63,22 @@
         </button>
 
         <div class="nav-links">
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" class="" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" class="" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" class="" data-i18n="nav_projects">
-                Projects
-            </a>
-
-            <a href="training.html" class="" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" class="active" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a
-                href="contact.html"
-                class="nav-cta"
-                data-i18n="nav_contact"
-            >
-                Request a Service
-            </a>
-
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" class="active" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Request a Service</a>
         </div>
 
-        <select
-            id="languageSelector"
-            aria-label="Language"
-        >
+        <select id="languageSelector" aria-label="Language">
             <option value="en">English</option>
             <option value="fr">Français</option>
             <option value="es">Español</option>
             <option value="pt">Português</option>
             <option value="sw">Kiswahili</option>
-            <option value="de">Deutsch</option>
-            <option value="ar">العربية</option>
-            <option value="zh">中文</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ja">日本語</option>
         </select>
 
     </nav>
@@ -246,10 +245,10 @@
             requirement.
         </p>
 <div class="actions">
-<a class="btn primary" href="contact.html">
+<a class="btn primary" href="contact.html" data-i18n="btn_contact_bitasec">
                 Contact BITASEC
             </a>
-<a class="btn secondary" href="services.html">
+<a class="btn secondary" href="services.html" data-i18n="btn_view_services">
                 View Services
             </a>
 </div>
@@ -257,172 +256,404 @@
 </section>
 </main>
 
-<script src="assets/js/translations.js"></script>
-<script src="assets/js/page_translations.js"></script>
-<script src="assets/js/main.js"></script>
-
 <footer class="bitasec-footer">
-
     <div class="footer-glow"></div>
 
     <div class="footer-container">
-
         <!-- Brand -->
         <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-                BITASEC
-            </a>
-
-            <p>
-                Best Information Technology Advanced Security
-            </p>
-
-            <p class="footer-tagline">
-                Technology. Security. Intelligence. Innovation.
-            </p>
-
+            <a href="index.html" class="footer-logo">BITASEC</a>
+            <p>Best Information Technology Advanced Security</p>
+            <p class="footer-tagline">Technology. Security. Intelligence. Innovation.</p>
         </div>
-
 
         <!-- Company -->
         <div class="footer-column">
-
-            <h3>Company</h3>
-
-            <a href="index.html" data-i18n="nav_home">
-                Home
-            </a>
-
-            <a href="about.html" data-i18n="nav_about">
-                About
-            </a>
-
-            <a href="team.html" data-i18n="nav_team">
-                Meet the Team
-            </a>
-
-            <a href="services.html" data-i18n="nav_services">
-                Services
-            </a>
-
-            <a href="projects.html" data-i18n="nav_projects">
-                Projects
-            </a>
-
+            <h3 data-i18n="footer_company">Company</h3>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="about.html" data-i18n="nav_about">About</a>
+            <a href="team.html" data-i18n="nav_team">Meet the Team</a>
+            <a href="services.html" data-i18n="nav_services">Services</a>
+            <a href="projects.html" data-i18n="nav_projects">Projects</a>
         </div>
-
 
         <!-- Resources -->
         <div class="footer-column">
-
-            <h3>Resources</h3>
-
-            <a href="training.html" data-i18n="nav_training">
-                Training
-            </a>
-
-            <a href="faq.html" data-i18n="nav_faq">
-                FAQ
-            </a>
-
-            <a href="contact.html" data-i18n="nav_contact">
-                Request a Service
-            </a>
-
+            <h3 data-i18n="footer_resources">Resources</h3>
+            <a href="training.html" data-i18n="nav_training">Training</a>
+            <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+            <a href="contact.html" data-i18n="nav_contact">Request a Service</a>
         </div>
-
 
         <!-- Contact -->
         <div class="footer-column footer-contact">
-
-            <h3>Contact</h3>
-
-            <a href="mailto:mumberedieumerci@gmail.com">
-                ✉ mumberedieumerci@gmail.com
-            </a>
-
-            <a
-                href="https://wa.me/254742432583"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ☎ +254 742 432 583
-            </a>
-
+            <h3 data-i18n="footer_contact">Contact</h3>
+            <a href="mailto:mumberedieumerci@gmail.com">✉ mumberedieumerci@gmail.com</a>
+            <a href="https://wa.me/254742432583" target="_blank" rel="noopener noreferrer">☎ +254 742 432 583</a>
         </div>
-
 
         <!-- Social Media -->
         <div class="footer-column footer-social">
-
-            <h3>Connect With Us</h3>
-
-            <p>
-                Follow BITASEC and stay connected with our
-                technology, cybersecurity and innovation work.
-            </p>
-
+            <h3 data-i18n="footer_connect">Connect With Us</h3>
+            <p data-i18n="footer_connect_desc">Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.</p>
             <div class="social-links">
-
-                <a
-                    href="#"
-                    aria-label="Facebook"
-                    title="Facebook"
-                >
-                    f
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                    title="Instagram"
-                >
-                    ◎
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
-                >
-                    in
-                </a>
-
-                <a
-                    href="#"
-                    aria-label="YouTube"
-                    title="YouTube"
-                >
-                    ▶
-                </a>
-
+                <a href="#" aria-label="Facebook" title="Facebook">f</a>
+                <a href="#" aria-label="Instagram" title="Instagram">◎</a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+                <a href="#" aria-label="YouTube" title="YouTube">▶</a>
             </div>
-
         </div>
-
     </div>
-
 
     <!-- Bottom -->
     <div class="footer-bottom">
-
         <div class="footer-container footer-bottom-inner">
-
-            <p>
-                © 2026 BITASEC. All rights reserved.
-            </p>
-
-            <p>
-                Technology • Security • Intelligence • Innovation
-            </p>
-
+            <p data-i18n="footer_rights">© 2026 BITASEC. All rights reserved.</p>
+            <p data-i18n="footer_motto">Technology • Security • Intelligence • Innovation</p>
         </div>
-
     </div>
-
 </footer>
 
+<!-- Embedded Translation Engine & UI Logic -->
+<script>
+    const siteTranslations = {
+        en: {
+            nav_home: "Home",
+            nav_about: "About",
+            nav_team: "Meet the Team",
+            nav_services: "Services",
+            nav_projects: "Projects",
+            nav_training: "Training",
+            nav_faq: "FAQ",
+            nav_contact: "Request a Service",
+            btn_contact_bitasec: "Contact BITASEC",
+            btn_view_services: "View Services",
+            footer_company: "Company",
+            footer_resources: "Resources",
+            footer_contact: "Contact",
+            footer_connect: "Connect With Us",
+            footer_connect_desc: "Follow BITASEC and stay connected with our technology, cybersecurity and innovation work.",
+            footer_rights: "© 2026 BITASEC. All rights reserved.",
+            footer_motto: "Technology • Security • Intelligence • Innovation",
+            faq_text_080: "FREQUENTLY ASKED QUESTIONS",
+            faq_text_081: "Questions? We can help.",
+            faq_text_082: "Find answers to common questions about BITASEC, our technology services, projects and training programs.",
+            faq_text_083: "GENERAL",
+            faq_text_084: "About BITASEC",
+            faq_text_085: "What is BITASEC?",
+            faq_text_086: "BITASEC is a technology solutions enterprise focused on cybersecurity, networking, artificial intelligence, IoT, electrical engineering and professional technology training.",
+            faq_text_087: "Who can use BITASEC services?",
+            faq_text_088: "BITASEC can work with individuals, businesses, institutions, organizations, students and technology teams.",
+            faq_text_089: "Where does BITASEC operate?",
+            faq_text_090: "BITASEC can provide technology services and training according to the location, requirements and technical scope of a project.",
+            faq_text_091: "SERVICES",
+            faq_text_092: "Technology services",
+            faq_text_093: "What cybersecurity services do you provide?",
+            faq_text_094: "Services may include security assessments, monitoring, threat detection, security awareness, infrastructure protection and cybersecurity consulting.",
+            faq_text_095: "Can BITASEC design a network?",
+            faq_text_096: "Yes. Networking services can include network planning, routing, switching, Wi-Fi, servers, structured cabling and network security.",
+            faq_text_097: "Do you provide IoT solutions?",
+            faq_text_098: "Yes. IoT solutions can involve sensors, connected devices, monitoring, automation and smart environments.",
+            faq_text_099: "Can BITASEC develop AI solutions?",
+            faq_text_100: "BITASEC can develop or integrate AI technologies for applications such as automation, analytics and intelligent systems.",
+            faq_text_101: "TRAINING",
+            faq_text_102: "Training questions",
+            faq_text_103: "Who can join BITASEC training?",
+            faq_text_104: "Training can be designed for beginners, students, IT professionals, organizations and technology enthusiasts.",
+            faq_text_105: "What subjects can I learn?",
+            faq_text_106: "Training areas include cybersecurity, networking, programming, Linux, artificial intelligence, IoT and IT fundamentals.",
+            faq_text_107: "Is the training practical?",
+            faq_text_108: "Training can include practical exercises, demonstrations, laboratories, simulations and technology projects.",
+            faq_text_109: "Can organizations request private training?",
+            faq_text_110: "Yes. Organizations can request customized workshops or training programs based on their technology requirements.",
+            faq_text_111: "PROJECTS",
+            faq_text_112: "Project questions",
+            faq_text_113: "Can I bring my own technology idea?",
+            faq_text_114: "Yes. You can describe your idea to BITASEC, and the requirements can be discussed to determine the appropriate technical approach.",
+            faq_text_115: "Can BITASEC work with an existing system?",
+            faq_text_116: "Existing technology environments can be reviewed and improvements or integrations can be discussed according to the project requirements.",
+            faq_text_117: "STILL HAVE QUESTIONS?",
+            faq_text_118: "Talk directly to BITASEC.",
+            faq_text_119: "If you cannot find the answer you need, send us your question or describe your technology requirement."
+        },
+        fr: {
+            nav_home: "Accueil",
+            nav_about: "À propos",
+            nav_team: "Rencontrez l'équipe",
+            nav_services: "Services",
+            nav_projects: "Projets",
+            nav_training: "Formation",
+            nav_faq: "FAQ",
+            nav_contact: "Demander un service",
+            btn_contact_bitasec: "Contacter BITASEC",
+            btn_view_services: "Voir les services",
+            footer_company: "Entreprise",
+            footer_resources: "Ressources",
+            footer_contact: "Contact",
+            footer_connect: "Connectez-vous avec nous",
+            footer_connect_desc: "Suivez BITASEC et restez connecté à notre travail en matière de technologie, de cybersécurité et d'innovation.",
+            footer_rights: "© 2026 BITASEC. Tous droits réservés.",
+            footer_motto: "Technologie • Sécurité • Intelligence • Innovation",
+            faq_text_080: "QUESTIONS FRÉQUEMMENT POSÉES",
+            faq_text_081: "Des questions ? Nous pouvons vous aider.",
+            faq_text_082: "Trouvez des réponses aux questions courantes sur BITASEC, nos services technologiques, projets et programmes de formation.",
+            faq_text_083: "GÉNÉRAL",
+            faq_text_084: "À propos de BITASEC",
+            faq_text_085: "Qu'est-ce que BITASEC ?",
+            faq_text_086: "BITASEC est une entreprise de solutions technologiques axée sur la cybersécurité, les réseaux, l'intelligence artificielle, l'IoT, l'ingénierie électrique et la formation technologique professionnelle.",
+            faq_text_087: "Qui peut utiliser les services de BITASEC ?",
+            faq_text_088: "BITASEC peut travailler avec des particuliers, des entreprises, des institutions, des organisations, des étudiants et des équipes technologiques.",
+            faq_text_089: "Où opère BITASEC ?",
+            faq_text_090: "BITASEC peut fournir des services technologiques et des formations en fonction de l'emplacement, des exigences et de la portée technique d'un projet.",
+            faq_text_091: "SERVICES",
+            faq_text_092: "Services technologiques",
+            faq_text_093: "Quels services de cybersécurité fournissez-vous ?",
+            faq_text_094: "Les services peuvent inclure des évaluations de sécurité, la surveillance, la détection des menaces, la sensibilisation à la sécurité, la protection des infrastructures et le conseil en cybersécurité.",
+            faq_text_095: "BITASEC peut-il concevoir un réseau ?",
+            faq_text_096: "Oui. Les services de réseau peuvent inclure la planification de réseau, le routage, la commutation, le Wi-Fi, les serveurs, le câblage structuré et la sécurité des réseaux.",
+            faq_text_097: "Fournissez-vous des solutions IoT ?",
+            faq_text_098: "Oui. Les solutions IoT peuvent impliquer des capteurs, des appareils connectés, la surveillance, l'automatisation et des environnements intelligents.",
+            faq_text_099: "BITASEC peut-il développer des solutions d'IA ?",
+            faq_text_100: "BITASEC peut développer ou intégrer des technologies d'IA pour des applications telles que l'automatisation, l'analytique et les systèmes intelligents.",
+            faq_text_101: "FORMATION",
+            faq_text_102: "Questions sur la formation",
+            faq_text_103: "Qui peut participer aux formations BITASEC ?",
+            faq_text_104: "La formation peut être conçue pour les débutants, les étudiants, les professionnels de l'informatique, les organisations et les passionnés de technologie.",
+            faq_text_105: "Quels sujets puis-je apprendre ?",
+            faq_text_106: "Les domaines de formation comprennent la cybersécurité, les réseaux, la programmation, Linux, l'intelligence artificielle, l'IoT et les fondamentaux de l'informatique.",
+            faq_text_107: "La formation est-elle pratique ?",
+            faq_text_108: "La formation peut inclure des exercices pratiques, des démonstrations, des laboratoires, des simulations et des projets technologiques.",
+            faq_text_109: "Les organisations peuvent-elles demander une formation privée ?",
+            faq_text_110: "Oui. Les organisations peuvent demander des ateliers ou des programmes de formation personnalisés en fonction de leurs exigences technologiques.",
+            faq_text_111: "PROJETS",
+            faq_text_112: "Questions sur les projets",
+            faq_text_113: "Puis-je apporter ma propre idée technologique ?",
+            faq_text_114: "Oui. Vous pouvez décrire votre idée à BITASEC, et les exigences peuvent être discutées pour déterminer l'approche technique appropriée.",
+            faq_text_115: "BITASEC peut-il travailler avec un système existant ?",
+            faq_text_116: "Les environnements technologiques existants peuvent être examinés et des améliorations ou intégrations peuvent être discutées en fonction des exigences du projet.",
+            faq_text_117: "VOUS AVEZ ENCORE DES QUESTIONS ?",
+            faq_text_118: "Parlez directement à BITASEC.",
+            faq_text_119: "Si vous ne trouvez pas la réponse dont vous avez besoin, envoyez-nous votre question ou décrivez votre exigence technologique."
+        },
+        es: {
+            nav_home: "Inicio",
+            nav_about: "Acerca de",
+            nav_team: "Conoce al Equipo",
+            nav_services: "Servicios",
+            nav_projects: "Proyectos",
+            nav_training: "Formación",
+            nav_faq: "Preguntas Frecuentes",
+            nav_contact: "Solicitar Servicio",
+            btn_contact_bitasec: "Contactar a BITASEC",
+            btn_view_services: "Ver Servicios",
+            footer_company: "Empresa",
+            footer_resources: "Recursos",
+            footer_contact: "Contacto",
+            footer_connect: "Conéctate con nosotros",
+            footer_connect_desc: "Sigue a BITASEC y mantente conectado con nuestro trabajo en tecnología, ciberseguridad e innovación.",
+            footer_rights: "© 2026 BITASEC. Todos los derechos reservados.",
+            footer_motto: "Tecnología • Seguridad • Inteligencia • Innovación",
+            faq_text_080: "PREGUNTAS FRECUENTES",
+            faq_text_081: "¿Preguntas? Podemos ayudar.",
+            faq_text_082: "Encuentra respuestas a preguntas comunes sobre BITASEC, nuestros servicios tecnológicos, proyectos y programas de formación.",
+            faq_text_083: "GENERAL",
+            faq_text_084: "Acerca de BITASEC",
+            faq_text_085: "¿Qué es BITASEC?",
+            faq_text_086: "BITASEC es una empresa de soluciones tecnológicas enfocada en ciberseguridad, redes, inteligencia artificial, IoT, ingeniería eléctrica y formación tecnológica profesional.",
+            faq_text_087: "¿Quién puede usar los servicios de BITASEC?",
+            faq_text_088: "BITASEC puede trabajar con individuos, empresas, instituciones, organizaciones, estudiantes y equipos de tecnología.",
+            faq_text_089: "¿Dónde opera BITASEC?",
+            faq_text_090: "BITASEC puede proporcionar servicios tecnológicos y formación según la ubicación, los requisitos y el alcance técnico de un proyecto.",
+            faq_text_091: "SERVICIOS",
+            faq_text_092: "Servicios tecnológicos",
+            faq_text_093: "¿Qué servicios de ciberseguridad proporcionan?",
+            faq_text_094: "Los servicios pueden incluir evaluaciones de seguridad, monitoreo, detección de amenazas, conciencia de seguridad, protección de infraestructura y consultoría en ciberseguridad.",
+            faq_text_095: "¿Puede BITASEC diseñar una red?",
+            faq_text_096: "Sí. Los servicios de redes pueden incluir planificación de redes, enrutamiento, conmutación, Wi-Fi, servidores, cableado estructurado y seguridad de redes.",
+            faq_text_097: "¿Proporcionan soluciones de IoT?",
+            faq_text_098: "Sí. Las soluciones de IoT pueden involucrar sensores, dispositivos conectados, monitoreo, automatización y entornos inteligentes.",
+            faq_text_099: "¿Puede BITASEC desarrollar soluciones de IA?",
+            faq_text_100: "BITASEC puede desarrollar o integrar tecnologías de IA para aplicaciones como automatización, análisis y sistemas inteligentes.",
+            faq_text_101: "FORMACIÓN",
+            faq_text_102: "Preguntas sobre formación",
+            faq_text_103: "¿Quién puede unirse a la formación de BITASEC?",
+            faq_text_104: "La formación puede diseñarse para principiantes, estudiantes, profesionales de TI, organizaciones y entusiastas de la tecnología.",
+            faq_text_105: "¿Qué temas puedo aprender?",
+            faq_text_106: "Las áreas de formación incluyen ciberseguridad, redes, programación, Linux, inteligencia artificial, IoT y fundamentos de TI.",
+            faq_text_107: "¿La formación es práctica?",
+            faq_text_108: "La formación puede incluir ejercicios prácticos, demostraciones, laboratorios, simulaciones y proyectos tecnológicos.",
+            faq_text_109: "¿Pueden las organizaciones solicitar formación privada?",
+            faq_text_110: "Sí. Las organizaciones pueden solicitar talleres o programas de formación personalizados según sus requisitos tecnológicos.",
+            faq_text_111: "PROYECTOS",
+            faq_text_112: "Preguntas sobre proyectos",
+            faq_text_113: "¿Puedo traer mi propia idea tecnológica?",
+            faq_text_114: "Sí. Puedes describir tu idea a BITASEC y se pueden discutir los requisitos para determinar el enfoque técnico adecuado.",
+            faq_text_115: "¿Puede BITASEC trabajar con un sistema existente?",
+            faq_text_116: "Los entornos tecnológicos existentes se pueden revisar y se pueden discutir mejoras o integraciones según los requisitos del proyecto.",
+            faq_text_117: "¿TODAVÍA TIENES PREGUNTAS?",
+            faq_text_118: "Habla directamente con BITASEC.",
+            faq_text_119: "Si no encuentras la respuesta que necesitas, envíanos tu pregunta o describe tu requisito tecnológico."
+        },
+        pt: {
+            nav_home: "Início",
+            nav_about: "Sobre",
+            nav_team: "Equipa",
+            nav_services: "Serviços",
+            nav_projects: "Projetos",
+            nav_training: "Formação",
+            nav_faq: "FAQ",
+            nav_contact: "Pedir Serviço",
+            btn_contact_bitasec: "Contactar BITASEC",
+            btn_view_services: "Ver Serviços",
+            footer_company: "Empresa",
+            footer_resources: "Recursos",
+            footer_contact: "Contacto",
+            footer_connect: "Conecte-se Connosco",
+            footer_connect_desc: "Siga a BITASEC e mantenha-se ligado ao nosso trabalho em tecnologia, cibersegurança e inovação.",
+            footer_rights: "© 2026 BITASEC. Todos os direitos reservados.",
+            footer_motto: "Tecnologia • Segurança • Inteligência • Inovação",
+            faq_text_080: "PERGUNTAS FREQUENTES",
+            faq_text_081: "Dúvidas? Podemos ajudar.",
+            faq_text_082: "Encontre respostas para perguntas comuns sobre a BITASEC, os nossos serviços tecnológicos, projetos e programas de formação.",
+            faq_text_083: "GERAL",
+            faq_text_084: "Sobre a BITASEC",
+            faq_text_085: "O que é a BITASEC?",
+            faq_text_086: "A BITASEC é uma empresa de soluções tecnológicas focada em cibersegurança, redes, inteligência artificial, IoT, engenharia elétrica e formação tecnológica profissional.",
+            faq_text_087: "Quem pode utilizar os serviços da BITASEC?",
+            faq_text_088: "A BITASEC pode trabalhar com indivíduos, empresas, instituições, organizações, estudantes e equipas de tecnologia.",
+            faq_text_089: "Onde opera a BITASEC?",
+            faq_text_090: "A BITASEC pode fornecer serviços tecnológicos e formação de acordo com a localização, os requisitos e o âmbito técnico de um projeto.",
+            faq_text_091: "SERVIÇOS",
+            faq_text_092: "Serviços tecnológicos",
+            faq_text_093: "Que serviços de cibersegurança fornecem?",
+            faq_text_094: "Os serviços podem incluir avaliações de segurança, monitorização, deteção de ameaças, consciencialização de segurança, proteção de infraestruturas e consultoria em cibersegurança.",
+            faq_text_095: "A BITASEC pode desenhar uma rede?",
+            faq_text_096: "Sim. Os serviços de redes podem incluir planeamento de redes, encaminhamento, comutação, Wi-Fi, servidores, cablagem estruturada e segurança de redes.",
+            faq_text_097: "Fornecem soluções de IoT?",
+            faq_text_098: "Sim. As soluções de IoT podem envolver sensores, dispositivos conectados, monitorização, automação e ambientes inteligentes.",
+            faq_text_099: "A BITASEC pode desenvolver soluções de IA?",
+            faq_text_100: "A BITASEC pode desenvolver ou integrar tecnologias de IA para aplicações como automação, analítica e sistemas inteligentes.",
+            faq_text_101: "FORMAÇÃO",
+            faq_text_102: "Perguntas sobre formação",
+            faq_text_103: "Quem pode participar na formação da BITASEC?",
+            faq_text_104: "A formação pode ser concebida para iniciantes, estudantes, profissionais de TI, organizações e entusiastas da tecnologia.",
+            faq_text_105: "Que assuntos posso aprender?",
+            faq_text_106: "As áreas de formação incluem cibersegurança, redes, programação, Linux, inteligência artificial, IoT e fundamentos de TI.",
+            faq_text_107: "A formação é prática?",
+            faq_text_108: "A formação pode incluir exercícios práticos, demonstrações, laboratórios, simulações e projetos tecnológicos.",
+            faq_text_109: "As organizações podem solicitar formação privada?",
+            faq_text_110: "Sim. As organizações podem solicitar workshops ou programas de formação personalizados com base nos seus requisitos tecnológicos.",
+            faq_text_111: "PROJETOS",
+            faq_text_112: "Perguntas sobre projetos",
+            faq_text_113: "Posso trazer a minha própria ideia tecnológica?",
+            faq_text_114: "Sim. Pode descrever a sua ideia à BITASEC e os requisitos podem ser discutidos para determinar a abordagem técnica adequada.",
+            faq_text_115: "A BITASEC pode trabalhar com um sistema existente?",
+            faq_text_116: "Os ambientes tecnológicos existentes podem ser revistos e melhorias ou integrações podem ser discutidas de acordo com os requisitos do projeto.",
+            faq_text_117: "AINDA TEM DÚVIDAS?",
+            faq_text_118: "Fale diretamente com a BITASEC.",
+            faq_text_119: "Se não encontrar a resposta de que precisa, envie-nos a sua pergunta ou descreva o seu requisito tecnológico."
+        },
+        sw: {
+            nav_home: "Nyumbani",
+            nav_about: "Kuhusu Sisi",
+            nav_team: "Kutana na Timu",
+            nav_services: "Huduma",
+            nav_projects: "Miradi",
+            nav_training: "Mafunzo",
+            nav_faq: "Maswali Yanayoulizwa",
+            nav_contact: "Omba Huduma",
+            btn_contact_bitasec: "Wasiliana na BITASEC",
+            btn_view_services: "Tazama Huduma",
+            footer_company: "Kampuni",
+            footer_resources: "Rasilimali",
+            footer_contact: "Mawasiliano",
+            footer_connect: "Ungana Nasi",
+            footer_connect_desc: "Fuata BITASEC na uendelee kuunganishwa na kazi yetu ya teknolojia, usalama wa mtandao na uvumbuzi.",
+            footer_rights: "© 2026 BITASEC. Haki zote zimehifadhiwa.",
+            footer_motto: "Teknolojia • Usalama • Ujasusi • Uvumbuzi",
+            faq_text_080: "MASWALI YANAYOULIZWA MARA KWA MARA",
+            faq_text_081: "Una maswali? Tunaweza kusaidia.",
+            faq_text_082: "Pata majibu ya maswali ya kawaida kuhusu BITASEC, huduma zetu za teknolojia, miradi na programu za mafunzo.",
+            faq_text_083: "KWA UJUMLA",
+            faq_text_084: "Kuhusu BITASEC",
+            faq_text_085: "BITASEC ni nini?",
+            faq_text_086: "BITASEC ni kampuni ya suluhu za teknolojia inayolenga usalama wa mtandao, mitandao, akili bandia, IoT, uhandisi wa umeme na mafunzo ya kitaalamu ya teknolojia.",
+            faq_text_087: "Nani anayeweza kutumia huduma za BITASEC?",
+            faq_text_088: "BITASEC inaweza kufanya kazi na watu binafsi, biashara, taasisi, mashirika, wanafunzi na timu za teknolojia.",
+            faq_text_089: "BITASEC inafanya kazi wapi?",
+            faq_text_090: "BITASEC inaweza kutoa huduma za teknolojia na mafunzo kulingana na eneo, mahitaji na wigo wa kiufundi wa mradi.",
+            faq_text_091: "HUDUMA",
+            faq_text_092: "Huduma za teknolojia",
+            faq_text_093: "Unatoa huduma gani za usalama wa mtandao?",
+            faq_text_094: "Huduma zinaweza kujumuisha tathmini za usalama, ufuatiliaji, ugunduzi wa vitisho, uelewa wa usalama, ulinzi wa miundombinu na ushauri wa usalama wa mtandao.",
+            faq_text_095: "Je, BITASEC inaweza kuunda mtandao?",
+            faq_text_096: "Ndiyo. Huduma za mtandao zinaweza kujumuisha upangaji wa mtandao, uelekezaji, kubadilisha, Wi-Fi, seva, nyaya zilizopangwa na usalama wa mitandao.",
+            faq_text_097: "Je, unatoa suluhu za IoT?",
+            faq_text_098: "Ndiyo. Suluhu za IoT zinaweza kuhusisha vitambuzi, vifaa vilivyounganishwa, ufuatiliaji, otomatiki na mazingira mahiri.",
+            faq_text_099: "Je, BITASEC inaweza kutengeneza suluhu za AI?",
+            faq_text_100: "BITASEC inaweza kutengeneza au kuunganishwa na teknolojia za AI kwa matumizi kama vile otomatiki, uchambuzi na mifumo ya akili.",
+            faq_text_101: "MAFUNZO",
+            faq_text_102: "Maswali ya mafunzo",
+            faq_text_103: "Nani anayeweza kujiunga na mafunzo ya BITASEC?",
+            faq_text_104: "Mafunzo yanaweza kuundwa kwa ajili ya wanaoanza, wanafunzi, wataalamu wa IT, mashirika na wapenzi wa teknolojia.",
+            faq_text_105: "Ninaweza kujifunza masomo gani?",
+            faq_text_106: "Maeneo ya mafunzo yanajumuisha usalama wa mtandao, mitandao, programu, Linux, akili bandia, IoT na misingi ya IT.",
+            faq_text_107: "Je, mafunzo ni ya vitendo?",
+            faq_text_108: "Mafunzo yanaweza kujumuisha mazoezi ya vitendo, maonyesho, maabara, uigaji na miradi ya teknolojia.",
+            faq_text_109: "Je, mashirika yanaweza kuomba mafunzo ya kibinafsi?",
+            faq_text_110: "Ndiyo. Mashirika yanaweza kuomba semina maalum au programu za mafunzo kulingana na mahitaji yao ya teknolojia.",
+            faq_text_111: "MIRADI",
+            faq_text_112: "Maswali ya mradi",
+            faq_text_113: "Je, ninaweza kuleta wazo langu mwenyewe la teknolojia?",
+            faq_text_114: "Ndiyo. Unaweza kuelezea wazo lako kwa BITASEC, na mahitaji yanaweza kujadiliwa ili kubaini mtazamo sahihi wa kiufundi.",
+            faq_text_115: "Je, BITASEC inaweza kufanya kazi na mfumo uliopo?",
+            faq_text_116: "Mazingira yaliyopo ya teknolojia yanaweza kukaguliwa na maboresho au miunganisho inaweza kujadiliwa kulingana na mahitaji ya mradi.",
+            faq_text_117: "BADO UNA MASWALI?",
+            faq_text_118: "Zungumza moja kwa moja na BITASEC.",
+            faq_text_119: "Ikiwa huwezi kupata jibu unalohitaji, tutumie swali lako au ueleze hitaji lako la teknolojia."
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Mobile Menu Toggle Logic
+        const menuToggle = document.querySelector(".mobile-menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+                menuToggle.setAttribute("aria-expanded", !expanded);
+            });
+        }
+
+        // Language Translation Handler
+        const languageSelector = document.getElementById("languageSelector");
+        
+        function applyTranslations(lang) {
+            const langData = siteTranslations[lang] || siteTranslations["en"];
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (langData[key]) {
+                    el.textContent = langData[key];
+                }
+            });
+        }
+
+        if (languageSelector) {
+            const savedLang = localStorage.getItem("bitasec_lang") || "en";
+            languageSelector.value = savedLang;
+            applyTranslations(savedLang);
+
+            languageSelector.addEventListener("change", (event) => {
+                const selectedLang = event.target.value;
+                localStorage.setItem("bitasec_lang", selectedLang);
+                applyTranslations(selectedLang);
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
