@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bitasec.mumberedieumerci203.workers.dev/sitemap.xml
