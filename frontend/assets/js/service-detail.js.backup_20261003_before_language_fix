@@ -1,0 +1,933 @@
+/* =========================================================
+   BITASEC SERVICE DETAIL PAGE
+   Multilingual service system
+========================================================= */
+
+(function () {
+
+    const serviceData = {
+
+        cybersecurity: {
+            icon: "🛡️",
+
+            title: {
+                en: "Cybersecurity",
+                fr: "Cybersécurité",
+                es: "Ciberseguridad",
+                pt: "Cibersegurança",
+                sw: "Usalama wa Mtandao",
+                de: "Cybersicherheit",
+                ar: "الأمن السيبراني",
+                zh: "网络安全",
+                hi: "साइबर सुरक्षा",
+                ja: "サイバーセキュリティ"
+            },
+
+            description: {
+                en: "Protect your digital environment with security monitoring, threat detection, vulnerability assessment and practical cybersecurity solutions.",
+                fr: "Protégez votre environnement numérique grâce à la surveillance de sécurité, la détection des menaces, l’évaluation des vulnérabilités et des solutions de cybersécurité pratiques.",
+                es: "Proteja su entorno digital mediante monitoreo de seguridad, detección de amenazas, evaluación de vulnerabilidades y soluciones prácticas de ciberseguridad.",
+                pt: "Proteja seu ambiente digital com monitoramento de segurança, detecção de ameaças, avaliação de vulnerabilidades e soluções práticas de cibersegurança.",
+                sw: "Linda mazingira yako ya kidijitali kwa ufuatiliaji wa usalama, ugunduzi wa vitisho, tathmini ya udhaifu na suluhisho za usalama wa mtandao.",
+                de: "Schützen Sie Ihre digitale Umgebung mit Sicherheitsüberwachung, Bedrohungserkennung, Schwachstellenbewertungen und praktischen Cybersicherheitslösungen.",
+                ar: "احمِ بيئتك الرقمية من خلال مراقبة الأمن واكتشاف التهديدات وتقييم الثغرات وحلول الأمن السيبراني العملية.",
+                zh: "通过安全监控、威胁检测、漏洞评估和实用的网络安全解决方案保护您的数字环境。",
+                hi: "सुरक्षा निगरानी, खतरे का पता लगाने, भेद्यता आकलन और व्यावहारिक साइबर सुरक्षा समाधानों के माध्यम से अपने डिजिटल वातावरण की रक्षा करें।",
+                ja: "セキュリティ監視、脅威検知、脆弱性評価、実践的なサイバーセキュリティソリューションでデジタル環境を保護します。"
+            },
+
+            intro: {
+                en: "BITASEC helps organizations strengthen their digital security by identifying risks, monitoring systems and implementing security controls designed around their operational needs.",
+                fr: "BITASEC aide les organisations à renforcer leur sécurité numérique en identifiant les risques, en surveillant les systèmes et en mettant en œuvre des contrôles de sécurité adaptés à leurs besoins opérationnels.",
+                es: "BITASEC ayuda a las organizaciones a fortalecer su seguridad digital identificando riesgos, supervisando sistemas e implementando controles de seguridad adaptados a sus necesidades.",
+                pt: "A BITASEC ajuda organizações a fortalecer sua segurança digital identificando riscos, monitorando sistemas e implementando controles de segurança adaptados às suas necessidades.",
+                sw: "BITASEC husaidia mashirika kuimarisha usalama wao wa kidijitali kwa kutambua hatari, kufuatilia mifumo na kutekeleza udhibiti wa usalama unaolingana na mahitaji yao.",
+                de: "BITASEC unterstützt Organisationen bei der Stärkung ihrer digitalen Sicherheit durch Risikoerkennung, Systemüberwachung und geeignete Sicherheitskontrollen.",
+                ar: "تساعد BITASEC المؤسسات على تعزيز أمنها الرقمي من خلال تحديد المخاطر ومراقبة الأنظمة وتنفيذ ضوابط أمنية مصممة وفق احتياجاتها التشغيلية.",
+                zh: "BITASEC 通过识别风险、监控系统并实施符合运营需求的安全控制措施，帮助组织加强数字安全。",
+                hi: "BITASEC जोखिमों की पहचान, सिस्टम निगरानी और संगठन की आवश्यकताओं के अनुसार सुरक्षा नियंत्रण लागू करके डिजिटल सुरक्षा को मजबूत करने में मदद करता है।",
+                ja: "BITASECは、リスクの特定、システム監視、運用要件に合わせたセキュリティ対策の実装を通じて、組織のデジタルセキュリティ強化を支援します。"
+            },
+
+            capabilities: {
+                en: [
+                    ["🔎", "Security Assessment", "Identify vulnerabilities, risks and security gaps."],
+                    ["📊", "Security Monitoring", "Monitor systems and security events."],
+                    ["🚨", "Incident Response", "Support detection and response to security incidents."],
+                    ["🖥️", "Endpoint Security", "Improve protection and visibility across endpoints."],
+                    ["🌐", "Network Security", "Strengthen secure network infrastructure and access."],
+                    ["🔐", "Security Architecture", "Develop practical security architectures."]
+                ],
+                fr: [
+                    ["🔎", "Évaluation de sécurité", "Identifier les vulnérabilités, risques et failles de sécurité."],
+                    ["📊", "Surveillance de sécurité", "Surveiller les systèmes et les événements de sécurité."],
+                    ["🚨", "Réponse aux incidents", "Soutenir la détection et la réponse aux incidents."],
+                    ["🖥️", "Sécurité des terminaux", "Améliorer la protection et la visibilité des terminaux."],
+                    ["🌐", "Sécurité réseau", "Renforcer les infrastructures et les accès réseau."],
+                    ["🔐", "Architecture de sécurité", "Développer des architectures de sécurité pratiques."]
+                ],
+                es: [
+                    ["🔎", "Evaluación de seguridad", "Identificar vulnerabilidades, riesgos y brechas."],
+                    ["📊", "Monitoreo de seguridad", "Supervisar sistemas y eventos de seguridad."],
+                    ["🚨", "Respuesta a incidentes", "Apoyar la detección y respuesta a incidentes."],
+                    ["🖥️", "Seguridad de endpoints", "Mejorar la protección y visibilidad de los dispositivos."],
+                    ["🌐", "Seguridad de redes", "Fortalecer la infraestructura y los accesos de red."],
+                    ["🔐", "Arquitectura de seguridad", "Desarrollar arquitecturas de seguridad prácticas."]
+                ],
+                pt: [
+                    ["🔎", "Avaliação de segurança", "Identificar vulnerabilidades, riscos e falhas."],
+                    ["📊", "Monitoramento de segurança", "Monitorar sistemas e eventos de segurança."],
+                    ["🚨", "Resposta a incidentes", "Apoiar a detecção e resposta a incidentes."],
+                    ["🖥️", "Segurança de endpoints", "Melhorar a proteção e visibilidade dos dispositivos."],
+                    ["🌐", "Segurança de redes", "Fortalecer a infraestrutura e os acessos de rede."],
+                    ["🔐", "Arquitetura de segurança", "Desenvolver arquiteturas de segurança práticas."]
+                ],
+                sw: [
+                    ["🔎", "Tathmini ya Usalama", "Tambua udhaifu, hatari na mapengo ya usalama."],
+                    ["📊", "Ufuatiliaji wa Usalama", "Fuatilia mifumo na matukio ya usalama."],
+                    ["🚨", "Mwitikio wa Matukio", "Saidia kugundua na kujibu matukio ya usalama."],
+                    ["🖥️", "Usalama wa Vifaa", "Boresha ulinzi na mwonekano wa vifaa."],
+                    ["🌐", "Usalama wa Mtandao", "Imarisha miundombinu na ufikiaji wa mtandao."],
+                    ["🔐", "Muundo wa Usalama", "Tengeneza miundo ya usalama inayotekelezeka."]
+                ],
+                de: [
+                    ["🔎", "Sicherheitsbewertung", "Schwachstellen, Risiken und Sicherheitslücken erkennen."],
+                    ["📊", "Sicherheitsüberwachung", "Systeme und Sicherheitsereignisse überwachen."],
+                    ["🚨", "Incident Response", "Erkennung und Reaktion auf Sicherheitsvorfälle unterstützen."],
+                    ["🖥️", "Endpoint-Sicherheit", "Schutz und Transparenz von Endgeräten verbessern."],
+                    ["🌐", "Netzwerksicherheit", "Netzwerkinfrastruktur und Zugriffe absichern."],
+                    ["🔐", "Sicherheitsarchitektur", "Praktische Sicherheitsarchitekturen entwickeln."]
+                ],
+                ar: [
+                    ["🔎", "تقييم الأمان", "تحديد الثغرات والمخاطر والفجوات الأمنية."],
+                    ["📊", "مراقبة الأمن", "مراقبة الأنظمة وأحداث الأمن."],
+                    ["🚨", "الاستجابة للحوادث", "دعم اكتشاف الحوادث الأمنية والاستجابة لها."],
+                    ["🖥️", "أمن الأجهزة", "تحسين حماية الأجهزة ووضوح حالتها الأمنية."],
+                    ["🌐", "أمن الشبكات", "تعزيز البنية التحتية ووصول الشبكات الآمن."],
+                    ["🔐", "هندسة الأمن", "تطوير معماريات أمنية عملية."]
+                ],
+                zh: [
+                    ["🔎", "安全评估", "识别漏洞、风险和安全缺口。"],
+                    ["📊", "安全监控", "监控系统和安全事件。"],
+                    ["🚨", "事件响应", "支持安全事件的检测与响应。"],
+                    ["🖥️", "终端安全", "提高终端设备的保护和可见性。"],
+                    ["🌐", "网络安全", "加强网络基础设施和访问控制。"],
+                    ["🔐", "安全架构", "设计实用的安全架构。"]
+                ],
+                hi: [
+                    ["🔎", "सुरक्षा मूल्यांकन", "कमजोरियों, जोखिमों और सुरक्षा अंतरालों की पहचान करें।"],
+                    ["📊", "सुरक्षा निगरानी", "सिस्टम और सुरक्षा घटनाओं की निगरानी करें।"],
+                    ["🚨", "घटना प्रतिक्रिया", "सुरक्षा घटनाओं की पहचान और प्रतिक्रिया में सहायता करें।"],
+                    ["🖥️", "एंडपॉइंट सुरक्षा", "डिवाइस सुरक्षा और दृश्यता में सुधार करें।"],
+                    ["🌐", "नेटवर्क सुरक्षा", "नेटवर्क इंफ्रास्ट्रक्चर और एक्सेस को मजबूत करें।"],
+                    ["🔐", "सुरक्षा आर्किटेक्चर", "व्यावहारिक सुरक्षा आर्किटेक्चर विकसित करें।"]
+                ],
+                ja: [
+                    ["🔎", "セキュリティ評価", "脆弱性、リスク、セキュリティ上の課題を特定します。"],
+                    ["📊", "セキュリティ監視", "システムとセキュリティイベントを監視します。"],
+                    ["🚨", "インシデント対応", "セキュリティインシデントの検知と対応を支援します。"],
+                    ["🖥️", "エンドポイントセキュリティ", "端末の保護と可視性を向上させます。"],
+                    ["🌐", "ネットワークセキュリティ", "安全なネットワーク基盤とアクセスを強化します。"],
+                    ["🔐", "セキュリティアーキテクチャ", "実用的なセキュリティアーキテクチャを設計します。"]
+                ]
+            }
+        },
+
+        ai: {
+            icon: "✦",
+            title: {
+                en: "Artificial Intelligence",
+                fr: "Intelligence Artificielle",
+                es: "Inteligencia Artificial",
+                pt: "Inteligência Artificial",
+                sw: "Akili Bandia",
+                de: "Künstliche Intelligenz",
+                ar: "الذكاء الاصطناعي",
+                zh: "人工智能",
+                hi: "कृत्रिम बुद्धिमत्ता",
+                ja: "人工知能"
+            },
+            description: {
+                en: "Turn data into intelligent solutions through AI, machine learning, computer vision, analytics and automation.",
+                fr: "Transformez les données en solutions intelligentes grâce à l'IA, l'apprentissage automatique, la vision par ordinateur, l'analyse et l'automatisation.",
+                es: "Transforme los datos en soluciones inteligentes mediante IA, aprendizaje automático, visión artificial, análisis y automatización.",
+                pt: "Transforme dados em soluções inteligentes através de IA, aprendizado de máquina, visão computacional, análise e automação.",
+                sw: "Badilisha data kuwa suluhisho mahiri kupitia AI, machine learning, computer vision, uchambuzi na automation.",
+                de: "Verwandeln Sie Daten durch KI, maschinelles Lernen, Computer Vision, Analysen und Automatisierung in intelligente Lösungen.",
+                ar: "حوّل البيانات إلى حلول ذكية باستخدام الذكاء الاصطناعي والتعلم الآلي والرؤية الحاسوبية والتحليلات والأتمتة.",
+                zh: "通过人工智能、机器学习、计算机视觉、数据分析和自动化将数据转化为智能解决方案。",
+                hi: "AI, मशीन लर्निंग, कंप्यूटर विज़न, एनालिटिक्स और ऑटोमेशन के माध्यम से डेटा को बुद्धिमान समाधानों में बदलें।",
+                ja: "AI、機械学習、コンピュータービジョン、分析、自動化によってデータをインテリジェントなソリューションへ変換します。"
+            }
+        },
+
+        iot: {
+            icon: "⌁",
+            title: {
+                en: "IoT & Smart Homes",
+                fr: "IoT & Maisons Intelligentes",
+                es: "IoT y Hogares Inteligentes",
+                pt: "IoT e Casas Inteligentes",
+                sw: "IoT na Nyumba Mahiri",
+                de: "IoT & Smart Homes",
+                ar: "إنترنت الأشياء والمنازل الذكية",
+                zh: "物联网与智能家居",
+                hi: "IoT और स्मार्ट होम",
+                ja: "IoT・スマートホーム"
+            },
+            description: {
+                en: "Connect devices, sensors, homes and environments through practical Internet of Things and smart automation solutions.",
+                fr: "Connectez les appareils, capteurs, maisons et environnements grâce à des solutions IoT et d'automatisation intelligente.",
+                es: "Conecte dispositivos, sensores, hogares y entornos mediante soluciones prácticas de IoT y automatización inteligente.",
+                pt: "Conecte dispositivos, sensores, casas e ambientes por meio de soluções práticas de IoT e automação inteligente.",
+                sw: "Unganisha vifaa, sensa, nyumba na mazingira kupitia suluhisho za IoT na automation mahiri.",
+                de: "Verbinden Sie Geräte, Sensoren, Häuser und Umgebungen durch praktische IoT- und intelligente Automatisierungslösungen.",
+                ar: "اربط الأجهزة والمستشعرات والمنازل والبيئات من خلال حلول عملية لإنترنت الأشياء والأتمتة الذكية.",
+                zh: "通过实用的物联网和智能自动化解决方案连接设备、传感器、家庭和环境。",
+                hi: "व्यावहारिक IoT और स्मार्ट ऑटोमेशन समाधानों के माध्यम से डिवाइस, सेंसर, घर और वातावरण को जोड़ें।",
+                ja: "実用的なIoTとスマートオートメーションソリューションで、デバイス、センサー、住宅、環境をつなぎます。"
+            }
+        },
+
+        networking: {
+            icon: "◈",
+            title: {
+                en: "Networking",
+                fr: "Réseaux Informatiques",
+                es: "Redes Informáticas",
+                pt: "Redes de Computadores",
+                sw: "Mitandao",
+                de: "Netzwerke",
+                ar: "الشبكات",
+                zh: "网络",
+                hi: "नेटवर्किंग",
+                ja: "ネットワーキング"
+            },
+            description: {
+                en: "Build reliable, secure and connected infrastructure for organizations, businesses and technology environments.",
+                fr: "Construisez une infrastructure fiable, sécurisée et connectée pour les organisations et les environnements technologiques.",
+                es: "Construya una infraestructura fiable, segura y conectada para organizaciones y entornos tecnológicos.",
+                pt: "Construa uma infraestrutura confiável, segura e conectada para organizações e ambientes tecnológicos.",
+                sw: "Jenga miundombinu thabiti, salama na iliyounganishwa kwa mashirika na mazingira ya teknolojia.",
+                de: "Bauen Sie zuverlässige, sichere und vernetzte Infrastrukturen für Organisationen und technologische Umgebungen.",
+                ar: "أنشئ بنية تحتية موثوقة وآمنة ومتصلة للمؤسسات وبيئات التكنولوجيا.",
+                zh: "为组织、企业和技术环境构建可靠、安全、互联的基础设施。",
+                hi: "संगठनों और तकनीकी वातावरण के लिए विश्वसनीय, सुरक्षित और कनेक्टेड इंफ्रास्ट्रक्चर बनाएं।",
+                ja: "組織、企業、技術環境向けに信頼性が高く、安全で接続されたインフラを構築します。"
+            }
+        },
+
+        electrical: {
+            icon: "⚡",
+            title: {
+                en: "Electrical Engineering",
+                fr: "Génie Électrique",
+                es: "Ingeniería Eléctrica",
+                pt: "Engenharia Elétrica",
+                sw: "Uhandisi wa Umeme",
+                de: "Elektrotechnik",
+                ar: "الهندسة الكهربائية",
+                zh: "电气工程",
+                hi: "इलेक्ट्रिकल इंजीनियरिंग",
+                ja: "電気工学"
+            },
+            description: {
+                en: "Develop intelligent electrical, energy, control and automation solutions for modern environments.",
+                fr: "Développez des solutions électriques, énergétiques, de contrôle et d'automatisation intelligentes.",
+                es: "Desarrolle soluciones inteligentes de electricidad, energía, control y automatización.",
+                pt: "Desenvolva soluções inteligentes de eletricidade, energia, controle e automação.",
+                sw: "Tengeneza suluhisho mahiri za umeme, nishati, udhibiti na automation kwa mazingira ya kisasa.",
+                de: "Entwickeln Sie intelligente Lösungen für Elektrotechnik, Energie, Steuerung und Automatisierung.",
+                ar: "طوّر حلولاً ذكية للكهرباء والطاقة والتحكم والأتمتة للبيئات الحديثة.",
+                zh: "为现代环境开发智能电气、能源、控制和自动化解决方案。",
+                hi: "आधुनिक वातावरण के लिए बुद्धिमान विद्युत, ऊर्जा, नियंत्रण और ऑटोमेशन समाधान विकसित करें।",
+                ja: "現代の環境向けに、電気、エネルギー、制御、自動化のインテリジェントなソリューションを開発します。"
+            }
+        }
+
+    };
+
+
+    const common = {
+        en: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "BITASEC CAPABILITIES",
+            what: "What BITASEC Does",
+            expertise: "OUR EXPERTISE",
+            ourCapabilities: "Our Capabilities",
+            projects: "BITASEC PROJECTS",
+            ourWork: "Our Work",
+            workIntro: "Explore the type of work BITASEC delivers in this service area.",
+            why: "WHY IT MATTERS",
+            howHelp: "How We Help",
+            helpText: "BITASEC focuses on practical technology solutions that address real organizational, technical and operational requirements.",
+            process: "OUR PROCESS",
+            howWork: "How We Work",
+            understand: "Understand",
+            understandText: "We understand your requirements, environment and objectives.",
+            analyze: "Analyze",
+            analyzeText: "We assess the current situation, challenges and technical requirements.",
+            design: "Design",
+            designText: "We develop a practical solution designed around your needs.",
+            implement: "Implement",
+            implementText: "We implement, test and support the solution toward its intended objectives.",
+            together: "LET'S WORK TOGETHER",
+            need: "Need",
+            ctaText: "Tell BITASEC about your requirements and let's discuss a practical solution for your organization or project.",
+            request: "Request This Service",
+            allServices: "View All Services",
+            back: "Back to Services"
+        },
+
+        fr: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "CAPACITÉS BITASEC",
+            what: "Ce que fait BITASEC",
+            expertise: "NOTRE EXPERTISE",
+            ourCapabilities: "Nos capacités",
+            projects: "PROJETS BITASEC",
+            ourWork: "Notre travail",
+            workIntro: "Découvrez le type de travail réalisé par BITASEC dans ce domaine.",
+            why: "POURQUOI C'EST IMPORTANT",
+            howHelp: "Comment nous aidons",
+            helpText: "BITASEC propose des solutions technologiques pratiques adaptées aux besoins organisationnels et opérationnels.",
+            process: "NOTRE PROCESSUS",
+            howWork: "Comment nous travaillons",
+            understand: "Comprendre",
+            understandText: "Nous comprenons vos besoins, votre environnement et vos objectifs.",
+            analyze: "Analyser",
+            analyzeText: "Nous évaluons la situation, les défis et les exigences techniques.",
+            design: "Concevoir",
+            designText: "Nous développons une solution pratique adaptée à vos besoins.",
+            implement: "Mettre en œuvre",
+            implementText: "Nous mettons en œuvre, testons et accompagnons la solution.",
+            together: "TRAVAILLONS ENSEMBLE",
+            need: "Besoin de",
+            ctaText: "Présentez vos besoins à BITASEC afin de discuter d'une solution adaptée à votre organisation ou projet.",
+            request: "Demander ce service",
+            allServices: "Voir tous les services",
+            back: "Retour aux services"
+        },
+
+        es: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "CAPACIDADES DE BITASEC",
+            what: "Lo que hace BITASEC",
+            expertise: "NUESTRA EXPERIENCIA",
+            ourCapabilities: "Nuestras capacidades",
+            projects: "PROYECTOS BITASEC",
+            ourWork: "Nuestro trabajo",
+            workIntro: "Explore el tipo de trabajo que BITASEC realiza en esta área.",
+            why: "POR QUÉ ES IMPORTANTE",
+            howHelp: "Cómo ayudamos",
+            helpText: "BITASEC ofrece soluciones tecnológicas prácticas adaptadas a las necesidades organizativas y operativas.",
+            process: "NUESTRO PROCESO",
+            howWork: "Cómo trabajamos",
+            understand: "Comprender",
+            understandText: "Comprendemos sus necesidades, entorno y objetivos.",
+            analyze: "Analizar",
+            analyzeText: "Evaluamos la situación, los desafíos y los requisitos técnicos.",
+            design: "Diseñar",
+            designText: "Desarrollamos una solución práctica adaptada a sus necesidades.",
+            implement: "Implementar",
+            implementText: "Implementamos, probamos y damos soporte a la solución.",
+            together: "TRABAJEMOS JUNTOS",
+            need: "¿Necesita",
+            ctaText: "Cuéntenos sus necesidades y analicemos una solución práctica para su organización o proyecto.",
+            request: "Solicitar este servicio",
+            allServices: "Ver todos los servicios",
+            back: "Volver a servicios"
+        },
+
+        pt: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "CAPACIDADES DA BITASEC",
+            what: "O que a BITASEC faz",
+            expertise: "NOSSA EXPERIÊNCIA",
+            ourCapabilities: "Nossas capacidades",
+            projects: "PROJETOS BITASEC",
+            ourWork: "Nosso trabalho",
+            workIntro: "Explore o tipo de trabalho realizado pela BITASEC nesta área.",
+            why: "POR QUE ISSO IMPORTA",
+            howHelp: "Como ajudamos",
+            helpText: "A BITASEC oferece soluções tecnológicas práticas adaptadas às necessidades organizacionais e operacionais.",
+            process: "NOSSO PROCESSO",
+            howWork: "Como trabalhamos",
+            understand: "Entender",
+            understandText: "Entendemos suas necessidades, ambiente e objetivos.",
+            analyze: "Analisar",
+            analyzeText: "Avaliamos a situação, os desafios e os requisitos técnicos.",
+            design: "Projetar",
+            designText: "Desenvolvemos uma solução prática para suas necessidades.",
+            implement: "Implementar",
+            implementText: "Implementamos, testamos e apoiamos a solução.",
+            together: "VAMOS TRABALHAR JUNTOS",
+            need: "Precisa de",
+            ctaText: "Conte à BITASEC sobre suas necessidades e vamos discutir uma solução prática.",
+            request: "Solicitar este serviço",
+            allServices: "Ver todos os serviços",
+            back: "Voltar aos serviços"
+        },
+
+        sw: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "UWEZO WA BITASEC",
+            what: "BITASEC Inafanya Nini",
+            expertise: "UTAALAMU WETU",
+            ourCapabilities: "Uwezo Wetu",
+            projects: "MIRADI YA BITASEC",
+            ourWork: "Kazi Yetu",
+            workIntro: "Angalia aina ya kazi ambayo BITASEC hufanya katika eneo hili.",
+            why: "KWA NINI NI MUHIMU",
+            howHelp: "Jinsi Tunavyosaidia",
+            helpText: "BITASEC inalenga suluhisho za teknolojia zinazokidhi mahitaji halisi ya mashirika na shughuli.",
+            process: "MCHAKATO WETU",
+            howWork: "Jinsi Tunavyofanya Kazi",
+            understand: "Kuelewa",
+            understandText: "Tunaelewa mahitaji, mazingira na malengo yako.",
+            analyze: "Kuchanganua",
+            analyzeText: "Tunatathmini hali, changamoto na mahitaji ya kiufundi.",
+            design: "Kubuni",
+            designText: "Tunatengeneza suluhisho linalolingana na mahitaji yako.",
+            implement: "Kutekeleza",
+            implementText: "Tunatekeleza, tunajaribu na kusaidia suluhisho.",
+            together: "TUFANYE KAZI PAMOJA",
+            need: "Unahitaji",
+            ctaText: "Tuambie mahitaji yako ili tujadili suluhisho linalofaa shirika au mradi wako.",
+            request: "Omba Huduma Hii",
+            allServices: "Angalia Huduma Zote",
+            back: "Rudi kwenye Huduma"
+        },
+
+        de: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "BITASEC KOMPETENZEN",
+            what: "Was BITASEC macht",
+            expertise: "UNSERE EXPERTISE",
+            ourCapabilities: "Unsere Kompetenzen",
+            projects: "BITASEC PROJEKTE",
+            ourWork: "Unsere Arbeit",
+            workIntro: "Entdecken Sie die Art von Arbeit, die BITASEC in diesem Bereich anbietet.",
+            why: "WARUM ES WICHTIG IST",
+            howHelp: "Wie wir helfen",
+            helpText: "BITASEC entwickelt praktische Technologielösungen für reale organisatorische und operative Anforderungen.",
+            process: "UNSER PROZESS",
+            howWork: "Wie wir arbeiten",
+            understand: "Verstehen",
+            understandText: "Wir verstehen Ihre Anforderungen, Umgebung und Ziele.",
+            analyze: "Analysieren",
+            analyzeText: "Wir bewerten die aktuelle Situation, Herausforderungen und technischen Anforderungen.",
+            design: "Entwerfen",
+            designText: "Wir entwickeln eine praktische Lösung für Ihre Anforderungen.",
+            implement: "Implementieren",
+            implementText: "Wir implementieren, testen und unterstützen die Lösung.",
+            together: "LASSEN SIE UNS ZUSAMMENARBEITEN",
+            need: "Sie benötigen",
+            ctaText: "Teilen Sie BITASEC Ihre Anforderungen mit und lassen Sie uns eine praktische Lösung besprechen.",
+            request: "Diesen Service anfragen",
+            allServices: "Alle Services anzeigen",
+            back: "Zurück zu Services"
+        },
+
+        ar: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "قدرات BITASEC",
+            what: "ماذا تقدم BITASEC",
+            expertise: "خبرتنا",
+            ourCapabilities: "قدراتنا",
+            projects: "مشاريع BITASEC",
+            ourWork: "أعمالنا",
+            workIntro: "استكشف نوع العمل الذي تقدمه BITASEC في هذا المجال.",
+            why: "لماذا هذا مهم",
+            howHelp: "كيف نساعد",
+            helpText: "تركز BITASEC على حلول تقنية عملية تلبي الاحتياجات التنظيمية والتشغيلية الحقيقية.",
+            process: "منهجيتنا",
+            howWork: "كيف نعمل",
+            understand: "الفهم",
+            understandText: "نفهم متطلباتك وبيئتك وأهدافك.",
+            analyze: "التحليل",
+            analyzeText: "نقيّم الوضع الحالي والتحديات والمتطلبات التقنية.",
+            design: "التصميم",
+            designText: "نطور حلاً عملياً مصمماً وفق احتياجاتك.",
+            implement: "التنفيذ",
+            implementText: "ننّفذ الحل ونختبره ونقدم الدعم.",
+            together: "لنعمل معاً",
+            need: "هل تحتاج إلى",
+            ctaText: "أخبر BITASEC باحتياجاتك ولنناقش حلاً عملياً لمؤسستك أو مشروعك.",
+            request: "طلب هذه الخدمة",
+            allServices: "عرض جميع الخدمات",
+            back: "العودة إلى الخدمات"
+        },
+
+        zh: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "BITASEC 能力",
+            what: "BITASEC 能做什么",
+            expertise: "我们的专业能力",
+            ourCapabilities: "我们的能力",
+            projects: "BITASEC 项目",
+            ourWork: "我们的工作",
+            workIntro: "了解 BITASEC 在该服务领域提供的工作类型。",
+            why: "为什么重要",
+            howHelp: "我们如何帮助您",
+            helpText: "BITASEC 专注于满足真实组织、技术和运营需求的实用技术解决方案。",
+            process: "我们的流程",
+            howWork: "我们的工作方式",
+            understand: "了解",
+            understandText: "了解您的需求、环境和目标。",
+            analyze: "分析",
+            analyzeText: "评估现状、挑战和技术要求。",
+            design: "设计",
+            designText: "根据您的需求制定实用解决方案。",
+            implement: "实施",
+            implementText: "实施、测试并支持解决方案。",
+            together: "让我们一起合作",
+            need: "需要",
+            ctaText: "告诉 BITASEC 您的需求，让我们为您的组织或项目讨论实用解决方案。",
+            request: "请求此服务",
+            allServices: "查看所有服务",
+            back: "返回服务"
+        },
+
+        hi: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "BITASEC की क्षमताएं",
+            what: "BITASEC क्या करता है",
+            expertise: "हमारी विशेषज्ञता",
+            ourCapabilities: "हमारी क्षमताएं",
+            projects: "BITASEC परियोजनाएं",
+            ourWork: "हमारा कार्य",
+            workIntro: "इस सेवा क्षेत्र में BITASEC द्वारा किए जाने वाले कार्यों को देखें।",
+            why: "यह क्यों महत्वपूर्ण है",
+            howHelp: "हम कैसे सहायता करते हैं",
+            helpText: "BITASEC वास्तविक संगठनात्मक, तकनीकी और परिचालन आवश्यकताओं के लिए व्यावहारिक तकनीकी समाधान प्रदान करता है।",
+            process: "हमारी प्रक्रिया",
+            howWork: "हम कैसे काम करते हैं",
+            understand: "समझना",
+            understandText: "हम आपकी आवश्यकताओं, वातावरण और उद्देश्यों को समझते हैं।",
+            analyze: "विश्लेषण",
+            analyzeText: "हम वर्तमान स्थिति, चुनौतियों और तकनीकी आवश्यकताओं का मूल्यांकन करते हैं।",
+            design: "डिज़ाइन",
+            designText: "हम आपकी आवश्यकताओं के अनुसार व्यावहारिक समाधान तैयार करते हैं।",
+            implement: "कार्यान्वयन",
+            implementText: "हम समाधान को लागू, परीक्षण और समर्थन करते हैं।",
+            together: "आइए साथ काम करें",
+            need: "क्या आपको चाहिए",
+            ctaText: "BITASEC को अपनी आवश्यकताओं के बारे में बताएं और एक व्यावहारिक समाधान पर चर्चा करें।",
+            request: "इस सेवा का अनुरोध करें",
+            allServices: "सभी सेवाएं देखें",
+            back: "सेवाओं पर वापस जाएं"
+        },
+
+        ja: {
+            eyebrow: "BITASEC TECHNOLOGIES",
+            capabilities: "BITASECの能力",
+            what: "BITASECが提供するもの",
+            expertise: "私たちの専門分野",
+            ourCapabilities: "対応能力",
+            projects: "BITASECプロジェクト",
+            ourWork: "私たちの仕事",
+            workIntro: "このサービス分野でBITASECが提供する仕事をご覧ください。",
+            why: "重要な理由",
+            howHelp: "私たちの支援方法",
+            helpText: "BITASECは、組織・技術・運用上の実際の要件に対応する実用的なテクノロジーソリューションを提供します。",
+            process: "私たちのプロセス",
+            howWork: "仕事の進め方",
+            understand: "理解",
+            understandText: "お客様の要件、環境、目標を理解します。",
+            analyze: "分析",
+            analyzeText: "現状、課題、技術要件を評価します。",
+            design: "設計",
+            designText: "ニーズに合わせた実用的なソリューションを設計します。",
+            implement: "実装",
+            implementText: "ソリューションを実装、テストし、サポートします。",
+            together: "一緒に取り組みましょう",
+            need: "必要ですか",
+            ctaText: "BITASECに要件をお聞かせください。組織やプロジェクトに適した実用的なソリューションをご相談します。",
+            request: "このサービスを依頼する",
+            allServices: "すべてのサービスを見る",
+            back: "サービスに戻る"
+        }
+    };
+
+
+    function getLanguage() {
+        return localStorage.getItem("bitasec_language") || "en";
+    }
+
+
+    function getService() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("service") || "cybersecurity";
+    }
+
+
+    function getText(value, language) {
+        if (!value) return "";
+
+        if (typeof value === "string") {
+            return value;
+        }
+
+        return value[language] || value.en || "";
+    }
+
+
+    function render(serviceKey) {
+
+        const service = serviceData[serviceKey] || serviceData.cybersecurity;
+
+        const language = getLanguage();
+
+        const c = common[language] || common.en;
+
+        const title = getText(service.title, language);
+        const description = getText(service.description, language);
+        const intro = getText(service.intro, language);
+
+        document.documentElement.lang = language;
+
+        if (language === "ar") {
+            document.documentElement.dir = "rtl";
+        } else {
+            document.documentElement.dir = "ltr";
+        }
+
+        document.title = `BITASEC Technologies | ${title}`;
+
+        const capabilities =
+            service.capabilities?.[language] ||
+            service.capabilities?.en ||
+            [];
+
+        const page = document.getElementById("servicePage");
+
+        page.innerHTML = `
+
+        <section class="service-hero">
+
+            <div class="container service-hero-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        ${c.eyebrow}
+                    </div>
+
+                    <h1>
+                        ${service.icon}
+                        ${title}
+                    </h1>
+
+                    <p class="service-hero-text">
+                        ${description}
+                    </p>
+
+                    <div class="actions">
+
+                        <a
+                            href="contact.html?service=${serviceKey}"
+                            class="btn primary"
+                        >
+                            ${c.request} →
+                        </a>
+
+                        <a
+                            href="services.html"
+                            class="btn secondary"
+                        >
+                            ${c.allServices}
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="service-hero-visual">
+
+                    <div class="service-visual-icon">
+                        ${service.icon}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    ${c.capabilities}
+                </div>
+
+                <h2>
+                    ${c.what}
+                </h2>
+
+                <p class="service-intro">
+                    ${intro}
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="section alt">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    ${c.expertise}
+                </div>
+
+                <h2>
+                    ${c.ourCapabilities}
+                </h2>
+
+                <div class="service-capabilities">
+
+                    ${capabilities.map(item => `
+
+                        <article class="capability-card">
+
+                            <div class="capability-icon">
+                                ${item[0]}
+                            </div>
+
+                            <h3>
+                                ${item[1]}
+                            </h3>
+
+                            <p>
+                                ${item[2]}
+                            </p>
+
+                        </article>
+
+                    `).join("")}
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    ${c.projects}
+                </div>
+
+                <h2>
+                    ${c.ourWork}
+                </h2>
+
+                <p class="service-intro">
+                    ${c.workIntro}
+                </p>
+
+                <div class="service-gallery">
+
+                    <article class="service-gallery-item">
+                        <div class="service-gallery-icon">
+                            ${service.icon}
+                        </div>
+                        <h3>${title}</h3>
+                        <p>${description}</p>
+                    </article>
+
+                    <article class="service-gallery-item">
+                        <div class="service-gallery-icon">⚙️</div>
+                        <h3>${c.ourCapabilities}</h3>
+                        <p>${intro}</p>
+                    </article>
+
+                    <article class="service-gallery-item">
+                        <div class="service-gallery-icon">✓</div>
+                        <h3>${c.howHelp}</h3>
+                        <p>${c.helpText}</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section alt">
+
+            <div class="container service-value">
+
+                <div>
+
+                    <div class="eyebrow">
+                        ${c.why}
+                    </div>
+
+                    <h2>
+                        ${c.howHelp}
+                    </h2>
+
+                    <p class="service-value-text">
+                        ${c.helpText}
+                    </p>
+
+                </div>
+
+                <div class="service-value-list">
+
+                    <div>✓ ${c.understand}</div>
+                    <div>✓ ${c.analyze}</div>
+                    <div>✓ ${c.design}</div>
+                    <div>✓ ${c.implement}</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    ${c.process}
+                </div>
+
+                <h2>
+                    ${c.howWork}
+                </h2>
+
+                <div class="workflow">
+
+                    <article class="workflow-step">
+                        <div class="workflow-number">01</div>
+                        <h3>${c.understand}</h3>
+                        <p>${c.understandText}</p>
+                    </article>
+
+                    <article class="workflow-step">
+                        <div class="workflow-number">02</div>
+                        <h3>${c.analyze}</h3>
+                        <p>${c.analyzeText}</p>
+                    </article>
+
+                    <article class="workflow-step">
+                        <div class="workflow-number">03</div>
+                        <h3>${c.design}</h3>
+                        <p>${c.designText}</p>
+                    </article>
+
+                    <article class="workflow-step">
+                        <div class="workflow-number">04</div>
+                        <h3>${c.implement}</h3>
+                        <p>${c.implementText}</p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="service-cta">
+
+                    <div class="eyebrow">
+                        ${c.together}
+                    </div>
+
+                    <h2>
+                        ${c.need} ${title}?
+                    </h2>
+
+                    <p>
+                        ${c.ctaText}
+                    </p>
+
+                    <a
+                        href="contact.html?service=${serviceKey}"
+                        class="btn primary"
+                    >
+                        ${c.request} →
+                    </a>
+
+                    <br>
+
+                    <a
+                        href="services.html"
+                        class="service-back"
+                    >
+                        ← ${c.back}
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+        `;
+
+    }
+
+
+    function start() {
+
+        render(getService());
+
+        /*
+         * The existing main.js handles the language selector.
+         * When the language changes, it dispatches the change event.
+         * We listen for it and rebuild the dynamic service page.
+         */
+        const selector = document.getElementById("languageSelect");
+
+        if (selector) {
+
+            selector.value = getLanguage();
+
+            selector.addEventListener("change", function () {
+
+                localStorage.setItem(
+                    "bitasec_language",
+                    this.value
+                );
+
+                render(getService());
+
+            });
+
+        }
+
+    }
+
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            start
+        );
+
+    } else {
+
+        start();
+
+    }
+
+})();
